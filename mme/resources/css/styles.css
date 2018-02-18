@@ -1,0 +1,113 @@
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+.container{
+    width: inherit;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.body{
+    width: 100%;
+    height: 100%;}
+.quest{
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 100px;
+    margin: 10px;
+    background-color: aqua;
+    text-decoration: none;
+}
+.quest:hover{
+     background-color: aquamarine;
+}
+.questlist{
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    top: 20px;
+    width: 80%;
+
+
+}
+
+.left {
+
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 1000px;
+
+    margin-left: auto;
+    margin-right: 5px;
+     background-color: #111;
+    margin-top: 5px;
+}
+.middle {
+
+
+    display: inline-block;
+    width: 50%;
+    height: 1000px;
+
+    background-color: #111;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 5px;
+    position: relative;
+
+
+}
+
+.character{
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #FFFFFF;
+}
+.right{
+    float: right;
+    display: inline-block;
+    width: 20%;
+    height: 1000px;
+    margin-right: auto;
+    margin-top: 5px;
+    background-color: #111;
+}
+.footer{
+    background-color: #FFFFFF;
+    width: 50%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    left: 25%;
+    right:25%;
+
+
+
+}
+
