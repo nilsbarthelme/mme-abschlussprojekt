@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #3E606F;
+    display:block;
 }
 
 li {
@@ -28,86 +31,111 @@ li a:hover {
     margin-left: auto;
     margin-right: auto;
 }
-.body{
+body{
     width: 100%;
-    height: 100%;}
-.quest{
+    height: 100%;
+    background-color: #193441;
+}
+
+.titel {
+    position: relative;
+    font-size: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    left: 50%;
+}
+
+.expbar{
+    content: "Experience";
+    color: black;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
     width: 90%;
-    height: 100px;
-    margin: 10px;
-    background-color: aqua;
+    height: 50px;
+    margin: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FFFAD5;
     text-decoration: none;
 }
-.quest:hover{
-     background-color: aquamarine;
+
+.strbar{
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 30px;
+    margin: 10px;
+    background-color: #FFE34E;
+    text-decoration: none;
 }
-.questlist{
-    position: absolute;
+
+.endbar{
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 30px;
+    margin: 10px;
+    background-color: #DB9E36;
+    text-decoration: none;
+}
+
+.agibar{
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 30px;
+    margin: 10px;
+    background-color: #BD4932;
+    text-decoration: none;
+}
+
+.explist{
     left: 0;
     margin: 0 auto;
     top: 20px;
     width: 80%;
+}
 
-
+.avatarpicture{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: 50px;
+    left: 50%;
+    background-color: #91AA9D;
 }
 
 .left {
 
     position: relative;
-    display: inline-block;
-    width: 20%;
-    height: 1000px;
-
+    display: inline-block; 
+    width: 30%;
+    height: 850px;
     margin-left: auto;
     margin-right: 5px;
-     background-color: #111;
+    background-color: #3E606F;
     margin-top: 5px;
 }
 .middle {
-
-
     display: inline-block;
-    width: 50%;
-    height: 1000px;
-
-    background-color: #111;
-    margin-left: 60px;
-    margin-right: 60px;
+    width: 67%;
+    height: 850px;
+    background-color: #3E606F;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5px;
     position: relative;
-
-
 }
 
-.character{
+.questelement{
     width: 90%;
-    height: 60%;
+    height: 500px;
     margin: 0 auto;
     margin-top: 50px;
     background-color: #FFFFFF;
 }
-.right{
-    float: right;
-    display: inline-block;
-    width: 20%;
-    height: 1000px;
-    margin-right: auto;
-    margin-top: 5px;
-    background-color: #111;
+
+.quest:hover{
+     background-color: #91AA9D;
 }
-.footer{
-    background-color: #FFFFFF;
-    width: 50%;
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
-    left: 25%;
-    right:25%;
-
-
-
-}
-
