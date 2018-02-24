@@ -178,6 +178,7 @@ body{
     margin-top: 25px;
     left: 50%;
     background-color: #91AA9D;
+    -webkit-transition: margin-left 0.5s;
 }
 
 .left {
