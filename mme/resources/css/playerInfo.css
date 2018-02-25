@@ -131,9 +131,8 @@
     position: relative;
     height: 200px;
     width: 200px;
-    margin-left: -120px;
-    margin-top: 25px;
-    left: 50%;
+    margin-left: 20%;
+    margin-top: 60px; 
     background-color: #91AA9D;
     -webkit-transition: margin-left 0.5s;
 }
@@ -151,6 +150,7 @@
     margin-top: 5px;
 }
 
+
 .left:hover .expbar {
     display: list-item;
      content: "Experience";
@@ -162,7 +162,7 @@
     margin: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: grey;
+    background-color: #C0BDAA;
     text-decoration: none;
     list-style-type: none;
 }
@@ -178,7 +178,7 @@
     margin: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: grey;
+    background-color: #C6B664;
     text-decoration: none;
     list-style-type: none;
 }
@@ -194,7 +194,7 @@
     margin: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: grey;
+    background-color: #A26255;
     text-decoration: none;
     list-style-type: none;
 }
@@ -210,7 +210,7 @@
     margin: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: grey;
+    background-color: #B29057;
     text-decoration: none;
     list-style-type: none;
 }
@@ -248,6 +248,6 @@
 .left:hover{ width: 30%;}
 
 .left:hover .avatarpicture{
-    margin-left: -100px;
+    margin-left: 30%;
 
 }
