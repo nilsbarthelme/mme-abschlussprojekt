@@ -1,0 +1,29 @@
+.messagebox {
+    width: 50%;
+    height: 50%;
+    background: red;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    z-index: 1;
+}
+
+.messagetext {
+     margin-left: 10px;
+    list-style-type: none ;
+    font-weight:normal;
+    color:#FFFFFF;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:28px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+    padding:0px;
+}

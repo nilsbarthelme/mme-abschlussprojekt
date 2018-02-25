@@ -1,0 +1,253 @@
+.expprogressback{
+    height: 100%;
+    width: 40%;
+    background-color: #FFFAD5;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    opacity: 20%;
+}
+.strprogressback{
+     height: 100%;
+    width: 60%;
+    background-color: #FFE34E;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+}
+.agiprogressback{
+    height: 100%;
+    width: 20%;
+    background-color: #BD4932;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+}
+.endprogressback{
+    height: 100%;
+    width: 80%;
+    background-color: #DB9E36;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+}
+.strprogress{
+    /* -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    height: 100%;
+    width: 75%;
+    background-color: dodgerblue; */
+}
+.agiprogress{
+    /*-webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    height: 100%;
+    width: 20%;
+    background-color: dodgerblue; */
+}
+    
+.endprogress{
+   /* -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    height: 100%;
+    width: 90%;
+    background-color: dodgerblue; */
+}
+    
+.expprogress{
+   /* -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    height: 100%;
+    width: 50%;
+    background-color: dodgerblue; */
+}
+.expbar {
+    display: none;
+    content: "Experience";
+    color: black;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 0%;
+    height: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FFFAD5;
+    text-decoration: none;
+    list-style-type: none;
+    
+    /*
+    -- not visilbe at all -- 
+    */
+
+}
+
+.strbar{
+    display: none;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    background-color: #FFE34E;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+.endbar{
+    display: none;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    background-color: #DB9E36;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.agibar{
+    display: none;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    background-color: #BD4932;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+.explist{
+    left: 0;
+    margin: 0 auto;
+    top: 20px;
+    width: 80%;
+}
+
+.explist li {
+    float: left;
+}
+
+.avatarpicture{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin-left: -120px;
+    margin-top: 25px;
+    left: 50%;
+    background-color: #91AA9D;
+    -webkit-transition: margin-left 0.5s;
+}
+
+.left {
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    width: 20%;
+     -webkit-transition: width 0.5s;
+    height: 850px;
+    margin-left: auto;
+    margin-right: 5px;
+    background-color: #3E606F;
+    margin-top: 5px;
+}
+
+.left:hover .expbar {
+    display: list-item;
+     content: "Experience";
+    color: black;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: grey;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.left:hover .strbar {
+    display: list-item;
+     content: "Experience";
+    color: black;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: grey;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.left:hover .agibar {
+    display: list-item;
+     content: "Experience";
+    color: black;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: grey;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.left:hover .endbar {
+    display: list-item;
+     content: "Experience";
+    color: black;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: grey;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.level{
+    margin-left: 10px;
+    list-style-type: none ;
+    font-weight:normal;
+    color:#FFFFFF;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:28px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+    padding:0px;
+}
+
+
+.username{
+    margin-left: 10px;
+    list-style-type: none ;
+    font-weight:normal;
+    color:#FFFFFF;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:28px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+    padding:0px;
+}
+
+
+.left:hover{ width: 30%;}
+
+.left:hover .avatarpicture{
+    margin-left: -100px;
+
+}
