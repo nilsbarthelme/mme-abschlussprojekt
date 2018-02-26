@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="resources/css/styles.css">
     <link rel="stylesheet" href="resources/css/playerInfo.css">
     <link rel="stylesheet" href="resources/css/messageBox.css">
+    <link rel="stylesheet" href="resources/css/questBox.css">
 </head>
 
 <body>
@@ -47,45 +48,45 @@
                 </div>
             </li>
         </ul>
-
     </div>
     <div class="middle">
         <div class="questelement">
             <ul class="questsactive">
-                <li class="activeTitle"> Aktive Quests  </li>
-                <li class="quest">
+                <li class="activeTitle"> Aktive Quest </li>
+                <li class="quest" id="active">
+                    <div class="questtitle">Questtitle</div>
                     <div class="removebutton">
                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
                     </div>
                     <input type="checkbox" id="mc" name="Zahlmethode" value="Mastercard">
                 </li>
-                <li class="quest">
-                     <div class="removebutton">
-                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
-                     </div>
-                </li>
-                <li class="quest">
-                     <div class="removebutton">
-                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
-                     </div>
-                </li>
             </ul>
-            <ul class="questsavailable">
-                <li class="availableTitle"> Verfügbare Quests</li>
-                <li class="quest">
-                    <div class="removebutton">
-                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
-                     </div>
-                    <button class="button">Accept</button>
-                </li>
-                <li class="quest">
-                    <div class="removebutton">
-                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
-                     </div>
-                    <button class="button">Accept</button>
-                </li>
-            </ul>
+            
     </div>
+    </div>
+    <div class="right">
+        <li class="availableTitle"> Verfügbare Quests</li>
+         <li class="quest">
+                    <div class="questtitle">Questtitle</div>
+                    <div class="removebutton">
+                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
+                     </div>
+                    <button class="button" id="accept">Accept</button>
+                </li>
+         <li class="quest">
+                    <div class="questtitle">Questtitle</div>
+                    <div class="removebutton">
+                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
+                     </div>
+                    <button class="button" id="accept">Accept</button>
+                </li>
+         <li class="quest">
+                    <div class="questtitle">Questtitle</div>
+                    <div class="removebutton">
+                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
+                     </div>
+                    <button class="button" id="accept">Accept</button>
+                </li>
     </div>
 
 

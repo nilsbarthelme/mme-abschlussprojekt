@@ -1,0 +1,58 @@
+.right {
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    width: 20%;
+     -webkit-transition: width 0.5s;
+    height: 850px;
+    margin-left: auto;
+    margin-right: 20px;
+    background-color: #3E606F;
+    margin-top: 5px;
+}
+
+.right #accept {
+   visibility: hidden;
+    -webkit-transition: visibility 0.5s;
+    font-size: 15px;
+    padding: 10px 17px;
+}
+
+
+.availableTitle{
+    margin-left: 10px;
+    list-style-type: none ;
+    font-weight:normal;
+    color:#FFFFFF;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+    padding:0px;
+}
+
+.questtitle {
+    position: absolute;
+    margin-left: 20px;
+    list-style-type: none ;
+    font-weight:normal;
+    color: black;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+    padding:0px;
+}
+
+
+.right:hover {
+    width: 30%;
+}
+
+.right:hover  #accept{
+    visibility: visible;
+}

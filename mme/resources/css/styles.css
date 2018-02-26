@@ -47,7 +47,7 @@ body{
 
 .middle {
     display: inline-block;
-    width: 68%;
+    width: 48%;
     height: 850px;
     background-color: #3E606F;
     margin-left: auto;
@@ -75,48 +75,29 @@ body{
 
 
 .quest:hover{
-     background-color: #91AA9D;
+     background-color: #C0BDAA;
 }
 
-.activequest{
-     margin-left: 10px;
-    list-style-type: none ;
-    font-weight:normal;
-    color:#FFFFFF;
-    letter-spacing:1pt;
-    word-spacing:7pt;
-    font-size:20px;
-    text-align:center;
-    font-family:helvetica, sans-serif;
-    line-height:3;
-    padding:0px;
-}
+
 
 .quest{
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
     width: 85%;
-    height: 200px;
+    height: 100px;
     margin: 20px;
-    background-color: #16a085;
+    background-color: #FFFAD5;
     text-decoration: none;
     list-style-type: none;
+    -webkit-transition: height 0.5s;
+}
 
+#active.quest{
+    height: 500px;
 }
+
 .activeTitle{
-    margin-left: 35%;
-    list-style-type: none ;
-    font-weight:normal;
-    color:#FFFFFF;
-    letter-spacing:1pt;
-    word-spacing:7pt;
-    font-size:28px;
-    text-align:center;
-    font-family:helvetica, sans-serif;
-    line-height:3;
-    padding:0px;
-}
-.availableTitle{
     margin-left: 35%;
     list-style-type: none ;
     font-weight:normal;
@@ -195,7 +176,9 @@ body{
 
 /* desgin of accept button */
 .button {
-  margin-left: 75%;
+  float: right;
+    margin-top: -30px;
+  margin-right: 60px;
   padding: 15px 25px;
   font-size: 24px;
   text-align: center;
