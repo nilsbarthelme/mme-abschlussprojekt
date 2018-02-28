@@ -18,7 +18,7 @@
         <div class="removebutton" id="messagebox">
             <div class="x flop large"><b></b><b></b><b></b><b></b></div>
         </div>
-        <div class="messagetext">Hello</div>
+        <div class="messagetext">Welcome</div>
     </div>
     <div class="container">
     <div class="left">
@@ -99,21 +99,22 @@
 
     </div>
 
-    <script src="resources/js/AvailableQuestController.js">
+    <script>
 
-        FitnessRPG.init();
+        
+        /*FitnessRPG.init(); */
 
         console.log(document.querySelector("#messagebox"));
-        document.querySelector(".more").addEventListener("click",displayMessage);
+        document.querySelector(".more").addEventListener("click", displayMessage);
         function displayMessage() {
-             document.getElementsByClassName("messagebox")[0].style.display="block";
+            curElement = document.getElementsByClassName("messagetext")[0].textContent = "This is your Quest:";
+             curElement = document.getElementsByClassName("messagebox")[0].style.display="block";
 
         }
        document.querySelector("#messagebox").addEventListener("click", hideMessageButton);
 
         function hideMessageButton() {
         document.getElementsByClassName("messagebox")[0].style.display="none";
-        console.log("hi");
 }
     </script>
 </body>
