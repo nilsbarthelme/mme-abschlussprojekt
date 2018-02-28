@@ -22,8 +22,9 @@
     </div>
     <div class="container">
     <div class="left">
-        <ul class="avatarpicture">
-        </ul>
+        <div class="avatarpicture">
+
+            <img src="resources/img/Char1_ Level 5.png" height="200" width="200"/></div>
          <li class="username" id="usr">Username</li>
             <li class="level" id="lvl">Level: 1</li>
         <ul class="explist">
@@ -67,25 +68,31 @@
     <div class="right">
         <li class="availableTitle"> Verfügbare Quests</li>
          <li class="quest">
-                    <div class="questtitle">Questtitle</div>
-                    <div class="removebutton">
+                    <div class="questtitle">Ausdauertraining</div>
+                    <div class="removebuttonquest">
                          <div class="x flop large"><b></b><b></b><b></b><b></b></div>
                      </div>
                     <button class="button" id="accept">Accept</button>
+                   <img src="resources/img/add-button-inside-black-circle.png" height="40" width="40" class="more"/></img>
+                   <div class="readmore">Read More</div>
                 </li>
          <li class="quest">
-                    <div class="questtitle">Questtitle</div>
-                    <div class="removebutton">
+                    <div class="questtitle">Beintraining</div>
+                    <div class="removebuttonquest">
                          <div class="x flop large"><b></b><b></b><b></b><b></b></div>
                      </div>
                     <button class="button" id="accept">Accept</button>
+                    <img src="resources/img/add-button-inside-black-circle.png" height="40" width="40" class="more"/></img>
+                     <div class="readmore">Read More</div>
                 </li>
          <li class="quest">
-                    <div class="questtitle">Questtitle</div>
-                    <div class="removebutton">
+                    <div class="questtitle">Arme</div>
+                    <div class="removebuttonquest">
                          <div class="x flop large"><b></b><b></b><b></b><b></b></div>
                      </div>
                     <button class="button" id="accept">Accept</button>
+                    <img src="resources/img/add-button-inside-black-circle.png" height="40" width="40" class="more"/></img>
+                     <div class="readmore">Read More</div>
                 </li>
     </div>
 
@@ -97,6 +104,11 @@
         FitnessRPG.init();
 
         console.log(document.querySelector("#messagebox"));
+        document.querySelector(".more").addEventListener("click",displayMessage);
+        function displayMessage() {
+             document.getElementsByClassName("messagebox")[0].style.display="block";
+
+        }
        document.querySelector("#messagebox").addEventListener("click", hideMessageButton);
 
         function hideMessageButton() {
