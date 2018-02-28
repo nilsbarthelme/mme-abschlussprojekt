@@ -53,7 +53,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
-    position: relative;
+
     vertical-align: top;
 }
 
@@ -69,8 +69,8 @@ body{
 }
 
 /* only works in chrome */
-.questelement::-webkit-scrollbar { 
-    display: none; 
+.questelement::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -113,7 +113,7 @@ body{
 
 /*style for x-button*/
 .removebutton{
-    margin-left: 92.8%;
+    margin-left: 89.8%;
     content: "\00d7";
     color: #FFFFFF;
     background-color: #AAAAAA;
