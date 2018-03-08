@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questlist>
+    <quest id="1">
+       <name>Ausdauerübung</name>
+        <dauer>1 Woche </dauer>
+        <uebung>5 KM Lauf</uebung>
+        <uebung>Sprints</uebung>
+        <uebung>10 KM Lauf</uebung>
+        <voraussetzung>0</voraussetzung>
+        <voraussetzung>0</voraussetzung>
+        <belohnung id="stren">10</belohnung>
+        <belohnung id="stam">10</belohnung>
+    </quest>
+    <quest id="2">
+       <name>Kraftübung</name>
+        <dauer>2 Wochen </dauer>
+        <übung>10 KG Bizepcurls</übung>
+        <übung>30 Situps</übung>
+        <übung>Liegestütze</übung>
+        <voraussetzung>0</voraussetzung>
+        <voraussetzung>0</voraussetzung>
+        <belohnung id="stren">20</belohnung>
+        <belohnung id="stam">10</belohnung>
+    </quest>
+ <quest id="2">
+       <name>Kraftübung</name>
+        <dauer>2 Wochen </dauer>
+        <übung>10 KG Bizepcurls</übung>
+        <übung>30 Situps</übung>
+        <übung>Liegestütze</übung>
+        <voraussetzung>0</voraussetzung>
+        <voraussetzung>0</voraussetzung>
+        <belohnung id="stren">20</belohnung>
+        <belohnung id="stam">10</belohnung>
+    </quest>
+
+
+</questlist>

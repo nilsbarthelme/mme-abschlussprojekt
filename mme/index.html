@@ -67,45 +67,25 @@
     </div>
     <div class="right">
         <li class="availableTitle"> Verfügbare Quests</li>
-         <li class="quest">
-                    <div class="questtitle">Ausdauertraining</div>
-                    <div class="removebuttonquest">
-                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
-                     </div>
-                    <button class="button" id="accept">Accept</button>
-                   <img src="resources/img/add-button-inside-black-circle.png" height="40" width="40" class="more"/></img>
-                   <div class="readmore">Read More</div>
-                </li>
-         <li class="quest">
-                    <div class="questtitle">Beintraining</div>
-                    <div class="removebuttonquest">
-                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
-                     </div>
-                    <button class="button" id="accept">Accept</button>
-                    <img src="resources/img/add-button-inside-black-circle.png" height="40" width="40" class="more"/></img>
-                     <div class="readmore">Read More</div>
-                </li>
-         <li class="quest">
-                    <div class="questtitle">Arme</div>
-                    <div class="removebuttonquest">
-                         <div class="x flop large"><b></b><b></b><b></b><b></b></div>
-                     </div>
-                    <button class="button" id="accept">Accept</button>
-                    <img src="resources/img/add-button-inside-black-circle.png" height="40" width="40" class="more"/></img>
-                     <div class="readmore">Read More</div>
-                </li>
     </div>
 
 
     </div>
+
+    <script src="http://localhost:63342/mme/resources/js/FitnessRPG.js"></script>
+    <script src="http://localhost:63342/mme/resources/js/Quest.js"></script>
+    <script src="http://localhost:63342/mme/resources/js/questparser.js"></script>
+    <script src="http://localhost:63342/mme/resources/js/AvailableQuestView.js"></script>
+
 
     <script>
 
-        
-        /*FitnessRPG.init(); */
+
+        FitnessRPG.init();
+
 
         console.log(document.querySelector("#messagebox"));
-        document.querySelector(".more").addEventListener("click", displayMessage);
+
         function displayMessage() {
             curElement = document.getElementsByClassName("messagetext")[0].textContent = "This is your Quest:";
              curElement = document.getElementsByClassName("messagebox")[0].style.display="block";

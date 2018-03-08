@@ -1,0 +1,12 @@
+[
+    {
+        "name": "ausdauerübung",
+        "dauer": "1 Woche",
+        "uebungen": [{
+            "uebung": "Liegestuetze",
+            "uebung2": "Laufen"
+        }],
+        "voraussetzung": ""
+
+    }
+]
