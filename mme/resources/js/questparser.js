@@ -120,7 +120,8 @@ var FitnessRPG = FitnessRPG || {};
             }
 
             function DOMQuestElement(parent, id) {
-                var title = document.createElement("div");
+            var quest = document.createElement("LI");
+               var title = document.createElement("div");
                 title.className = "questtitle";
                 title.innerHTML = availableQuests[id].name;
                 var readMoreIcon = document.createElement("img");
@@ -131,7 +132,7 @@ var FitnessRPG = FitnessRPG || {};
                 var readMore = document.createElement("div");
                 readMore.className = "readmore";
                 readMore.innerHTML = "Read More";
-                var quest = document.createElement("LI");
+
                 var removeButton = document.createElement("div");
                 removeButton.className = "removebuttonquest";
                 var removeButtonInner = document.createElement("div");
@@ -160,11 +161,26 @@ var FitnessRPG = FitnessRPG || {};
                 var parent =  document.getElementsByClassName("messagebox")[0];
                 parent.style.display="block";
                 var target = event.target;
+                createName(getQuestData(target),parent);
+                createDuration(getQuestData(target),parent);
                 createExercises(getQuestData(target),parent);
                 createRequirements(getQuestData(target),parent);
                 createAwards(getQuestData(target),parent);
             }
+            function createDuration(questData,parent){
+                var duration  = document.createElement("div");
+                duration.className = "exercise";
+                duration.innerHTML ="Questdauer: ";
+                duration.innerHTML += questData.duration;
+                parent.appendChild(duration)
 
+            }
+            function createName(questData,parent) {
+                var title = document.createElement("div");
+                title.className = "exercise";
+                title.innerHTML = questData.name;
+                parent.appendChild(title);
+            }
             function createRequirements(questData,parent) {
             for(var i = 0; i < questData.requirements.length;i++){
                     var requirement = document.createElement("div");

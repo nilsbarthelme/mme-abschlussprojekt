@@ -128,7 +128,8 @@ body{
 
 /*style for x-button*/
 .removebutton{
-    margin-left: 89.8%;
+    margin-left: 93%;
+    margin-top: -84px;
     content: "\00d7";
     color: #FFFFFF;
     background-color: #AAAAAA;
