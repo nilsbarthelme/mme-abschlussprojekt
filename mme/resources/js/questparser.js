@@ -21,40 +21,33 @@ var FitnessRPG = FitnessRPG || {};
             client.onloadend = function () {
                 xmlString = client.responseText;
                 xmldoc = parser.parseFromString(xmlString, 'text/xml');
-                console.log(xmldoc);
+                addElementsToQuestList();
                 buildQuestElements();
                 return xmldoc;
             };
 
             client.send();
         }
+        function addElementsToQuestList() {
+            var index = xmldoc.getElementsByTagName("quest");
+             for(var i = 0; i < index.length;i++){
+                createQuestObjects(i);}
+
+        }
         function buildQuestElements() {
             var rightside = document.getElementsByClassName("right")[0];
-            var questlist = xmldoc.getElementsByTagName("quest");
-            console.log(questlist);
-            for(var i = 0; i < questlist.length;i++){
-                createQuestObjects(i);
+            var index = xmldoc.getElementsByTagName("quest");
+            for(var i = 0; i < index.length;i++){
                 var questid = availableQuests[i].id;
-                var name = availableQuests[i].name;
-                DOMQuestElement(rightside,questid,name);
+                DOMQuestElement(rightside,questid);
             }
-            console.log(availableQuests);
 
 
         }
         function acceptbutton(){
            var elm = event.target;
-           var clickedId = elm.parentNode.getAttribute("id");
-          console.log(elm.parentNode.getAttribute("id"));
-          elm.parentNode.style.display = "none";
-          var clickedQuest;
-          for(var i = 0; i < availableQuests.length; i++){
-              if(availableQuests[i].id === clickedId){
-                  clickedQuest = availableQuests[i];
-              }
-          }
-          createActiveQuest(clickedQuest);
-
+          elm.parentNode.parentNode.removeChild(elm.parentNode);
+          createActiveQuest(getQuestData(elm));
 
         }
 
@@ -81,9 +74,9 @@ var FitnessRPG = FitnessRPG || {};
                 var questActive = document.createElement("ul");
                 questActive.className = "questsactive";
                 questbox.appendChild(questActive);
-                var title = document.createElement("li");
-                title.className = "quest";
-                title.id = "active";
+                var quest = document.createElement("li");
+                quest.className = "quest";
+                quest.id = clickedQuest.id;
                 var titlequest = document.createElement("div");
                 var duration  = document.createElement("div");
                 duration.className = "duration";
@@ -91,42 +84,45 @@ var FitnessRPG = FitnessRPG || {};
                 duration.innerHTML += clickedQuest.duration;
                 titlequest.className ="questtitleactive";
                 titlequest.innerHTML = clickedQuest.name;
-                title.appendChild(titlequest);
-                title.appendChild(duration);
-                for(var i = 0; i < clickedQuest.exercises.length; i++){
-                    var exercise = document.createElement("div");
-                    exercise.className = "exercise";
-                    exercise.innerHTML = "Übung: ";
-                    exercise.innerHTML += clickedQuest.exercises[i].innerHTML;
-                    console.log(clickedQuest.exercises);
-                    console.log(clickedQuest.exercises[0]);
-                    title.appendChild(exercise);
+                var removeButton = document.createElement("div");
+                removeButton.className = "removebuttonactive";
+                var removeButtonInner = document.createElement("div");
+                removeButtonInner.className = "x flop large";
+                    for (var i = 0; i < 4; i++) {
+                    removeButtonInner.appendChild(document.createElement("b"));
                 }
-                for(var i = 0; i < clickedQuest.requirements.length;i++){
-                    var requirement = document.createElement("div");
-                    requirement.className = "exercise";
-                    requirement.innerHTML = "Anforderungen: ";
-                    requirement.innerHTML += clickedQuest.requirements[i].innerHTML;
-                    console.log(clickedQuest.requirements);
-                    console.log(clickedQuest.requirements[0]);
-                    title.appendChild(requirement);
-                }
-                questActive.appendChild(title);
-
-
-
+                removeButton.appendChild(removeButtonInner);
+                quest.appendChild(removeButton);
+                quest.appendChild(titlequest);
+                quest.appendChild(duration);
+                createExercises(clickedQuest,quest);
+                createRequirements(clickedQuest,quest);
+                createAwards(clickedQuest,quest);
+                questActive.appendChild(quest);
                 var parent = document.getElementsByClassName("middle")[0];
-
-
-
                 parent.appendChild(questbox);
+                removeButton.addEventListener("click",removeActive);
 
             }
+            function removeActive() {
 
-            function DOMQuestElement(parent, id, name) {
+                var elm = event.target;
+                var parent = document.getElementsByClassName("questelement")[0];
+                parent.parentNode.removeChild(parent);
+                var questelement = elm.parentNode.parentNode.parentNode;
+                var questId = questelement.getAttribute("id");
+                resetQuest(questId);
+
+            }
+            function resetQuest(id) {
+                var rightside = document.getElementsByClassName("right")[0];
+                DOMQuestElement(rightside,id);
+            }
+
+            function DOMQuestElement(parent, id) {
                 var title = document.createElement("div");
                 title.className = "questtitle";
-                title.innerHTML = name;
+                title.innerHTML = availableQuests[id].name;
                 var readMoreIcon = document.createElement("img");
                 readMoreIcon.src = "resources/img/add-button-inside-black-circle.png";
                 readMoreIcon.height = "40";
@@ -153,10 +149,66 @@ var FitnessRPG = FitnessRPG || {};
                 quest.appendChild(accept);
                 quest.appendChild(readMoreIcon);
                 quest.appendChild(readMore);
-                quest.className = "quest";
+                quest.className = "questAvailable";
                 quest.id = id;
                 parent.appendChild(quest);
                 accept.addEventListener("click",acceptbutton);
+                readMoreIcon.addEventListener("click",readMoreButtonClick);
+            }
+
+            function readMoreButtonClick(){
+                var parent =  document.getElementsByClassName("messagebox")[0];
+                parent.style.display="block";
+                var target = event.target;
+                createExercises(getQuestData(target),parent);
+                createRequirements(getQuestData(target),parent);
+                createAwards(getQuestData(target),parent);
+            }
+
+            function createRequirements(questData,parent) {
+            for(var i = 0; i < questData.requirements.length;i++){
+                    var requirement = document.createElement("div");
+                    requirement.className = "exercise";
+                    requirement.innerHTML = "Anforderungen: ";
+                    requirement.innerHTML += questData.requirements[i].innerHTML;
+                    console.log(questData.requirements);
+                    console.log(questData.requirements[0]);
+                    parent.appendChild(requirement);
+                }
+
+            }
+            function createExercises(questData,parent) {
+                for(var i = 0; i < questData.exercises.length; i++){
+                    var exercise = document.createElement("div");
+                    exercise.className = "exercise";
+                    exercise.innerHTML = "Übung: ";
+                    exercise.innerHTML += questData.exercises[i].innerHTML;
+                    console.log(questData.exercises);
+                    console.log(questData.exercises[0]);
+                    parent.appendChild(exercise);
+                }
+
+            }
+            function createAwards(questData,parent) {
+                for(var i = 0; i < questData.award.length;i++){
+                    var award = document.createElement("div");
+                    award.className = "exercise";
+                    award.innerHTML = "Belohnungen: ";
+                    award.innerHTML += questData.award[i].innerHTML;
+                    console.log(questData.award);
+                    console.log(questData.award[0]);
+                    parent.appendChild(award);
+                }
+
+            }
+            function getQuestData(target) {
+                var clickedId = target.parentNode.getAttribute("id");
+                var questData;
+                for(var i = 0; i < availableQuests.length; i++){
+                    if(availableQuests[i].id === clickedId){
+                  questData = availableQuests[i];
+              }}
+                return questData;
             }
 
 

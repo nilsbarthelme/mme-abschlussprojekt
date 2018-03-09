@@ -109,6 +109,22 @@
     visibility: visible;
 }
 /*style for x-button*/
+.removebuttonactive{
+     -webkit-transition: margin-left 0.5s;
+    margin-left: 90%;
+    margin-top: 0px;
+    content: "\00d7";
+    color: #FFFFFF;
+    background-color: #AAAAAA;
+    width: 50px;
+    height: 50px;
+    right: 0%;
+    display: block;
+    -webkit-border-bottom-left-radius: 13px;
+    -webkit-border-top-right-radius: 13px;
+
+    -moz-border-radius: 13px;
+}
 .removebuttonquest{
      -webkit-transition: margin-left 0.5s;
     margin-left: 79.7%;
