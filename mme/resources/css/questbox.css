@@ -36,8 +36,8 @@
     margin-top: -32px;
 }
 
-.questtitle {
-    position: absolute;
+.questtitleactive {
+
     margin-left: 20px;
     list-style-type: none ;
     font-weight:normal;
@@ -49,6 +49,45 @@
     font-family:helvetica, sans-serif;
     line-height:3;
     padding:0px;
+}
+.questtitle {
+
+    margin-left: -100px;
+    list-style-type: none ;
+    font-weight:normal;
+    color: black;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+    padding:0px;
+}
+.duration {
+    margin-left: 20px;
+    list-style-type: none ;
+    font-weight:normal;
+    color: black;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+    padding:0px;
+}
+.exercise {
+    list-style-type: none ;
+    font-weight:normal;
+    color: black;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+
 }
 .more{
     margin-left: 30px;
@@ -73,6 +112,7 @@
 .removebuttonquest{
      -webkit-transition: margin-left 0.5s;
     margin-left: 79.7%;
+    margin-top: -60px;
     content: "\00d7";
     color: #FFFFFF;
     background-color: #AAAAAA;

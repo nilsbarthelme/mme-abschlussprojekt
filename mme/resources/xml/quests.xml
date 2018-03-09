@@ -14,20 +14,20 @@
     <quest id="2">
        <name>Kraftübung</name>
         <dauer>2 Wochen </dauer>
-        <übung>10 KG Bizepcurls</übung>
-        <übung>30 Situps</übung>
-        <übung>Liegestütze</übung>
+        <uebung>10 KG Bizepcurls</uebung>
+        <uebung>30 Situps</uebung>
+        <uebung>Liegestütze</uebung>
         <voraussetzung>0</voraussetzung>
         <voraussetzung>0</voraussetzung>
         <belohnung id="stren">20</belohnung>
         <belohnung id="stam">10</belohnung>
     </quest>
- <quest id="2">
+ <quest id="3">
        <name>Kraftübung</name>
         <dauer>2 Wochen </dauer>
-        <übung>10 KG Bizepcurls</übung>
-        <übung>30 Situps</übung>
-        <übung>Liegestütze</übung>
+        <uebung>10 KG Bizepcurls</uebung>
+        <uebung>30 Situps</uebung>
+        <uebung>Liegestütze</uebung>
         <voraussetzung>0</voraussetzung>
         <voraussetzung>0</voraussetzung>
         <belohnung id="stren">20</belohnung>

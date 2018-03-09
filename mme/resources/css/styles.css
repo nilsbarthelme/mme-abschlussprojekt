@@ -46,6 +46,7 @@ body{
 }
 
 .middle {
+    overflow-y: scroll;
     display: inline-block;
     width: 48%;
     height: 850px;
