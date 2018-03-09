@@ -13,7 +13,7 @@
     </quest>
     <quest id="1">
        <name>Kraftübung</name>
-        <dauer>2 Wochen </dauer>
+        <dauer>1 Wochen </dauer>
         <uebung>10 KG Bizepcurls</uebung>
         <uebung>30 Situps</uebung>
         <uebung>Liegestütze</uebung>
@@ -23,29 +23,63 @@
         <belohnung id="stam">10</belohnung>
     </quest>
  <quest id="2">
-       <name>Kraftübung</name>
+       <name>Schnelligkeit</name>
         <dauer>2 Wochen </dauer>
-        <uebung>10 KG Bizepcurls</uebung>
-        <uebung>30 Situps</uebung>
-        <uebung>Liegestütze</uebung>
+        <uebung>5x 100 M Sprint</uebung>
+        <uebung>5x 50 M Sprint</uebung>
+        <uebung>1x 200 M Sprint</uebung>
+        <uebung>1x 100 M Sprint</uebung>
         <voraussetzung>0</voraussetzung>
         <voraussetzung>0</voraussetzung>
         <belohnung id="stren">20</belohnung>
         <belohnung id="stam">10</belohnung>
     </quest>
      <quest id="3">
-       <name>Kraftübung</name>
-        <dauer>2 Wochen </dauer>
-        <uebung>10 KG Bizepcurls</uebung>
-        <uebung>30 Situps</uebung>
-        <uebung>Liegestütze</uebung>
+       <name>Ausdauerübung</name>
+        <dauer>1 Woche </dauer>
+        <uebung>7,5 KM Joggen</uebung>
+        <uebung>5 KM Joggen</uebung>
+        <uebung>300M Schwimmen</uebung>
+         <uebung>10KM Radfahren</uebung>
         <voraussetzung>0</voraussetzung>
         <voraussetzung>0</voraussetzung>
         <belohnung id="stren">20</belohnung>
         <belohnung id="stam">10</belohnung>
     </quest>
      <quest id="4">
-       <name>Kraftübung</name>
+       <name>Koordinationstraining</name>
+        <dauer>2 Wochen </dauer>
+        <uebung>Slalom Hütchenlauf</uebung>
+        <uebung>Stangenspringen</uebung>
+        <uebung>10x 20M Diverse Übungen</uebung>
+        <voraussetzung>0</voraussetzung>
+        <voraussetzung>0</voraussetzung>
+        <belohnung id="stren">20</belohnung>
+        <belohnung id="stam">10</belohnung>
+    </quest>
+    <quest id="5">
+       <name>Beweglichkeit</name>
+        <dauer>2 Wochen </dauer>
+        <uebung>Squashen</uebung>
+        <uebung>Tennis</uebung>
+        <uebung>Squats</uebung>
+        <voraussetzung>0</voraussetzung>
+        <voraussetzung>0</voraussetzung>
+        <belohnung id="stren">20</belohnung>
+        <belohnung id="stam">10</belohnung>
+    </quest>
+     <quest id="6">
+       <name>Ausdauertraining</name>
+        <dauer>1 Wochen </dauer>
+        <uebung>12KM Joggen</uebung>
+        <uebung>5KM Schnelles Joggen</uebung>
+        <voraussetzung>Level 2 Ausdauer</voraussetzung>
+        <voraussetzung>0</voraussetzung>
+        <belohnung id="stren">20</belohnung>
+        <belohnung id="stam">10</belohnung>
+    </quest>
+     <quest id="7">
+       <name>Crossfit</name>
         <dauer>2 Wochen </dauer>
         <uebung>10 KG Bizepcurls</uebung>
         <uebung>30 Situps</uebung>
