@@ -9,11 +9,16 @@ var FitnessRPG = FitnessRPG || {};
         var availableQuests = [];
 
         function initEventListeners() {
-            console.log("hi");
+            console.log("hi console");
+            checkLocalStorage();
         }
 
 
+        function checkLocalStorage() {
+        }
+
         function parseQuests() {
+           checkLocalStorage();
             var xmlString = "";
             var parser = new DOMParser();
             var client = new XMLHttpRequest();

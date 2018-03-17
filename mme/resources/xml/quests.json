@@ -1,12 +1,199 @@
-[
-    {
-        "name": "ausdauerübung",
-        "dauer": "1 Woche",
-        "uebungen": [{
-            "uebung": "Liegestuetze",
-            "uebung2": "Laufen"
-        }],
-        "voraussetzung": ""
-
-    }
-]
+{
+  "questlist": {
+    "quest": [
+      {
+        "-id": "0",
+        "name": "Ausdauerübung",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "5 KM Lauf",
+          "Sprints",
+          "10 KM Lauf"
+        ],
+        "voraussetzung": [
+          "0",
+          "0"
+        ],
+        "belohnung": [
+          {
+            "-id": "stren",
+            "#text": "10"
+          },
+          {
+            "-id": "stam",
+            "#text": "10" 
+          }
+        ]
+      },
+      {
+        "-id": "1",
+        "name": "Kraftübung",
+        "dauer": "1 Wochen ",
+        "uebung": [
+          "10 KG Bizepcurls",
+          "30 Situps",
+          "Liegestütze"
+        ],
+        "voraussetzung": [
+          "0",
+          "0"
+        ],
+        "belohnung": [
+          {
+            "-id": "stren",
+            "#text": "20"
+          },
+          {
+            "-id": "stam",
+            "#text": "10"
+          }
+        ]
+      },
+      {
+        "-id": "2",
+        "name": "Schnelligkeit",
+        "dauer": "2 Wochen ",
+        "uebung": [
+          "5x 100 M Sprint",
+          "5x 50 M Sprint",
+          "1x 200 M Sprint",
+          "1x 100 M Sprint"
+        ],
+        "voraussetzung": [
+          "0",
+          "0"
+        ],
+        "belohnung": [
+          {
+            "-id": "stren",
+            "#text": "20"
+          },
+          {
+            "-id": "stam",
+            "#text": "10"
+          }
+        ]
+      },
+      {
+        "-id": "3",
+        "name": "Ausdauerübung",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "7,5 KM Joggen",
+          "5 KM Joggen",
+          "300M Schwimmen",
+          "10KM Radfahren"
+        ],
+        "voraussetzung": [
+          "0",
+          "0"
+        ],
+        "belohnung": [
+          {
+            "-id": "stren",
+            "#text": "20"
+          },
+          {
+            "-id": "stam",
+            "#text": "10"
+          }
+        ]
+      },
+      {
+        "-id": "4",
+        "name": "Koordinationstraining",
+        "dauer": "2 Wochen ",
+        "uebung": [
+          "Slalom Hütchenlauf",
+          "Stangenspringen",
+          "10x 20M Diverse Übungen"
+        ],
+        "voraussetzung": [
+          "0",
+          "0"
+        ],
+        "belohnung": [
+          {
+            "-id": "stren",
+            "#text": "20"
+          },
+          {
+            "-id": "stam",
+            "#text": "10"
+          }
+        ]
+      },
+      {
+        "-id": "5",
+        "name": "Beweglichkeit",
+        "dauer": "2 Wochen ",
+        "uebung": [
+          "Squashen",
+          "Tennis",
+          "Squats"
+        ],
+        "voraussetzung": [
+          "0",
+          "0"
+        ],
+        "belohnung": [
+          {
+            "-id": "stren",
+            "#text": "20"
+          },
+          {
+            "-id": "stam",
+            "#text": "10"
+          }
+        ]
+      },
+      {
+        "-id": "6",
+        "name": "Ausdauertraining",
+        "dauer": "1 Wochen ",
+        "uebung": [
+          "12KM Joggen",
+          "5KM Schnelles Joggen"
+        ],
+        "voraussetzung": [
+          "Level 2 Ausdauer",
+          "0"
+        ],
+        "belohnung": [
+          {
+            "-id": "stren",
+            "#text": "20"
+          },
+          {
+            "-id": "stam",
+            "#text": "10"
+          }
+        ]
+      },
+      {
+        "-id": "7",
+        "name": "Crossfit",
+        "dauer": "2 Wochen ",
+        "uebung": [
+          "10 KG Bizepcurls",
+          "30 Situps",
+          "Liegestütze"
+        ],
+        "voraussetzung": [
+          "0",
+          "0"
+        ],
+        "belohnung": [
+          {
+            "-id": "stren",
+            "#text": "20"
+          },
+          {
+            "-id": "stam",
+            "#text": "10"
+          }
+        ]
+      }
+    ]
+  }
+}
