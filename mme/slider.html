@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Character Selection</title>
+     <link rel="stylesheet" href="resources/css/slider.css">
+
+</head>
+<body>
+
+	<section class="pen">
+		<div class="stage">
+			<div class="element michael"></div>
+			<div class="element franklin"></div>
+			<div class="element trevor"></div>
+		</div>
+	</section>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+
+    <script src="resources/js/selectionEffect.js"></script>
+   <script>
+         init();
+        function init() {
+            initListener()
+
+        }
+
+        function initListener() {
+            var char_1 = document.getElementsByClassName("michael")[0];
+            var char_2 = document.getElementsByClassName("franklin")[0];
+            var char_3 = document.getElementsByClassName("trevor")[0];
+            console.log(char_1);
+            char_1.addEventListener("click",saveFirstCharacter);
+            char_2.addEventListener("click",saveSecondCharacter);
+            char_3.addEventListener("click",saveThirdCharacter);
+
+
+            console.log(char_1);
+            console.log("hi console");
+            checkLocalStorage();
+        }
+        function openNewPage() {
+            window.open('index.html');
+
+        }
+        function saveFirstCharacter() {
+            localStorage.setItem('character', 'char_1');
+            openNewPage();
+
+        }
+        function saveSecondCharacter() {
+            localStorage.setItem('character', 'char_2');
+             openNewPage();
+        }
+        function saveThirdCharacter() {
+            localStorage.setItem('character', 'char_3');
+             openNewPage();
+        }
+
+
+
+        function checkLocalStorage() {
+            localStorage.setItem('Aufgabe_1', 'Aktiv am Self-Wiki mitarbeiten!');
+        }
+
+    </script>
+ <script src="resources/js/selection.js">
+     FitnessRPG.selection();
+    </script>
+
+
+
+</body>
+</html>

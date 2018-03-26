@@ -15,6 +15,7 @@ var FitnessRPG = FitnessRPG || {};
 
 
         function checkLocalStorage() {
+            localStorage.setItem('Aufgabe_1', 'Aktiv am Self-Wiki mitarbeiten!');
         }
 
         function parseQuests() {
