@@ -189,10 +189,14 @@ var FitnessRPG = FitnessRPG || {};
             }
             function createRequirements(questData,parent) {
             for(var i = 0; i < questData.requirements.length;i++){
+                var checkbox = document.createElement("input");
+                    checkbox.setAttribute("type","checkbox");
+                    checkbox.className = "checkbox";
                     var requirement = document.createElement("div");
                     requirement.className = "exercise";
                     requirement.innerHTML = "Anforderungen: ";
                     requirement.innerHTML += questData.requirements[i].innerHTML;
+                      requirement.appendChild(checkbox);
                     console.log(questData.requirements);
                     console.log(questData.requirements[0]);
                     parent.appendChild(requirement);
@@ -201,10 +205,15 @@ var FitnessRPG = FitnessRPG || {};
             }
             function createExercises(questData,parent) {
                 for(var i = 0; i < questData.exercises.length; i++){
+                    var checkbox = document.createElement("input");
+                    checkbox.setAttribute("type","checkbox");
+                    checkbox.className = "checkbox";
                     var exercise = document.createElement("div");
+                    console.log(checkbox);
                     exercise.className = "exercise";
                     exercise.innerHTML = "Übung: ";
                     exercise.innerHTML += questData.exercises[i].innerHTML;
+                    exercise.appendChild(checkbox);
                     console.log(questData.exercises);
                     console.log(questData.exercises[0]);
                     parent.appendChild(exercise);
@@ -213,10 +222,14 @@ var FitnessRPG = FitnessRPG || {};
             }
             function createAwards(questData,parent) {
                 for(var i = 0; i < questData.award.length;i++){
+                    var checkbox = document.createElement("input");
+                    checkbox.setAttribute("type","checkbox");
+                    checkbox.className = "checkbox";
                     var award = document.createElement("div");
                     award.className = "exercise";
                     award.innerHTML = "Belohnungen: ";
                     award.innerHTML += questData.award[i].innerHTML;
+                    award.appendChild(checkbox);
                     console.log(questData.award);
                     console.log(questData.award[0]);
                     parent.appendChild(award);

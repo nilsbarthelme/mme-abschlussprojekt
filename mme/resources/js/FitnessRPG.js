@@ -7,6 +7,7 @@ var FitnessRPG = (function() {
         questparser = new FitnessRPG.questParser();
         availablequestview = new FitnessRPG.AvailableQuestView();
         updateLocalStorage();
+        updateCharacterImage();
     }
 
     function updateLocalStorage() {
@@ -20,6 +21,23 @@ var FitnessRPG = (function() {
             updateUserView();
         }
         console.log(localStorage);
+    }
+    function updateCharacterImage() {
+        var char = document.getElementById("character");
+        var character = localStorage.getItem("character");
+        switch (character){
+            case "char_1":
+                char.setAttribute("src","resources/img/Char1Level1.png");
+                break;
+            case "char_2":
+                char.setAttribute("src","resources/img/Char2Level1.png");
+                break;
+            case "char_3":
+                char.setAttribute("src","resources/img/Char3Level5.png");
+                break;
+        }
+        console.log(character);
+
     }
 
     function updateUserView() {
