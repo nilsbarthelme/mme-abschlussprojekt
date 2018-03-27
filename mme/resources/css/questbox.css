@@ -90,6 +90,54 @@
     line-height:3;
 
 }
+.name {
+    list-style-type: none ;
+    font-weight:normal;
+    color: black;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+
+}
+.duration {
+    list-style-type: none ;
+    font-weight:normal;
+    color: black;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+
+}
+.requirement {
+    list-style-type: none ;
+    font-weight:normal;
+    color: black;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+
+}
+.award {
+    list-style-type: none ;
+    font-weight:normal;
+    color: black;
+    letter-spacing:1pt;
+    word-spacing:7pt;
+    font-size:20px;
+    text-align:center;
+    font-family:helvetica, sans-serif;
+    line-height:3;
+
+}
 .more{
     margin-left: 30px;
 }

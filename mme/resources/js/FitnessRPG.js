@@ -6,9 +6,8 @@ var FitnessRPG = (function() {
     function init() {
         questparser = new FitnessRPG.questParser();
         availablequestview = new FitnessRPG.AvailableQuestView();
-
         updateLocalStorage();
-        PlayerInfoView.updateCharacterImage();
+       // PlayerInfoView.updateCharacterImage();
     }
 
     function updateLocalStorage() {
@@ -25,7 +24,7 @@ var FitnessRPG = (function() {
             console.log(JSON.parse(localStorage.getItem("quests")).questlist.quest[0]);
             console.log(obj); // java objekt
             console.log(obj.playerinfo[0].level); //level des users
-            PlayerInfoView.updateUserView(obj);
+           // PlayerInfoView.updateUserView(obj);
         }
         console.log(localStorage);
     }
