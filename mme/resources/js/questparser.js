@@ -124,10 +124,16 @@ var FitnessRPG = FitnessRPG || {};
                 var questelement = elm.parentNode;
                 var questId = questelement.getAttribute("id");
                 console.log(questId);
+                var jsonobj = JSON.parse(localStorage.getItem("quests"));
+                console.log(jsonobj);
+
                 for (var i = 0; i < availableQuests.length; i++ ){
                     if (availableQuests[i].id === questId){
                         availableQuests[i].status = "erledigt";
+                        jsonobj.questlist.quest[i].status = "erledigt";
                         console.log(availableQuests);
+                        console.log(localStorage);
+                        localStorage.setItem("quests",JSON.stringify(jsonobj));
                     }
                 }
             }
@@ -148,8 +154,8 @@ var FitnessRPG = FitnessRPG || {};
 
             function DOMQuestElement(parent, id) {
 
-            var quest = document.createElement("LI");
-               var title = document.createElement("div");
+                var quest = document.createElement("LI");
+                var title = document.createElement("div");
                 title.className = "questtitle";
                 title.innerHTML = availableQuests[id].name;
                 var readMoreIcon = document.createElement("img");
@@ -163,6 +169,7 @@ var FitnessRPG = FitnessRPG || {};
                 var removeButton = document.createElement("div");
                 removeButton.className = "removebuttonquest";
                 var removeButtonInner = document.createElement("div");
+
                 var accept = document.createElement("button");
                 accept.className = "button";
                 accept.id = "accept";
@@ -174,13 +181,16 @@ var FitnessRPG = FitnessRPG || {};
                 removeButton.appendChild(removeButtonInner);
                 quest.appendChild(title);
                 quest.appendChild(removeButton);
-                quest.appendChild(accept);
+                if(availableQuests[id].status === "offen"){
+                    quest.appendChild(accept);
+                    accept.addEventListener("click",acceptbutton);
+                }
                 quest.appendChild(readMoreIcon);
                 quest.appendChild(readMore);
                 quest.className = "questAvailable";
                 quest.id = id;
                 parent.appendChild(quest);
-                accept.addEventListener("click",acceptbutton);
+
                 readMoreIcon.addEventListener("click",readMoreButtonClick);
             }
 
