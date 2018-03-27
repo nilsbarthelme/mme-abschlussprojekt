@@ -174,13 +174,9 @@ var FitnessRPG = FitnessRPG || {};
                 accept.className = "button";
                 accept.id = "accept";
                 accept.innerHTML = "Accept";
-                removeButtonInner.className = "x flop large";
-                for (var i = 0; i < 4; i++) {
-                    removeButtonInner.appendChild(document.createElement("b"));
-                }
-                removeButton.appendChild(removeButtonInner);
+
                 quest.appendChild(title);
-                quest.appendChild(removeButton);
+
                 if(availableQuests[id].status === "offen"){
                     quest.appendChild(accept);
                     accept.addEventListener("click",acceptbutton);
