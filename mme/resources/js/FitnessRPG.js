@@ -8,7 +8,7 @@ var FitnessRPG = (function() {
         availablequestview = new FitnessRPG.AvailableQuestView();
 
         updateLocalStorage();
-        updateCharacterImage();
+        PlayerInfoView.updateCharacterImage();
     }
 
     function updateLocalStorage() {
@@ -25,35 +25,9 @@ var FitnessRPG = (function() {
             console.log(JSON.parse(localStorage.getItem("quests")).questlist.quest[0]);
             console.log(obj); // java objekt
             console.log(obj.playerinfo[0].level); //level des users
-            updateUserView();
+            PlayerInfoView.updateUserView(obj);
         }
         console.log(localStorage);
-    }
-    function updateCharacterImage() {
-        var char = document.getElementById("character");
-        var character = localStorage.getItem("character");
-        switch (character){
-            case "char_1":
-                char.setAttribute("src","resources/img/Char1Level1.png");
-                break;
-            case "char_2":
-                char.setAttribute("src","resources/img/Char2Level1.png");
-                break;
-            case "char_3":
-                char.setAttribute("src","resources/img/Char3Level5.png");
-                break;
-        }
-        console.log(character);
-
-    }
-
-    function updateUserView() {
-        document.querySelector(".username").textContent = obj.playerinfo[0].name;
-        document.querySelector(".level").textContent = "Level: " + obj.playerinfo[0].level;
-        document.querySelector(".expprogressback").style.width = obj.playerinfo[0].exp + "%";
-        document.querySelector(".strprogressback").style.width = obj.playerinfo[0].str + "%";
-        document.querySelector(".endprogressback").style.width = obj.playerinfo[0].end + "%";
-        document.querySelector(".agiprogressback").style.width = obj.playerinfo[0].agi + "%";
     }
 
     function setNewPlayerinfo() {
@@ -78,9 +52,7 @@ var FitnessRPG = (function() {
             localStorage.setItem("quests", jsonString);
             return jsonString;
         };
-
         client.send();
-
     }
 
     that.init = init;
