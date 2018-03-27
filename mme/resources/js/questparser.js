@@ -210,14 +210,10 @@ var FitnessRPG = FitnessRPG || {};
             }
             function createRequirements(questData,parent) {
             for(var i = 0; i < questData.requirements.length;i++){
-                var checkbox = document.createElement("input");
-                    checkbox.setAttribute("type","checkbox");
-                    checkbox.className = "checkbox";
                     var requirement = document.createElement("div");
                     requirement.className = "exercise";
                     requirement.innerHTML = "Anforderungen: ";
                     requirement.innerHTML += questData.requirements[i];
-                      requirement.appendChild(checkbox);
                     console.log(questData.requirements);
                     console.log(questData.requirements[0]);
                     parent.appendChild(requirement);
@@ -243,16 +239,11 @@ var FitnessRPG = FitnessRPG || {};
             }
             function createAwards(questData,parent) {
                 for(var i = 0; i < questData.award.length;i++){
-                    var checkbox = document.createElement("input");
-                    checkbox.setAttribute("type","checkbox");
-                    checkbox.className = "checkbox";
                     var award = document.createElement("div");
                     award.className = "exercise";
                     award.innerHTML = "Belohnungen: ";
                     award.innerHTML += questData.award[i].awardid;
                     award.innerHTML += " "+ questData.award[i].value;
-                    award.appendChild(checkbox);
-
                     parent.appendChild(award);
                 }
 
