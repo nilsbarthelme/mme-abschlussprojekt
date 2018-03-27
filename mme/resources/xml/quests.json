@@ -2,7 +2,8 @@
   "questlist": {
     "quest": [
       {
-        "-id": "0",
+        "status": "offen",
+        "questid": "0",
         "name": "Ausdauerübung",
         "dauer": "1 Woche ",
         "uebung": [
@@ -16,17 +17,18 @@
         ],
         "belohnung": [
           {
-            "-id": "stren",
-            "#text": "10"
+            "awardid": "stren",
+            "value": "10"
           },
           {
-            "-id": "stam",
-            "#text": "10" 
+            "awardid": "stam",
+            "value": "10"
           }
         ]
       },
       {
-        "-id": "1",
+          "status": "offen",
+        "questid": "1",
         "name": "Kraftübung",
         "dauer": "1 Wochen ",
         "uebung": [
@@ -40,17 +42,18 @@
         ],
         "belohnung": [
           {
-            "-id": "stren",
-            "#text": "20"
+            "awardid": "stren",
+            "value": "20"
           },
           {
-            "-id": "stam",
-            "#text": "10"
+            "awardid": "stam",
+            "value": "10"
           }
         ]
       },
       {
-        "-id": "2",
+          "status": "offen",
+        "questid": "2",
         "name": "Schnelligkeit",
         "dauer": "2 Wochen ",
         "uebung": [
@@ -65,17 +68,18 @@
         ],
         "belohnung": [
           {
-            "-id": "stren",
-            "#text": "20"
+            "awardid": "stren",
+            "value": "20"
           },
           {
-            "-id": "stam",
-            "#text": "10"
+            "awardid": "stam",
+            "value": "10"
           }
         ]
       },
       {
-        "-id": "3",
+          "status": "offen",
+        "questid": "3",
         "name": "Ausdauerübung",
         "dauer": "1 Woche ",
         "uebung": [
@@ -90,17 +94,18 @@
         ],
         "belohnung": [
           {
-            "-id": "stren",
-            "#text": "20"
+            "awardid": "stren",
+            "value": "20"
           },
           {
-            "-id": "stam",
-            "#text": "10"
+            "awardid": "stam",
+            "value": "10"
           }
         ]
       },
       {
-        "-id": "4",
+          "status": "offen",
+        "questid": "4",
         "name": "Koordinationstraining",
         "dauer": "2 Wochen ",
         "uebung": [
@@ -114,17 +119,18 @@
         ],
         "belohnung": [
           {
-            "-id": "stren",
-            "#text": "20"
+            "awardid": "stren",
+            "value": "20"
           },
           {
-            "-id": "stam",
-            "#text": "10"
+            "awardid": "stam",
+            "value": "10"
           }
         ]
       },
       {
-        "-id": "5",
+          "status": "offen",
+        "questid": "5",
         "name": "Beweglichkeit",
         "dauer": "2 Wochen ",
         "uebung": [
@@ -138,17 +144,18 @@
         ],
         "belohnung": [
           {
-            "-id": "stren",
-            "#text": "20"
+            "awardid": "stren",
+            "value": "20"
           },
           {
-            "-id": "stam",
-            "#text": "10"
+            "awardid": "stam",
+            "value": "10"
           }
         ]
       },
       {
-        "-id": "6",
+          "status": "erledigt",
+        "questid": "6",
         "name": "Ausdauertraining",
         "dauer": "1 Wochen ",
         "uebung": [
@@ -161,17 +168,18 @@
         ],
         "belohnung": [
           {
-            "-id": "stren",
-            "#text": "20"
+            "awardid": "stren",
+            "value": "20"
           },
           {
-            "-id": "stam",
-            "#text": "10"
+            "awardid": "stam",
+            "value": "10"
           }
         ]
       },
       {
-        "-id": "7",
+          "status": "offen",
+        "questid": "7",
         "name": "Crossfit",
         "dauer": "2 Wochen ",
         "uebung": [
@@ -185,12 +193,12 @@
         ],
         "belohnung": [
           {
-            "-id": "stren",
-            "#text": "20"
+            "awardid": "stren",
+            "value": "20"
           },
           {
-            "-id": "stam",
-            "#text": "10"
+            "awardid": "stam",
+            "value": "10"
           }
         ]
       }

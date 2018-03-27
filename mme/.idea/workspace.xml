@@ -11,12 +11,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="selection.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/selection.js">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="203">
+              <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="24" selection-end-line="209" selection-end-column="24" />
+              <folding>
+                <marker date="1522150091077" expanded="true" signature="2169:2171" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -31,23 +33,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messagebox.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/css/messagebox.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Char1Level1.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/img/Char1Level1.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="slider.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/slider.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,21 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selectionEffect.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/selectionEffect.js">
+      <file leaf-file-name="quests.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/xml/quests.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="697">
+              <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+            <state relative-caret-position="251">
+              <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -81,10 +66,10 @@
       <file leaf-file-name="FitnessRPG.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/FitnessRPG.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <marker date="1522089708194" expanded="true" signature="2340:2346" ph="{...}" />
+                <marker date="1522149470353" expanded="true" signature="2628:2634" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -100,11 +85,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questparser.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="questparser.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/questparser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="213">
+              <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quests.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/xml/quests.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerinfo.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/xml/playerinfo.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,7 +148,6 @@
         <option value="$PROJECT_DIR$/signupForm.html" />
         <option value="$PROJECT_DIR$/characterSelection.html" />
         <option value="$PROJECT_DIR$/resources/css/characterSelection.css" />
-        <option value="$PROJECT_DIR$/resources/xml/quests.json" />
         <option value="$PROJECT_DIR$/resources/js/AvailableQuestView.js" />
         <option value="$PROJECT_DIR$/resources/js/quests.js" />
         <option value="$PROJECT_DIR$/resources/js/Quests.js" />
@@ -151,7 +155,6 @@
         <option value="$PROJECT_DIR$/resources/css/messagebox.css" />
         <option value="$PROJECT_DIR$/resources/css/questbox.css" />
         <option value="$PROJECT_DIR$/resources/xml/quests.xml" />
-        <option value="$PROJECT_DIR$/resources/css/styles.css" />
         <option value="$PROJECT_DIR$/resources/xml/playerinfo" />
         <option value="$PROJECT_DIR$/resources/xml/playerinfo.json" />
         <option value="$PROJECT_DIR$/resources/css/slider.css" />
@@ -159,9 +162,11 @@
         <option value="$PROJECT_DIR$/js/selection.js" />
         <option value="$PROJECT_DIR$/resources/js/selection.js" />
         <option value="$PROJECT_DIR$/slider.html" />
-        <option value="$PROJECT_DIR$/resources/js/questparser.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/resources/xml/quests.json" />
         <option value="$PROJECT_DIR$/resources/js/FitnessRPG.js" />
+        <option value="$PROJECT_DIR$/resources/css/styles.css" />
+        <option value="$PROJECT_DIR$/resources/js/questparser.js" />
       </list>
     </option>
   </component>
@@ -258,6 +263,12 @@
               <item name="mme" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mme" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,7 +420,7 @@
         <state relative-caret-position="2580">
           <caret line="172" column="27" lean-forward="false" selection-start-line="172" selection-start-column="27" selection-end-line="172" selection-end-column="27" />
           <folding>
-            <marker date="1521378825652" expanded="true" signature="2169:2171" ph="{...}" />
+            <marker date="1522150091077" expanded="true" signature="2169:2171" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -435,7 +446,7 @@
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <marker date="1522089708194" expanded="true" signature="2340:2346" ph="{...}" />
+            <marker date="1522149470353" expanded="true" signature="2628:2634" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -445,7 +456,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521378825652" expanded="true" signature="2169:2171" ph="{...}" />
+            <marker date="1522150091077" expanded="true" signature="2169:2171" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -463,7 +474,7 @@
         <state relative-caret-position="3077">
           <caret line="181" column="1" lean-forward="true" selection-start-line="181" selection-start-column="1" selection-end-line="181" selection-end-column="1" />
           <folding>
-            <marker date="1521378825652" expanded="true" signature="2169:2171" ph="{...}" />
+            <marker date="1522150091077" expanded="true" signature="2169:2171" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -536,7 +547,7 @@
         <state relative-caret-position="645">
           <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <marker date="1521378825652" expanded="true" signature="2169:2171" ph="{...}" />
+            <marker date="1522150091077" expanded="true" signature="2169:2171" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -560,7 +571,7 @@
         <state relative-caret-position="990">
           <caret line="66" column="20" lean-forward="false" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
           <folding>
-            <marker date="1521378825652" expanded="true" signature="2169:2171" ph="{...}" />
+            <marker date="1522150091077" expanded="true" signature="2169:2171" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -622,31 +633,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/Quest.js" />
-    <entry file="file://$PROJECT_DIR$/resources/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="23" lean-forward="false" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
-          <folding>
-            <marker date="1521378825652" expanded="true" signature="2169:2171" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/xml/quests.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/xml/quests.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/xml/playerinfo" />
     <entry file="file://$PROJECT_DIR$/resources/js/AvailableQuestController.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -671,14 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/xml/playerinfo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/img/pancake.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -692,22 +670,6 @@
     <entry file="file://$PROJECT_DIR$/resources/img/Char1Level1.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/AvailableQuestView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/selection.js">
@@ -734,6 +696,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/xml/playerinfo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/xml/quests.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/slider.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -742,28 +720,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/questparser.js">
+    <entry file="file://$PROJECT_DIR$/resources/xml/quests.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="697">
+          <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="24" selection-end-line="209" selection-end-column="24" />
+          <folding>
+            <marker date="1522150091077" expanded="true" signature="2169:2171" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/AvailableQuestView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/FitnessRPG.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1522089708194" expanded="true" signature="2340:2346" ph="{...}" />
+            <marker date="1522149470353" expanded="true" signature="2628:2634" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/resources/js/questparser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+        <state relative-caret-position="213">
+          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
           <folding />
         </state>
       </provider>

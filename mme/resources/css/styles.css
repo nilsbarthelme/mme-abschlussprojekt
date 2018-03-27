@@ -200,7 +200,26 @@ body{
   border-right-color:#AAAAAA;
   right:-2px;
 }
-
+/*
+design of abgeben button*/
+.sendbutton {
+    width: 200px;
+    height: 50px;
+  float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  margin-right: 60px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #af0700;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 /* desgin of accept button */
 .button {
   float: right;
@@ -219,6 +238,14 @@ body{
 }
 
 .button:hover {background-color: #3e8e41}
+
+.sendbutton:hover {background-color: #8e8280
+}
+.sendbutton:active {
+  background-color: #af0700;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 .button:active {
   background-color: #3e8e41;
