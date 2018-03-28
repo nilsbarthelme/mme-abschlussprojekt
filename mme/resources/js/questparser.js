@@ -146,7 +146,7 @@ var FitnessRPG = FitnessRPG || {};
                 quest.appendChild(titlequest);
                 quest.appendChild(duration);
                 createExercises(clickedQuest,quest);
-                createRequirements(clickedQuest,quest);
+
                 createAwards(clickedQuest,quest);
                 quest.appendChild(sendButton);
                 questActive.appendChild(quest);
@@ -178,12 +178,16 @@ var FitnessRPG = FitnessRPG || {};
             function removeButtonActive() {
                 var elm = event.target;
                 var parent = document.getElementsByClassName("questelement")[0];
-                parent.parentNode.removeChild(parent);
-                var questelement = elm.parentNode.parentNode.parentNode;
-                var questId = questelement.getAttribute("id");
-                resetQuest(questId);
-                localStorage.removeItem("activeQuest");
-                console.log(localStorage.getItem("activeQuest"));
+                if (confirm('Bist du dir sicher, dass du diese Quest abbrechen willst?')) {
+                     parent.parentNode.removeChild(parent);
+                        var questelement = elm.parentNode.parentNode.parentNode;
+                    var questId = questelement.getAttribute("id");
+                    resetQuest(questId);
+                    localStorage.removeItem("activeQuest");
+                } else {
+
+                 }
+
 
             }
             function removeActiveFinished() {
