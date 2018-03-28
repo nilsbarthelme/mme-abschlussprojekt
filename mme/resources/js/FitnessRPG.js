@@ -1,14 +1,15 @@
 var FitnessRPG = (function() {
     "use strict";
 
-    var that = {}, availablequestview,questparser, playerinfo, obj,quests,questsobj;
+    var that = {}, availablequestview,questparser, playerinfo, obj,quests,questsobj,playerinfoview;
 
     function init() {
         questparser = new FitnessRPG.questParser();
         availablequestview = new FitnessRPG.AvailableQuestView();
+        playerinfoview = new FitnessRPG.PlayerInfoView();
 
         updateLocalStorage();
-       // PlayerInfoView.updateCharacterImage();
+       playerinfoview.updateCharacterImage();
     }
 
     function updateLocalStorage() {
