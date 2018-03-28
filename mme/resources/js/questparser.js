@@ -41,13 +41,20 @@ var FitnessRPG = FitnessRPG || {};
 
         }
         function buildQuestElements() {
-            var rightside = document.getElementsByClassName("right")[0];
-            var index = xmldoc.getElementsByTagName("quest");
-            for(var i = 0; i < index.length;i++){
-                var questid = availableQuests[i].id;
-                DOMQuestElement(rightside,questid);
-            }
+            if(localStorage.getItem("activeQuest")!== null || undefined){
+               var activeIndex = localStorage.getItem("activeQuest");
+               console.log(activeIndex);
+               console.log(availableQuests);
+               createActiveQuest(availableQuests[activeIndex]);
 
+            }
+            var rightside = document.getElementsByClassName("right")[0];
+            var index = availableQuests.length;
+            for(var i = 0; i < index;i++){
+                var questid = availableQuests[i].id;
+                if(questid !== activeIndex){
+                DOMQuestElement(rightside,questid);}
+            }
 
         }
         function acceptbutton(){
@@ -117,6 +124,7 @@ var FitnessRPG = FitnessRPG || {};
                 parent.appendChild(questbox);
                 removeButton.addEventListener("click",removeButtonActive);
                 sendButton.addEventListener("click",changeStatus);
+                localStorage.setItem("activeQuest",quest.id);
 
             }
             function changeStatus() {
@@ -144,6 +152,7 @@ var FitnessRPG = FitnessRPG || {};
                 var questelement = elm.parentNode.parentNode.parentNode;
                 var questId = questelement.getAttribute("id");
                 resetQuest(questId);
+                localStorage.removeItem("activeQuest");
 
             }
             function removeActiveFinished() {
@@ -154,6 +163,7 @@ var FitnessRPG = FitnessRPG || {};
                 console.log(questelement);
                 var questId = questelement.getAttribute("id");
                 resetQuest(questId);
+                 localStorage.removeItem("activeQuest");
 
             }
 
