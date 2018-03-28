@@ -6,6 +6,7 @@ var FitnessRPG = (function() {
     function init() {
         questparser = new FitnessRPG.questParser();
         availablequestview = new FitnessRPG.AvailableQuestView();
+
         updateLocalStorage();
        // PlayerInfoView.updateCharacterImage();
     }

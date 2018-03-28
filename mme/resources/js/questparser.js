@@ -115,7 +115,7 @@ var FitnessRPG = FitnessRPG || {};
                 questActive.appendChild(quest);
                 var parent = document.getElementsByClassName("middle")[0];
                 parent.appendChild(questbox);
-                removeButton.addEventListener("click",removeActive);
+                removeButton.addEventListener("click",removeButtonActive);
                 sendButton.addEventListener("click",changeStatus);
 
             }
@@ -132,15 +132,26 @@ var FitnessRPG = FitnessRPG || {};
                         availableQuests[i].status = "erledigt";
                         jsonobj.questlist.quest[i].status = "erledigt";
                         localStorage.setItem("quests",JSON.stringify(jsonobj));
+                        alert("Quest erfolgreich abgeschlossen!");
+                        removeActiveFinished();
                     }
-                }}
+                }} else { alert("Sie Müssen erst alle Aufgaben der Quest erledigen um die Quest abzuschließen!")}
             }
-            function removeActive() {
-
+            function removeButtonActive() {
                 var elm = event.target;
                 var parent = document.getElementsByClassName("questelement")[0];
                 parent.parentNode.removeChild(parent);
                 var questelement = elm.parentNode.parentNode.parentNode;
+                var questId = questelement.getAttribute("id");
+                resetQuest(questId);
+
+            }
+            function removeActiveFinished() {
+                var elm = event.target;
+                var parent = document.getElementsByClassName("questelement")[0];
+                parent.parentNode.removeChild(parent);
+                var questelement = elm.parentNode;
+                console.log(questelement);
                 var questId = questelement.getAttribute("id");
                 resetQuest(questId);
 
@@ -166,6 +177,7 @@ var FitnessRPG = FitnessRPG || {};
             }
             function resetQuest(id) {
                 var rightside = document.getElementsByClassName("right")[0];
+                console.log(id);
                 DOMQuestElement(rightside,id);
             }
 
@@ -174,7 +186,9 @@ var FitnessRPG = FitnessRPG || {};
                 var quest = document.createElement("LI");
                 var title = document.createElement("div");
                 title.className = "questtitle";
+                console.log(availableQuests[id])
                 title.innerHTML = availableQuests[id].name;
+
                 var readMoreIcon = document.createElement("img");
                 readMoreIcon.src = "resources/img/add-button-inside-black-circle.png";
                 readMoreIcon.height = "40";
@@ -197,10 +211,13 @@ var FitnessRPG = FitnessRPG || {};
                 if(availableQuests[id].status === "offen"){
                     quest.appendChild(accept);
                     accept.addEventListener("click",acceptbutton);
-                }
+                    quest.className = "questAvailable";
+                } else {
+                    quest.className = "questDone";
+                            readMore.innerHTML = "";
+                            readMore.innerHTML = "Erledigt!"}
                 quest.appendChild(readMoreIcon);
                 quest.appendChild(readMore);
-                quest.className = "questAvailable";
                 quest.id = id;
                 parent.appendChild(quest);
 
