@@ -235,6 +235,21 @@ design of abgeben button*/
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
+.buttonRequirements {
+  float: right;
+    margin-top: -30px;
+  margin-right: 60px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #da1a00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 /* desgin of accept button */
 .button {
   float: right;

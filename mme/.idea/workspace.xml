@@ -14,31 +14,11 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="126" column="25" lean-forward="false" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+            <state relative-caret-position="530">
+              <caret line="247" column="0" lean-forward="false" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
               <folding>
-                <marker date="1522231089436" expanded="true" signature="2531:2533" ph="{...}" />
+                <marker date="1522235380484" expanded="true" signature="2531:2533" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="questbox.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/css/questbox.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="92" column="5" lean-forward="false" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slider.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/slider.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -66,11 +46,11 @@
       <file leaf-file-name="FitnessRPG.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/FitnessRPG.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="108">
               <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <marker date="1522232211475" expanded="true" signature="156:317" ph="{...}" />
-                <marker date="1522232211475" expanded="true" signature="1847:1853" ph="{...}" />
+                <marker date="1522236217553" expanded="true" signature="156:317" ph="{...}" />
+                <marker date="1522236217553" expanded="true" signature="1847:1853" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -86,21 +66,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questparser.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/questparser.js">
+      <file leaf-file-name="quests.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/xml/quests.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+            <state relative-caret-position="675">
+              <caret line="305" column="11" lean-forward="false" selection-start-line="305" selection-start-column="11" selection-end-line="305" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quests.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/xml/quests.json">
+      <file leaf-file-name="plugins.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/plugins.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerInfoView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/PlayerInfoView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="questparser.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/questparser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="185" column="65" lean-forward="false" selection-start-line="185" selection-start-column="65" selection-end-line="185" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerinfo.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/xml/playerinfo.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -128,6 +138,8 @@
       <find>questAva</find>
       <find>listener</find>
       <find>console</find>
+      <find>getQuestd</find>
+      <find>ac</find>
       <find>questA</find>
     </findStrings>
   </component>
@@ -148,18 +160,18 @@
         <option value="$PROJECT_DIR$/resources/css/messagebox.css" />
         <option value="$PROJECT_DIR$/resources/xml/quests.xml" />
         <option value="$PROJECT_DIR$/resources/xml/playerinfo" />
-        <option value="$PROJECT_DIR$/resources/xml/playerinfo.json" />
         <option value="$PROJECT_DIR$/resources/css/slider.css" />
         <option value="$PROJECT_DIR$/js/selectionEffect.js" />
         <option value="$PROJECT_DIR$/js/selection.js" />
         <option value="$PROJECT_DIR$/resources/js/selection.js" />
         <option value="$PROJECT_DIR$/slider.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/resources/xml/quests.json" />
         <option value="$PROJECT_DIR$/resources/css/questbox.css" />
+        <option value="$PROJECT_DIR$/resources/xml/playerinfo.json" />
         <option value="$PROJECT_DIR$/resources/css/styles.css" />
-        <option value="$PROJECT_DIR$/resources/js/FitnessRPG.js" />
         <option value="$PROJECT_DIR$/resources/js/questparser.js" />
+        <option value="$PROJECT_DIR$/resources/xml/quests.json" />
+        <option value="$PROJECT_DIR$/resources/js/FitnessRPG.js" />
       </list>
     </option>
   </component>
@@ -402,24 +414,6 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
-          <caret line="77" column="21" lean-forward="false" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2580">
-          <caret line="172" column="27" lean-forward="false" selection-start-line="172" selection-start-column="27" selection-end-line="172" selection-end-column="27" />
-          <folding>
-            <marker date="1522231089436" expanded="true" signature="2531:2533" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
           <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
           <folding />
         </state>
@@ -437,8 +431,8 @@
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <marker date="1522232211475" expanded="true" signature="156:317" ph="{...}" />
-            <marker date="1522232211475" expanded="true" signature="1847:1853" ph="{...}" />
+            <marker date="1522236217553" expanded="true" signature="156:317" ph="{...}" />
+            <marker date="1522236217553" expanded="true" signature="1847:1853" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -448,7 +442,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522231089436" expanded="true" signature="2531:2533" ph="{...}" />
+            <marker date="1522235380484" expanded="true" signature="2531:2533" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -466,7 +460,7 @@
         <state relative-caret-position="3077">
           <caret line="181" column="1" lean-forward="true" selection-start-line="181" selection-start-column="1" selection-end-line="181" selection-end-column="1" />
           <folding>
-            <marker date="1522231089436" expanded="true" signature="2531:2533" ph="{...}" />
+            <marker date="1522235380484" expanded="true" signature="2531:2533" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -535,7 +529,7 @@
         <state relative-caret-position="645">
           <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <marker date="1522231089436" expanded="true" signature="2531:2533" ph="{...}" />
+            <marker date="1522235380484" expanded="true" signature="2531:2533" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -559,7 +553,7 @@
         <state relative-caret-position="990">
           <caret line="66" column="20" lean-forward="false" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
           <folding>
-            <marker date="1522231089436" expanded="true" signature="2531:2533" ph="{...}" />
+            <marker date="1522235380484" expanded="true" signature="2531:2533" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -660,13 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/xml/playerinfo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/questbox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
@@ -679,14 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/xml/quests.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -709,11 +688,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="126" column="25" lean-forward="false" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+        <state relative-caret-position="530">
+          <caret line="247" column="0" lean-forward="false" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
           <folding>
-            <marker date="1522231089436" expanded="true" signature="2531:2533" ph="{...}" />
+            <marker date="1522235380484" expanded="true" signature="2531:2533" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -725,22 +712,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/FitnessRPG.js">
+    <entry file="file://$PROJECT_DIR$/resources/js/PlayerInfoView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <marker date="1522232211475" expanded="true" signature="156:317" ph="{...}" />
-            <marker date="1522232211475" expanded="true" signature="1847:1853" ph="{...}" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/questparser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+        <state relative-caret-position="352">
+          <caret line="185" column="65" lean-forward="false" selection-start-line="185" selection-start-column="65" selection-end-line="185" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/xml/playerinfo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/xml/quests.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="305" column="11" lean-forward="false" selection-start-line="305" selection-start-column="11" selection-end-line="305" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/FitnessRPG.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1522236217553" expanded="true" signature="156:317" ph="{...}" />
+            <marker date="1522236217553" expanded="true" signature="1847:1853" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

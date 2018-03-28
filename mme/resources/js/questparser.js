@@ -7,6 +7,7 @@ var FitnessRPG = FitnessRPG || {};
         var that = {};
         var xmldoc;
         var availableQuests = [];
+        var playerInfo =  JSON.parse(localStorage.getItem("playerinfo"));
 
         function initEventListeners() {
             checkLocalStorage();
@@ -57,10 +58,39 @@ var FitnessRPG = FitnessRPG || {};
             }
 
         }
+        function checkRequirements(id) {
+
+            var lvl = parseInt(playerInfo.playerinfo[0].level);
+           var exp = parseInt(playerInfo.playerinfo[0].exp);
+            var str = parseInt(playerInfo.playerinfo[0].str);
+            var end = parseInt(playerInfo.playerinfo[0].end);
+            var agi = parseInt(playerInfo.playerinfo[0].agi);
+            var lvlrequ = parseInt(availableQuests[id].requirements[0]);
+            var exprequ = parseInt(availableQuests[id].requirements[1]);
+            var strrequ = parseInt(availableQuests[id].requirements[2]);
+            var endrequ = parseInt(availableQuests[id].requirements[3]);
+            var agirequ = parseInt(availableQuests[id].requirements[4]);
+            if(lvl>= lvlrequ && exp >= exprequ && str >= strrequ && end >= endrequ && agi >= agirequ){
+                console.log(true);
+                return true;
+            } else {
+                console.log(false);
+                return false;}
+
+        }
+        function requirementsNotFulfilled() {
+            alert("Sie erfüllen die Anforderungen für diese Quest nicht!");
+        }
         function acceptbutton(){
            var elm = event.target;
-          elm.parentNode.parentNode.removeChild(elm.parentNode);
-          createActiveQuest(getQuestData(elm));
+          var currentQuest = getQuestData(elm);
+          if(localStorage.getItem("questActive") === null){
+              elm.parentNode.parentNode.removeChild(elm.parentNode);
+              createActiveQuest(getQuestData(elm));} else {
+              console.log(localStorage.getItem("activeQuest"));
+              alert("Sie können nur eine Quest gleichzeitig annehmen!");
+          }
+
 
         }
 
@@ -153,6 +183,7 @@ var FitnessRPG = FitnessRPG || {};
                 var questId = questelement.getAttribute("id");
                 resetQuest(questId);
                 localStorage.removeItem("activeQuest");
+                console.log(localStorage.getItem("activeQuest"));
 
             }
             function removeActiveFinished() {
@@ -164,6 +195,7 @@ var FitnessRPG = FitnessRPG || {};
                 var questId = questelement.getAttribute("id");
                 resetQuest(questId);
                  localStorage.removeItem("activeQuest");
+                 console.log(localStorage.getItem("activeQuest"));
 
             }
 
@@ -192,13 +224,11 @@ var FitnessRPG = FitnessRPG || {};
             }
 
             function DOMQuestElement(parent, id) {
-
                 var quest = document.createElement("LI");
                 var title = document.createElement("div");
                 title.className = "questtitle";
-                console.log(availableQuests[id])
-                title.innerHTML = availableQuests[id].name;
 
+                title.innerHTML = availableQuests[id].name;
                 var readMoreIcon = document.createElement("img");
                 readMoreIcon.src = "resources/img/add-button-inside-black-circle.png";
                 readMoreIcon.height = "40";
@@ -210,22 +240,28 @@ var FitnessRPG = FitnessRPG || {};
                 var removeButton = document.createElement("div");
                 removeButton.className = "removebuttonquest";
                 var removeButtonInner = document.createElement("div");
-
                 var accept = document.createElement("button");
                 accept.className = "button";
                 accept.id = "accept";
                 accept.innerHTML = "Accept";
-
                 quest.appendChild(title);
-
-                if(availableQuests[id].status === "offen"){
+                if(availableQuests[id].status === "offen" && checkRequirements(id)){
                     quest.appendChild(accept);
                     accept.addEventListener("click",acceptbutton);
                     quest.className = "questAvailable";
-                } else {
+                } else if (availableQuests[id].status === "offen" && !checkRequirements(id)){
+                    quest.appendChild(accept);
+                    accept.className = "buttonRequirements";
+                    accept.innerHTML = "Nicht erfüllt!";
+                    accept.addEventListener("click",requirementsNotFulfilled);
+                    quest.className = "questAvailable";
+
+                }else{
+
                     quest.className = "questDone";
-                            readMore.innerHTML = "";
-                            readMore.innerHTML = "Erledigt!"}
+                    readMore.innerHTML = "";
+                    readMore.innerHTML = "Erledigt!"}
+
                 quest.appendChild(readMoreIcon);
                 quest.appendChild(readMore);
                 quest.id = id;
