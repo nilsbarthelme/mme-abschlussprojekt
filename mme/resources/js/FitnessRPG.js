@@ -10,6 +10,8 @@ var FitnessRPG = (function() {
 
         updateLocalStorage();
        playerinfoview.updateCharacterImage();
+       playerinfoview.updateCharacterLevel();
+       playerinfoview.updateCharacterName();
     }
 
     function updateLocalStorage() {
