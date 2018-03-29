@@ -1,4 +1,4 @@
-var FitnessRPG = FitnessRPG || {};
+/*var FitnessRPG = FitnessRPG || {};
     FitnessRPG.questParser = function () {
 
 
@@ -326,4 +326,4 @@ var FitnessRPG = FitnessRPG || {};
 
             that.parseQuests = parseQuests;
             return that;
-        };
+        };*/
