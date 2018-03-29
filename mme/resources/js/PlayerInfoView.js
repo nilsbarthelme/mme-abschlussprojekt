@@ -3,16 +3,15 @@ FitnessRPG.PlayerInfoView = function () {
 
     "use strict";
 
-    var that = {};
+    var that = {},
+    playerLevelOffset = 10;
 
     function updateUserView() {
         var obj = JSON.parse(localStorage.getItem("playerinfo"));
-        console.log("in: updateUserView");
-        console.log(obj);
-        console.log(obj.playerinfo[0].name);
+        var expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * 100;
         document.querySelector(".username").textContent = obj.playerinfo[0].name;
         document.querySelector(".level").textContent = "Level: " + obj.playerinfo[0].level;
-        document.querySelector(".expprogressback").style.width = obj.playerinfo[0].exp + "%";
+        document.querySelector(".expprogressback").style.width = expInPercent + "%";
         document.querySelector(".strprogressback").style.width = obj.playerinfo[0].str + "%";
         document.querySelector(".endprogressback").style.width = obj.playerinfo[0].end + "%";
         document.querySelector(".agiprogressback").style.width = obj.playerinfo[0].agi + "%";
@@ -40,12 +39,12 @@ FitnessRPG.PlayerInfoView = function () {
         var currentLevel = playerinfoObj.playerinfo[0].level;
         charLevel.innerHTML = "Level: " + currentLevel;
     }
+    
     function updateCharacterName() {
         var charName = document.getElementsByClassName("username")[0];
         var playerinfoObj = JSON.parse(localStorage.getItem("playerinfo"));
         var name = playerinfoObj.playerinfo[0].name;
         charName.innerHTML =  name;
-
     }
 
     that.updateUserView = updateUserView;
