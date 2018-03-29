@@ -3,6 +3,7 @@
         {
 
             "name" : "Example",
+            "email": "testmail@test.de",
             "level" : "3",
             "exp" : "0",
             "str" : "0",
