@@ -7,6 +7,7 @@ var FitnessRPG = FitnessRPG || {};
         init();
         function init() {
             initListener()
+            console.log(localStorage);
 
         }
 

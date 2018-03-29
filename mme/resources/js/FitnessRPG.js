@@ -1,6 +1,9 @@
 var FitnessRPG = (function() {
     "use strict";
+   if(localStorage.length === 0){
+        window.open('signup.html',"_self");
 
+    }
     var that = {}, availablequestview,
         questparser,
         playerinfo,
@@ -16,6 +19,7 @@ var FitnessRPG = (function() {
         playerInfoModel;
 
     function init() {
+
 
         availablequestview = new FitnessRPG.AvailableQuestView();
         availableQuestModel = new FitnessRPG.AvailableQuestModel();
@@ -39,15 +43,10 @@ var FitnessRPG = (function() {
        playerinfoview.updateCharacterImage();
        playerinfoview.updateCharacterLevel();
        playerinfoview.updateCharacterName();
-       console.log(availableQuestModel.availableQuests);
     }
 
 
-    function updateLocalStorage() {
-        if (localStorage.length === 0) {
-            setNewPlayerinfo();
-            setQuestList();
-        } else {
+   function updateLocalStorage() {
             playerinfo = localStorage.getItem("playerinfo");
             quests = localStorage.getItem("quests");
             // json string
@@ -59,8 +58,8 @@ var FitnessRPG = (function() {
             console.log(obj.playerinfo[0].level); //level des users
            // PlayerInfoView.updateUserView(obj);
         }
-        console.log(localStorage);
-    }
+
+
 
     function setNewPlayerinfo() {
         var jsonString = "";
