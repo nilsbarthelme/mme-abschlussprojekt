@@ -1,6 +1,7 @@
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.PlayerInfoView = function () {
 
+
     "use strict";
 
     var that = {};

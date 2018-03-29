@@ -1,14 +1,15 @@
 var FitnessRPG = (function() {
     "use strict";
 
-    var that = {}, availablequestview,questparser, playerinfo, obj,quests,questsobj;
+    var that = {}, availablequestview,questparser, playerinfo, obj,quests,questsobj, playerInfoView;
 
     function init() {
+        playerInfoView = new FitnessRPG.PlayerInfoView();
         questparser = new FitnessRPG.questParser();
         availablequestview = new FitnessRPG.AvailableQuestView();
 
         updateLocalStorage();
-        PlayerInfoView.updateCharacterImage();
+        playerInfoView.updateCharacterImage();
     }
 
     function updateLocalStorage() {
@@ -25,9 +26,15 @@ var FitnessRPG = (function() {
             console.log(JSON.parse(localStorage.getItem("quests")).questlist.quest[0]);
             console.log(obj); // java objekt
             console.log(obj.playerinfo[0].level); //level des users
-            PlayerInfoView.updateUserView(obj);
+            playerInfoView.updateUserView(obj);
         }
         console.log(localStorage);
+    }
+
+    function updatePlayerStats() {
+
+        console.log("in playerRPG");
+
     }
 
     function setNewPlayerinfo() {

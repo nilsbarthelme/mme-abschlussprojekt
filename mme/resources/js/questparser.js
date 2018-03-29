@@ -6,7 +6,7 @@ var FitnessRPG = FitnessRPG || {};
 
         var that = {};
         var xmldoc;
-        var availableQuests = [];
+        var availableQuests = [], fitnessRPG;
 
         function initEventListeners() {
             checkLocalStorage();
@@ -136,7 +136,21 @@ var FitnessRPG = FitnessRPG || {};
                         localStorage.setItem("quests",JSON.stringify(jsonobj));
                     }
                 }
+
+                updatePlayerStats(jsonobj, questId);
             }
+
+            function updatePlayerStats(jsonobj, questid) {
+            var strengthValue;
+            var obj = jsonobj.questlist.quest[questid];
+                for (var i = 0; i < obj.belohnung.length; i++) {
+                    if (obj.belohnung[i].awardid === "stren") {
+                        strengthValue = obj.belohnung[i].value;
+                    }
+                }
+                FitnessRPG.updatePlayerStats();
+            }
+
             function removeActive() {
 
                 var elm = event.target;
