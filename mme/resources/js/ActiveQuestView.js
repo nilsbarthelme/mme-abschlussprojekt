@@ -5,9 +5,13 @@ var FitnessRPG = FitnessRPG || {};
         "use strict";
 
         var that = {};
-        var availableQuestModel = new FitnessRPG.AvailableQuestModel();
+        var availableQuestModel;
           var activeQuestController;
+        function activeViewGetInstances(activeQuestControllerInstance,availableQuestModelInstance) {
+            activeQuestController = activeQuestControllerInstance;
+            availableQuestModel = availableQuestModelInstance;
 
+        }
 
         function createQuest(clickedQuest) {
              var quest = document.createElement("li");
@@ -95,7 +99,7 @@ var FitnessRPG = FitnessRPG || {};
                 }
 
             }
-
+            that.activeViewGetInstances = activeViewGetInstances;
             that.createActiveQuest = createActiveQuest;
 
         return that;

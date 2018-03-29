@@ -7,17 +7,26 @@ var FitnessRPG = FitnessRPG || {};
         var that = {};
         var questdata, availableQuestModel, availableQuestController,activeQuestView,readMoreView,playerinfo;
         playerinfo = JSON.parse(localStorage.getItem("playerinfo"))
-        availableQuestModel = new FitnessRPG.AvailableQuestModel();
-        availableQuestController = new FitnessRPG.AvailableQuestController();
-        readMoreView = new FitnessRPG.ReadMoreView();
-        activeQuestView = new FitnessRPG.ActiveQuestView();
-        questdata = availableQuestModel.parseQuests();
 
+       /* function init() {
+            availableQuestModel = new FitnessRPG.AvailableQuestModel();
+            availableQuestController = new FitnessRPG.AvailableQuestController();
+            readMoreView = new FitnessRPG.ReadMoreView();
+            activeQuestView = new FitnessRPG.ActiveQuestView();
+            questdata = availableQuestModel.parseQuests();
+
+        }*/
+        function getInstances (availableQuestModelInstance, availableQuestControllerInstance, readMoreViewInstance, activeQuestViewInstance){
+            availableQuestModel = availableQuestModelInstance;
+            availableQuestController = availableQuestControllerInstance;
+            readMoreView = readMoreViewInstance;
+            activeQuestView = activeQuestViewInstance;
+            questdata = availableQuestModel.availableQuests;
+        }
        function buildQuestElements(data) {
-           //questdata = data;
+
             if(localStorage.getItem("activeQuest")!== null || undefined){
                var activeIndex = localStorage.getItem("activeQuest");
-               console.log(data[activeIndex]);
                activeQuestView.createActiveQuest(data[activeIndex]);
             }
             var rightside = document.getElementsByClassName("right")[0];
@@ -67,8 +76,9 @@ var FitnessRPG = FitnessRPG || {};
                     quest.className = "questAvailable";
                 }else{
                     quest.className = "questDone";
-                    //readMore.innerHTML = "";
-                    //readMore.innerHTML = "Erledigt!"
+                    var readMore = document.getElementsByClassName("readmore");
+                    readMore.innerHTML = "";
+                    readMore.innerHTML = "Erledigt!"
                     }
                 return accept;
         }
@@ -111,7 +121,7 @@ var FitnessRPG = FitnessRPG || {};
                     var str = parseInt(playerinfo.playerinfo[0].str);
                     var end = parseInt(playerinfo.playerinfo[0].end);
                     var agi = parseInt(playerinfo.playerinfo[0].agi);
-                    console.log(id);
+
 
                     var lvlrequ = parseInt(questdata[id].requirements[0]);
                     var exprequ = parseInt(questdata[id].requirements[1]);
@@ -119,15 +129,15 @@ var FitnessRPG = FitnessRPG || {};
                     var endrequ = parseInt(questdata[id].requirements[3]);
                     var agirequ = parseInt(questdata[id].requirements[4]);
             if(lvl>= lvlrequ && exp >= exprequ && str >= strrequ && end >= endrequ && agi >= agirequ){
-                console.log(true);
+
                 return true;
             } else {
-                console.log(false);
+
                 return false;}
 
         }
 
-
+        that.getInstances = getInstances;
         that.resetQuest = resetQuest;
         that.buildQuestElements = buildQuestElements;
         return that;

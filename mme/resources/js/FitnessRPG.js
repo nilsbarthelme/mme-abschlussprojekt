@@ -1,20 +1,38 @@
 var FitnessRPG = (function() {
     "use strict";
 
-    var that = {}, availablequestview,questparser, playerinfo, obj,quests,questsobj,playerinfoview,availableQuestModel;
+    var that = {}, availablequestview,
+        questparser,
+        playerinfo,
+        obj,
+        quests,
+        questsobj,
+        playerinfoview,
+        availableQuestModel,
+        availableQuestController,
+        readMoreView,
+        activeQuestView,
+        activeQuestController;
 
     function init() {
-        //questparser = new FitnessRPG.questParser();
         availablequestview = new FitnessRPG.AvailableQuestView();
         availableQuestModel = new FitnessRPG.AvailableQuestModel();
         playerinfoview = new FitnessRPG.PlayerInfoView();
+        readMoreView = new FitnessRPG.ReadMoreView();
+        activeQuestView = new FitnessRPG.ActiveQuestView();
+        availableQuestController = new FitnessRPG.AvailableQuestController();
+        activeQuestController = new FitnessRPG.ActiveQuestController();
         updateLocalStorage();
+       availablequestview.getInstances(availableQuestModel,availableQuestController,readMoreView,activeQuestView);
+       availableQuestController.availQuestsGetInstances(activeQuestView,availableQuestModel);
+       activeQuestView.activeViewGetInstances(activeQuestController,availableQuestModel);
+       activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
         availablequestview.buildQuestElements(availableQuestModel.parseQuests());
-
        playerinfoview.updateCharacterImage();
        playerinfoview.updateCharacterLevel();
        playerinfoview.updateCharacterName();
     }
+
 
     function updateLocalStorage() {
         if (localStorage.length === 0) {
@@ -56,6 +74,7 @@ var FitnessRPG = (function() {
             jsonString = client.responseText;
             localStorage.setItem("quests", jsonString);
             return jsonString;
+
         };
         client.send();
     }

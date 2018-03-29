@@ -6,7 +6,7 @@ var FitnessRPG = FitnessRPG || {};
 
         var that = {};
         var availableQuests = [];
-        var playerInfo =  JSON.parse(localStorage.getItem("playerinfo"));
+      //  var playerInfo =  JSON.parse(localStorage.getItem("playerinfo"));
 
 
         function addElementsToQuestList() {
@@ -16,12 +16,12 @@ var FitnessRPG = FitnessRPG || {};
 
              for(var i = 0; i < length;i++){
                 createQuestObjects(i,questlist);}
-                console.log(availableQuests);
+
 
         }
         function parseQuests() {
                 addElementsToQuestList();
-                console.log(availableQuests);
+
                 return availableQuests;
 
         }
@@ -43,11 +43,12 @@ var FitnessRPG = FitnessRPG || {};
                 quest.requirements = requirements;
                 quest.award = award;
                 availableQuests.push(quest)
-                console.log(availableQuests);
+
             }
 
             function storageActiveQuest(id){
              localStorage.setItem("activeQuest",id);
+             console.log(availableQuests);
             }
 
             that.storageActiveQuest = storageActiveQuest;

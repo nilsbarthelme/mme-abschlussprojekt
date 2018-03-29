@@ -5,9 +5,17 @@ var FitnessRPG = FitnessRPG || {};
         "use strict";
 
         var that = {};
-        var availableQuestModel = new FitnessRPG.AvailableQuestModel();
-        var availableQuestView = new FitnessRPG.AvailableQuestView();
-        var quests = availableQuestModel.parseQuests();
+        var availableQuestModel;
+        var availableQuestView;
+        var quests;
+
+        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance) {
+            availableQuestModel = availableQuestModelInstance;
+            availableQuestView = availableQuestViewInstance;
+            quests = availableQuestModel.availableQuests;
+
+
+        }
         function changeQuestStatus(button) {
             button.addEventListener("click",changeStatus);
 
@@ -81,7 +89,7 @@ var FitnessRPG = FitnessRPG || {};
 
 
 
-
+            that.activeControllerGetInstances = activeControllerGetInstances;
             that.changeQuestStatus = changeQuestStatus;
             that.removeActiveQuest = removeActiveQuest;
 

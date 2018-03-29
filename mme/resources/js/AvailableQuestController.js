@@ -5,11 +5,14 @@ var FitnessRPG = FitnessRPG || {};
         "use strict";
 
         var that = {};
-        var activeQuestView;
+        var activeQuestView,availableQuestModel;
         var availableQuests;
-        activeQuestView = new FitnessRPG.ActiveQuestView();
-        var availableQuestModel = new FitnessRPG.AvailableQuestModel();
 
+
+        function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance) {
+            activeQuestView = activeQuestviewInstance;
+            availableQuestModel = availableQuestModelInstance;
+        }
         function listenerQuestAvailable(button) {
              button.addEventListener("click",acceptbutton);
         }
@@ -44,7 +47,7 @@ var FitnessRPG = FitnessRPG || {};
               }}
                 return questData;
             }
-
+            that.availQuestsGetInstances = availQuestsGetInstances;
             that.listenerQuestNotAvailable = listenerQuestNotAvailable;
             that.listenerQuestAvailable = listenerQuestAvailable;
 
