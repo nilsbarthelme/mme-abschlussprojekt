@@ -7,13 +7,15 @@ var FitnessRPG = FitnessRPG || {};
         var that = {};
         var availableQuestModel;
         var availableQuestView;
+        var playerInfoModel;
         var quests;
 
-        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance) {
+        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance) {
             console.log(availableQuestModelInstance);
             console.log(availableQuestViewInstance);
             availableQuestModel = availableQuestModelInstance;
             availableQuestView = availableQuestViewInstance;
+            playerInfoModel = playerInfoModelInstance;
             quests = availableQuestModel.availableQuests;
               console.log(quests);
 
@@ -38,11 +40,8 @@ var FitnessRPG = FitnessRPG || {};
                 for (var i = 0; i < quests.length; i++ ){
                     if (quests[i].id === questId){
                         quests[i].status = "erledigt";
-                        console.log(jsonobj);
-                        console.log(jsonobj.questlist.quest);
-                        console.log(i);
-                        console.log(quests);
                         jsonobj.questlist.quest[i].status = "erledigt";
+                        playerInfoModel.updatePlayerStats(i);
                         localStorage.setItem("quests",JSON.stringify(jsonobj));
                         alert("Quest erfolgreich abgeschlossen!");
                         removeActiveFinished();
@@ -57,7 +56,6 @@ var FitnessRPG = FitnessRPG || {};
                     if(exercises[i].checked){
                         proofNumber++;
                     }
-
                 }
                 if(proofNumber === exercises.length){
                     console.log("All Boxes checked!");
@@ -65,7 +63,6 @@ var FitnessRPG = FitnessRPG || {};
                 } else {
                     console.log("Not all  Boxes checked!");
                     return false;}
-
 
             }
             function removeActiveFinished() {
@@ -77,10 +74,9 @@ var FitnessRPG = FitnessRPG || {};
                 var questId = questelement.getAttribute("id");
                 availableQuestView.resetQuest(questId);
 
-                 localStorage.removeItem("activeQuest");
-
-
+                localStorage.removeItem("activeQuest");
             }
+
              function removeButtonActive() {
                  console.log(availableQuestView);
                 var elm = event.target;
@@ -94,7 +90,6 @@ var FitnessRPG = FitnessRPG || {};
                 } else {
 
                  }
-
 
             }
 

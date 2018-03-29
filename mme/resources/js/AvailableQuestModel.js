@@ -23,7 +23,6 @@ var FitnessRPG = FitnessRPG || {};
                 addElementsToQuestList();
 
                 return availableQuests;
-
         }
 
         function createQuestObjects(index,questlist) {
@@ -48,7 +47,7 @@ var FitnessRPG = FitnessRPG || {};
 
             function storageActiveQuest(id){
              localStorage.setItem("activeQuest",id);
-             console.log(availableQuests);
+             console.log("Available quests" + availableQuests);
             }
 
             that.storageActiveQuest = storageActiveQuest;

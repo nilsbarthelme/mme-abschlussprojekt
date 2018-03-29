@@ -5,7 +5,11 @@ FitnessRPG.PlayerInfoView = function () {
 
     var that = {};
 
-    function updateUserView(obj) {
+    function updateUserView() {
+        var obj = JSON.parse(localStorage.getItem("playerinfo"));
+        console.log("in: updateUserView");
+        console.log(obj);
+        console.log(obj.playerinfo[0].name);
         document.querySelector(".username").textContent = obj.playerinfo[0].name;
         document.querySelector(".level").textContent = "Level: " + obj.playerinfo[0].level;
         document.querySelector(".expprogressback").style.width = obj.playerinfo[0].exp + "%";
