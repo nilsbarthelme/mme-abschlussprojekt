@@ -12,16 +12,29 @@
           "10 KM Lauf"
         ],
         "voraussetzung": [
-          "0",
-          "0"
+            "3",
+            "0",
+            "0",
+            "0",
+            "0"
         ],
         "belohnung": [
-          {
-            "awardid": "stren",
-            "value": "10"
+         {
+            "awardid": "Exp",
+            "value": "20"
           },
           {
-            "awardid": "stam",
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
             "value": "10"
           }
         ]
@@ -37,16 +50,29 @@
           "Liegestütze"
         ],
         "voraussetzung": [
-          "0",
-          "0"
+           "4",
+            "0",
+            "0",
+            "0",
+            "0"
         ],
         "belohnung": [
           {
-            "awardid": "stren",
+            "awardid": "Exp",
             "value": "20"
           },
           {
-            "awardid": "stam",
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
             "value": "10"
           }
         ]
@@ -63,16 +89,29 @@
           "1x 100 M Sprint"
         ],
         "voraussetzung": [
-          "0",
-          "0"
+           "2",
+            "0",
+            "0",
+            "0",
+            "0"
         ],
         "belohnung": [
           {
-            "awardid": "stren",
+            "awardid": "Exp",
             "value": "20"
           },
           {
-            "awardid": "stam",
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
             "value": "10"
           }
         ]
@@ -89,16 +128,29 @@
           "10KM Radfahren"
         ],
         "voraussetzung": [
-          "0",
-          "0"
+           "2",
+            "3",
+            "0",
+            "0",
+            "0"
         ],
         "belohnung": [
-          {
-            "awardid": "stren",
+        {
+            "awardid": "Exp",
             "value": "20"
           },
           {
-            "awardid": "stam",
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
             "value": "10"
           }
         ]
@@ -114,16 +166,29 @@
           "10x 20M Diverse Übungen"
         ],
         "voraussetzung": [
-          "0",
-          "0"
+             "2",
+            "0",
+            "2",
+            "0",
+            "0"
         ],
         "belohnung": [
-          {
-            "awardid": "stren",
+           {
+            "awardid": "Exp",
             "value": "20"
           },
           {
-            "awardid": "stam",
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
             "value": "10"
           }
         ]
@@ -139,22 +204,35 @@
           "Squats"
         ],
         "voraussetzung": [
-          "0",
-          "0"
+          "2",
+            "0",
+            "0",
+            "0",
+            "0"
         ],
         "belohnung": [
-          {
-            "awardid": "stren",
+       {
+            "awardid": "Exp",
             "value": "20"
           },
           {
-            "awardid": "stam",
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
             "value": "10"
           }
         ]
       },
       {
-          "status": "erledigt",
+          "status": "offen",
         "questid": "6",
         "name": "Ausdauertraining",
         "dauer": "1 Wochen ",
@@ -163,16 +241,29 @@
           "5KM Schnelles Joggen"
         ],
         "voraussetzung": [
-          "Level 2 Ausdauer",
-          "0"
+            "2",
+            "0",
+            "0",
+            "0",
+            "0"
         ],
         "belohnung": [
-          {
-            "awardid": "stren",
+         {
+            "awardid": "Exp",
             "value": "20"
           },
           {
-            "awardid": "stam",
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
             "value": "10"
           }
         ]
@@ -188,16 +279,29 @@
           "Liegestütze"
         ],
         "voraussetzung": [
-          "0",
-          "0"
+          "2",
+            "0",
+            "0",
+            "0",
+            "0"
         ],
         "belohnung": [
-          {
-            "awardid": "stren",
+           {
+            "awardid": "Exp",
             "value": "20"
           },
           {
-            "awardid": "stam",
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
             "value": "10"
           }
         ]

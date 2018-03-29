@@ -62,31 +62,22 @@
     </div>
 
     <script src="resources/js/FitnessRPG.js"></script>
-
+    <script src="resources/js/PlayerInfoView.js"></script>
     <script src="resources/js/questparser.js"></script>
     <script src="resources/js/AvailableQuestView.js"></script>
+<<<<<<< HEAD
     <script src="resources/js/PlayerInfoView.js"></script>
+=======
+    <script src="resources/js/AvailableQuestModel.js"></script>
+    <script src="resources/js/ActiveQuestController.js"></script>
+     <script src="resources/js/AvailableQuestController.js"></script>
+    <script src="resources/js/ReadMoreView.js"></script>
+     <script src="resources/js/ActiveQuestView.js"></script>
+>>>>>>> master
 
 
     <script>
-
-
         FitnessRPG.init();
-
-
-        console.log(document.querySelector("#messagebox"));
-
-        function displayMessage() {
-            curElement = document.getElementsByClassName("messagetext")[0].textContent = "This is your Quest:";
-             curElement = document.getElementsByClassName("messagebox")[0].style.display="block";
-
-        }
-       document.querySelector("#messagebox").addEventListener("click", hideMessageButton);
-
-        function hideMessageButton() {
-
-        document.getElementsByClassName("messagebox")[0].style.display="none";
-}
     </script>
 </body>
 

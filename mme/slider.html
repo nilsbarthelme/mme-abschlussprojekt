@@ -38,20 +38,18 @@
 
 
             console.log(char_1);
-            console.log("hi console");
-            checkLocalStorage();
         }
         function openNewPage() {
-            window.open('index.html');
+            window.open('index.html',"_self");
 
         }
         function saveFirstCharacter() {
-            localStorage.setItem('character', 'char_1');
+            localStorage.setItem('character', 'char_2');
             openNewPage();
 
         }
         function saveSecondCharacter() {
-            localStorage.setItem('character', 'char_2');
+            localStorage.setItem('character', 'char_1');
              openNewPage();
         }
         function saveThirdCharacter() {
@@ -60,10 +58,6 @@
         }
 
 
-
-        function checkLocalStorage() {
-            localStorage.setItem('Aufgabe_1', 'Aktiv am Self-Wiki mitarbeiten!');
-        }
 
     </script>
  <script src="resources/js/selection.js">

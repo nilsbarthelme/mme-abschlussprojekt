@@ -31,9 +31,24 @@ FitnessRPG.PlayerInfoView = function () {
         }
         console.log(character);
     }
+    function updateCharacterLevel() {
+        var charLevel = document.getElementsByClassName("level")[0];
+        var playerinfoObj = JSON.parse(localStorage.getItem("playerinfo"));
+        var currentLevel = playerinfoObj.playerinfo[0].level;
+        charLevel.innerHTML = "Level: " + currentLevel;
+    }
+    function updateCharacterName() {
+        var charName = document.getElementsByClassName("username")[0];
+        var playerinfoObj = JSON.parse(localStorage.getItem("playerinfo"));
+        var name = playerinfoObj.playerinfo[0].name;
+        charName.innerHTML =  name;
+
+    }
 
     that.updateUserView = updateUserView;
     that.updateCharacterImage = updateCharacterImage;
+    that.updateCharacterLevel = updateCharacterLevel;
+    that.updateCharacterName = updateCharacterName;
 
     return that;
 };
