@@ -33,7 +33,6 @@ var FitnessRPG = FitnessRPG || {};
                 return duration;
         }
         function createRemoveButton() {
-            activeQuestController = new FitnessRPG.ActiveQuestController();
             var removeButton = document.createElement("div");
                 removeButton.className = "removebuttonactive";
                 var removeButtonInner = document.createElement("div");

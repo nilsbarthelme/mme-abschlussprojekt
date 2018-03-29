@@ -15,14 +15,19 @@ var FitnessRPG = (function() {
         activeQuestController;
 
     function init() {
+
         availablequestview = new FitnessRPG.AvailableQuestView();
         availableQuestModel = new FitnessRPG.AvailableQuestModel();
+        activeQuestController = new FitnessRPG.ActiveQuestController();
+
+         activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
         playerinfoview = new FitnessRPG.PlayerInfoView();
         readMoreView = new FitnessRPG.ReadMoreView();
         activeQuestView = new FitnessRPG.ActiveQuestView();
-        availableQuestController = new FitnessRPG.AvailableQuestController();
-        activeQuestController = new FitnessRPG.ActiveQuestController();
+
+    availableQuestController = new FitnessRPG.AvailableQuestController();
         updateLocalStorage();
+         activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
        availablequestview.getInstances(availableQuestModel,availableQuestController,readMoreView,activeQuestView);
        availableQuestController.availQuestsGetInstances(activeQuestView,availableQuestModel);
        activeQuestView.activeViewGetInstances(activeQuestController,availableQuestModel);
@@ -31,6 +36,7 @@ var FitnessRPG = (function() {
        playerinfoview.updateCharacterImage();
        playerinfoview.updateCharacterLevel();
        playerinfoview.updateCharacterName();
+       console.log(availableQuestModel.availableQuests);
     }
 
 

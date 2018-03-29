@@ -37,7 +37,7 @@ var FitnessRPG = FitnessRPG || {};
             alert("Sie erfüllen die Anforderungen für diese Quest nicht!");
         }
         function getQuestData(target) {
-                availableQuests = availableQuestModel.parseQuests();
+                availableQuests = availableQuestModel.availableQuests;
                 console.log(availableQuests);
                 var clickedId = target.parentNode.getAttribute("id");
                 var questData;

@@ -10,17 +10,22 @@ var FitnessRPG = FitnessRPG || {};
         var quests;
 
         function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance) {
+            console.log(availableQuestModelInstance);
+            console.log(availableQuestViewInstance);
             availableQuestModel = availableQuestModelInstance;
             availableQuestView = availableQuestViewInstance;
             quests = availableQuestModel.availableQuests;
+              console.log(quests);
 
 
         }
         function changeQuestStatus(button) {
+                console.log(availableQuestView);
             button.addEventListener("click",changeStatus);
 
         }
         function removeActiveQuest(button) {
+                 console.log(availableQuestView);
             button.addEventListener("click",removeButtonActive);
 
         }
@@ -33,6 +38,10 @@ var FitnessRPG = FitnessRPG || {};
                 for (var i = 0; i < quests.length; i++ ){
                     if (quests[i].id === questId){
                         quests[i].status = "erledigt";
+                        console.log(jsonobj);
+                        console.log(jsonobj.questlist.quest);
+                        console.log(i);
+                        console.log(quests);
                         jsonobj.questlist.quest[i].status = "erledigt";
                         localStorage.setItem("quests",JSON.stringify(jsonobj));
                         alert("Quest erfolgreich abgeschlossen!");
@@ -60,6 +69,7 @@ var FitnessRPG = FitnessRPG || {};
 
             }
             function removeActiveFinished() {
+                console.log(availableQuestView);
                 var elm = event.target;
                 var parent = document.getElementsByClassName("questelement")[0];
                 parent.parentNode.removeChild(parent);
@@ -72,6 +82,7 @@ var FitnessRPG = FitnessRPG || {};
 
             }
              function removeButtonActive() {
+                 console.log(availableQuestView);
                 var elm = event.target;
                 var parent = document.getElementsByClassName("questelement")[0];
                 if (confirm('Bist du dir sicher, dass du diese Quest abbrechen willst?')) {
