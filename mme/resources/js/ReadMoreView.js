@@ -5,6 +5,12 @@ var FitnessRPG = FitnessRPG || {};
         "use strict";
 
         var that = {};
+        function removeButton() {
+            document.querySelector("#messagebox").addEventListener("click", hideMessageButton);
+            function hideMessageButton() {
+                document.getElementsByClassName("messagebox")[0].style.display="none";
+}
+        }
 
         function createDuration(questData,parent){
                 var duration  = document.createElement("div");
@@ -56,7 +62,7 @@ var FitnessRPG = FitnessRPG || {};
             }
 
 
-
+            that.removeButton = removeButton;
             that.createDuration = createDuration;
             that.createAwards = createAwards;
             that.createExercises = createExercises;

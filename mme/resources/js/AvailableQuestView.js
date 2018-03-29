@@ -94,6 +94,7 @@ var FitnessRPG = FitnessRPG || {};
                 readMoreView.createExercises(getQuestData(target),parent);
                 readMoreView.createRequirements(getQuestData(target),parent);
                 readMoreView.createAwards(getQuestData(target),parent);
+                readMoreView.removeButton();
             }
             function getQuestData(target) {
                 var clickedId = target.parentNode.getAttribute("id");
