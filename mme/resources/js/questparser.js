@@ -9,29 +9,9 @@ var FitnessRPG = FitnessRPG || {};
         var availableQuests = [];
         var playerInfo =  JSON.parse(localStorage.getItem("playerinfo"));
 
-        function initEventListeners() {
-            checkLocalStorage();
-        }
-
-
-        function checkLocalStorage() {
-        }
-
         function parseQuests() {
-           checkLocalStorage();
-            var xmlString = "";
-            var parser = new DOMParser();
-            var client = new XMLHttpRequest();
-            client.open('GET', 'resources/xml/quests.xml');
-            client.onloadend = function () {
-                xmlString = client.responseText;
-                xmldoc = parser.parseFromString(xmlString, 'text/xml');
                 addElementsToQuestList();
                 buildQuestElements();
-                return xmldoc;
-            };
-
-            client.send();
         }
         function addElementsToQuestList() {
             var questlist = JSON.parse(localStorage.getItem("quests"));
@@ -44,10 +24,7 @@ var FitnessRPG = FitnessRPG || {};
         function buildQuestElements() {
             if(localStorage.getItem("activeQuest")!== null || undefined){
                var activeIndex = localStorage.getItem("activeQuest");
-               console.log(activeIndex);
-               console.log(availableQuests);
                createActiveQuest(availableQuests[activeIndex]);
-
             }
             var rightside = document.getElementsByClassName("right")[0];
             var index = availableQuests.length;
