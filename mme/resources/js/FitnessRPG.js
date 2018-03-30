@@ -1,11 +1,11 @@
 var FitnessRPG = (function() {
     "use strict";
+
    if(localStorage.length === 0){
         window.open('signup.html',"_self");
 
     }
     var that = {}, availablequestview,
-        questparser,
         playerinfo,
         obj,
         quests,
@@ -39,7 +39,7 @@ var FitnessRPG = (function() {
        activeQuestView.activeViewGetInstances(activeQuestController,availableQuestModel);
        activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview, playerInfoModel);
         availablequestview.buildQuestElements(availableQuestModel.parseQuests());
-        playerInfoModel.setInstances(playerinfoview);
+        playerInfoModel.setInstances(playerinfoview,availablequestview,availableQuestModel);
        playerinfoview.updateCharacterImage();
        playerinfoview.updateCharacterLevel();
        playerinfoview.updateCharacterName();

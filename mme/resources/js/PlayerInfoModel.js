@@ -13,6 +13,7 @@ FitnessRPG.PlayerInfoModel = function () {
 
     function setInstances(playerInfoViewInstance) {
         playerInfoView = playerInfoViewInstance;
+
     }
 
     function updatePlayerStats(questId) {

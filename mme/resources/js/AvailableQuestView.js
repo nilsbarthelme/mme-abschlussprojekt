@@ -8,14 +8,6 @@ var FitnessRPG = FitnessRPG || {};
         var questdata, availableQuestModel, availableQuestController,activeQuestView,readMoreView,playerinfo;
         playerinfo = JSON.parse(localStorage.getItem("playerinfo"))
 
-       /* function init() {
-            availableQuestModel = new FitnessRPG.AvailableQuestModel();
-            availableQuestController = new FitnessRPG.AvailableQuestController();
-            readMoreView = new FitnessRPG.ReadMoreView();
-            activeQuestView = new FitnessRPG.ActiveQuestView();
-            questdata = availableQuestModel.parseQuests();
-
-        }*/
         function getInstances (availableQuestModelInstance, availableQuestControllerInstance, readMoreViewInstance, activeQuestViewInstance){
             availableQuestModel = availableQuestModelInstance;
             availableQuestController = availableQuestControllerInstance;
