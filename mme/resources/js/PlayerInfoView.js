@@ -30,6 +30,7 @@ FitnessRPG.PlayerInfoView = function () {
         var jsonObj = JSON.parse(localStorage.getItem("playerinfo"));
         var level = parseInt( jsonObj.playerinfo[0].level);
         var imgLevel = definePlayerImageLevel(level);
+        console.log(level);
         switch (character){
             case "char_1":
                 char.setAttribute("src","resources/img/Char1Level" + imgLevel + ".png");
@@ -39,6 +40,7 @@ FitnessRPG.PlayerInfoView = function () {
                 break;
             case "char_3":
                 char.setAttribute("src","resources/img/Char3Level" + imgLevel + ".png");
+                console.log(imgLevel);
                 break;
         }
         console.log(character);
