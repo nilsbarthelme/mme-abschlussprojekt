@@ -15,6 +15,7 @@ var FitnessRPG = FitnessRPG || {};
             activeQuestView = activeQuestViewInstance;
             questdata = availableQuestModel.availableQuests;
         }
+
        function buildQuestElements(data) {
 
             if(localStorage.getItem("activeQuest")!== null || undefined){
@@ -119,9 +120,9 @@ var FitnessRPG = FitnessRPG || {};
             function checkRequirements(id) {
                     var lvl = parseInt(playerinfo.playerinfo[0].level);
                     var exp = parseInt(playerinfo.playerinfo[0].exp);
-                    var str = parseInt(playerinfo.playerinfo[0].str);
-                    var end = parseInt(playerinfo.playerinfo[0].end);
-                    var agi = parseInt(playerinfo.playerinfo[0].agi);
+                    var str = parseInt(playerinfo.playerinfo[0].strlevel);
+                    var end = parseInt(playerinfo.playerinfo[0].endlevel);
+                    var agi = parseInt(playerinfo.playerinfo[0].agilevel);
 
 
                     var lvlrequ = parseInt(questdata[id].requirements[0]);

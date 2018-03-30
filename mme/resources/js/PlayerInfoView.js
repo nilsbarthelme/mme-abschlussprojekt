@@ -4,8 +4,13 @@ FitnessRPG.PlayerInfoView = function () {
     "use strict";
 
     var that = {},
+    playerInfoController,
     playerLevelOffset = 15,
     playerAttributeOffeset = 15;
+
+    function setinstances(playerInfoControllerView) {
+        playerInfoController = playerInfoControllerView;
+    }
 
     function updateUserView() {
         var obj = JSON.parse(localStorage.getItem("playerinfo"));
@@ -21,7 +26,10 @@ FitnessRPG.PlayerInfoView = function () {
         document.querySelector(".strprogressback").style.width = strInPercent + "%";
         document.querySelector(".endprogressback").style.width = endInPercent + "%";
         document.querySelector(".agiprogressback").style.width = agiInPercent + "%";
-        document.querySelector(".expprogressback").textContent = obj.playerinfo[0].exp + " / " + (obj.playerinfo[0].level * playerLevelOffset);
+        document.querySelector(".expinfo").textContent = obj.playerinfo[0].exp + " / " + (obj.playerinfo[0].level * playerLevelOffset);
+        document.querySelector(".strinfo").textContent = obj.playerinfo[0].str + " / " + (obj.playerinfo[0].strlevel * playerAttributeOffeset);
+        document.querySelector(".endinfo").textContent = obj.playerinfo[0].end + " / " + (obj.playerinfo[0].endlevel * playerAttributeOffeset);
+        document.querySelector(".agiinfo").textContent = obj.playerinfo[0].agi + " / " + (obj.playerinfo[0].agilevel * playerAttributeOffeset);
     }
 
     function updateCharacterImage() {
@@ -66,6 +74,12 @@ FitnessRPG.PlayerInfoView = function () {
         charName.innerHTML =  name;
     }
 
+    function getInfoElement() {
+        return document.querySelector(".left");
+    }
+
+    that.getInfoElement = getInfoElement;
+    that.setInstances = setinstances;
     that.updateUserView = updateUserView;
     that.updateCharacterImage = updateCharacterImage;
     that.updateCharacterLevel = updateCharacterLevel;

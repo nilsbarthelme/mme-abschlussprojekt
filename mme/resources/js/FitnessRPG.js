@@ -16,7 +16,8 @@ var FitnessRPG = (function() {
         readMoreView,
         activeQuestView,
         activeQuestController,
-        playerInfoModel;
+        playerInfoModel,
+        playerInfoController;
 
     function init() {
 
@@ -29,10 +30,9 @@ var FitnessRPG = (function() {
         readMoreView = new FitnessRPG.ReadMoreView();
         activeQuestView = new FitnessRPG.ActiveQuestView();
         playerInfoModel = new FitnessRPG.PlayerInfoModel();
+        playerInfoController = new FitnessRPG.PlayerInfoController();
+        availableQuestController = new FitnessRPG.AvailableQuestController();
 
-    availableQuestController = new FitnessRPG.AvailableQuestController();
-        updateLocalStorage();
-        playerinfoview.updateUserView();
          activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
        availablequestview.getInstances(availableQuestModel,availableQuestController,readMoreView,activeQuestView);
        availableQuestController.availQuestsGetInstances(activeQuestView,availableQuestModel);
@@ -40,9 +40,20 @@ var FitnessRPG = (function() {
        activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview, playerInfoModel);
         availablequestview.buildQuestElements(availableQuestModel.parseQuests());
         playerInfoModel.setInstances(playerinfoview,availablequestview,availableQuestModel);
-       playerinfoview.updateCharacterImage();
-       playerinfoview.updateCharacterLevel();
-       playerinfoview.updateCharacterName();
+        playerInfoController.setInstances(activeQuestView, playerinfoview);
+        playerinfoview.setInstances(playerInfoController);
+
+        playerInfoController.init();
+
+        updateUserInfo();
+        updateLocalStorage();
+    }
+
+    function updateUserInfo() {
+        playerinfoview.updateCharacterImage();
+        playerinfoview.updateCharacterLevel();
+        playerinfoview.updateCharacterName();
+        playerinfoview.updateUserView();
     }
 
 

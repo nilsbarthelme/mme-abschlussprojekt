@@ -54,7 +54,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
-
+    -webkit-transition: width 0.5s;
     vertical-align: top;
 }
 

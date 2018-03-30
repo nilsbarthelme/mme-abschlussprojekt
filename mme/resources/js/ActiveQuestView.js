@@ -98,6 +98,15 @@ var FitnessRPG = FitnessRPG || {};
                 }
 
             }
+
+            function getMiddleElement() {
+                return document.querySelector(".middle");
+            }
+
+            function setMiddleWidth(width) {document.querySelector(".middle").style.width = width + "%";}
+
+            that.setMiddleWidth = setMiddleWidth;
+            that.getMiddleElement = getMiddleElement;
             that.activeViewGetInstances = activeViewGetInstances;
             that.createActiveQuest = createActiveQuest;
 

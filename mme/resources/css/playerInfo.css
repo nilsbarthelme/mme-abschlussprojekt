@@ -1,4 +1,7 @@
+
 .expprogressback{
+    color: grey;
+    font-size: 20px;
     height: 100%;
     width: 40%;
     background-color: #FFFAD5;
@@ -71,12 +74,56 @@
     background-color: #FFFAD5;
     text-decoration: none;
     list-style-type: none;
-
-    /*
-    -- not visilbe at all --
-    */
-
 }
+
+.expinfo{
+    float: right;
+    margin-left:auto;
+    margin-right:0;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 30%;
+    left: -5%;
+}
+
+.strinfo{
+    float: right;
+    margin-left:auto;
+    margin-right:0;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 30%;
+    left: -5%;
+}
+
+.endinfo{
+    float: right;
+    margin-left:auto;
+    margin-right:0;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 30%;
+    left: -5%;
+}
+
+.agiinfo{
+    float: right;
+    margin-left:auto;
+    margin-right:0;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 30%;
+    left: -5%;
+}
+
 
 .strbar{
     display: none;
@@ -140,6 +187,8 @@
 }
 
 .left {
+    font-family:helvetica, sans-serif;
+    color: white;
     vertical-align: top;
     position: relative;
     display: inline-block;

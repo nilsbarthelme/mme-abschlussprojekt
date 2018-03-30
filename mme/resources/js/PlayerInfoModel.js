@@ -71,13 +71,13 @@ FitnessRPG.PlayerInfoModel = function () {
     }
 
     function updateEndLevel(attributeLevel, attributeExp, jsonobjPlayer) {
-        var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].str);
+        var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].end);
         jsonobjPlayer.playerinfo[0].end = String(attributeExp - expLeft);
         jsonobjPlayer.playerinfo[0].endlevel =  String(attributeLevel + 1);
     }
 
     function updateAgiLevel(attributeLevel, attributeExp, jsonobjPlayer) {
-        var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].str);
+        var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].agi);
         jsonobjPlayer.playerinfo[0].agi = String(attributeExp - expLeft);
         jsonobjPlayer.playerinfo[0].agilevel =  String(attributeLevel + 1);
     }
