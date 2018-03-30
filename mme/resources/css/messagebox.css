@@ -2,7 +2,7 @@
     display: none;
     overflow-y: scroll;
     font-family: 'Roboto', sans-serif;
-    width: 50%;
+    width: 35%;
     height: 50%;
     background: orange;
     position: absolute;
@@ -31,4 +31,8 @@
     font-family:helvetica, sans-serif;
     line-height:3;
     padding:0px;
+}
+
+.messagebox::-webkit-scrollbar {
+    display: none;
 }

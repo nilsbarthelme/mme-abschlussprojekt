@@ -58,6 +58,10 @@ body{
     vertical-align: top;
 }
 
+.middle::-webkit-scrollbar {
+    display: none;
+}
+
 .questelement{
     overflow: scroll;
     -webkit-border-radius: 13px;

@@ -5,7 +5,7 @@ FitnessRPG.PlayerInfoModel = function () {
 
     var that = {},
     playerInfoView,
-    playerLevelOffset= 10,
+    playerLevelOffset= 15,
     playerLevel,
     expAward,
     questReward;
@@ -43,6 +43,7 @@ FitnessRPG.PlayerInfoModel = function () {
         }
         localStorage.setItem("playerinfo",JSON.stringify(jsonobjPlayer));
         playerInfoView.updateUserView();
+        playerInfoView.updateCharacterImage();
     }
 
     function updatePlayerLevel(playerLevel, jsonobjPlayer) {

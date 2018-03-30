@@ -15,13 +15,23 @@ var SignUpForm = (function() {
       function getData() {
           var name = document.getElementsByName("user_name");
           var email = document.getElementsByName("user_email");
-          var playerInfo = JSON.parse(localStorage.getItem("playerinfo"));
-          playerInfo.playerinfo[0].name = name[0].value;
-          playerInfo.playerinfo[0].email = email[0].value;
-          localStorage.setItem("playerinfo",JSON.stringify(playerInfo));
-          window.open('slider.html',"_self");
+          if (name[0].value === "") {alert("Bitte einen Namen eingeben!")}
+          else if (!validateEmail(email[0].value)) {alert("Bitte eine korrekte Email angeben!")}
+          else {
+              var playerInfo = JSON.parse(localStorage.getItem("playerinfo"));
+              playerInfo.playerinfo[0].name = name[0].value;
+              playerInfo.playerinfo[0].email = email[0].value;
+              localStorage.setItem("playerinfo",JSON.stringify(playerInfo));
+              window.open('slider.html',"_self");
+          }
+
 
       }
+
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
       function setPlayerInfo() {
            var jsonString = "";
         var client = new XMLHttpRequest();

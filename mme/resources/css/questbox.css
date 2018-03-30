@@ -12,6 +12,10 @@
     float: right;
 }
 
+.right::-webkit-scrollbar {
+    display: none;
+}
+
 .right #accept {
     font-size: 15px;
     padding: 10px 17px;
@@ -51,6 +55,12 @@
     line-height:3;
     padding:0px;
 }
+
+.questDone::-webkit-scrollbar {
+    display: none;
+}
+
+
 .questtitle {
 
     margin-left: -100px;
@@ -151,7 +161,6 @@
 }
 .right:hover .removebuttonquest{
     margin-left: 86.2%;
-
 }
 
 .right:hover  #accept{

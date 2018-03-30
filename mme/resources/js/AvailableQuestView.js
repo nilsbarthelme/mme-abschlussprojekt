@@ -115,6 +115,7 @@ var FitnessRPG = FitnessRPG || {};
               }}
                 return currentQuest;
             }
+
             function checkRequirements(id) {
                     var lvl = parseInt(playerinfo.playerinfo[0].level);
                     var exp = parseInt(playerinfo.playerinfo[0].exp);
