@@ -108,16 +108,16 @@ body {
   opacity: 0.4;
 }
 .element.franklin {
-
+    background: url("../img/Char1Level1.png") 45% 0 no-repeat;
 
   background-size: cover;
 }
 .element.michael {
-  background: url('http://localhost:63342/mme/resources/img/Char2Level1.png') 45% 0 no-repeat;
+  background: url("../img/Char2Level1.png") 45% 0 no-repeat;
   background-size: cover;
 }
 .element.trevor {
-  background: url('http://localhost:63342/mme/resources/img/Char3Level5.png') 45% 0 no-repeat;
+  background: url("../img/Char3Level5.png") 45% 0 no-repeat;
   background-size: cover;
 }
 .element:last-of-type {

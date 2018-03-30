@@ -11,23 +11,18 @@ var FitnessRPG = FitnessRPG || {};
         var quests;
 
         function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance) {
-            console.log(availableQuestModelInstance);
-            console.log(availableQuestViewInstance);
             availableQuestModel = availableQuestModelInstance;
             availableQuestView = availableQuestViewInstance;
             playerInfoModel = playerInfoModelInstance;
             quests = availableQuestModel.availableQuests;
-              console.log(quests);
 
 
         }
         function changeQuestStatus(button) {
-                console.log(availableQuestView);
             button.addEventListener("click",changeStatus);
 
         }
         function removeActiveQuest(button) {
-                 console.log(availableQuestView);
             button.addEventListener("click",removeButtonActive);
 
         }
@@ -46,7 +41,7 @@ var FitnessRPG = FitnessRPG || {};
                         alert("Quest erfolgreich abgeschlossen!");
                         removeActiveFinished();
                     }
-                }} else { alert("Sie Müssen erst alle Aufgaben der Quest erledigen um die Quest abzuschließen!")}
+                }} else { alert("Sie Müssen erst alle Aufgaben der Quest erledigen um die Quest abzuschließen!");}
             }
 
              function checkQuestProgress(questelement) {
@@ -58,10 +53,8 @@ var FitnessRPG = FitnessRPG || {};
                     }
                 }
                 if(proofNumber === exercises.length){
-                    console.log("All Boxes checked!");
                     return true;
                 } else {
-                    console.log("Not all  Boxes checked!");
                     return false;}
 
             }
@@ -88,13 +81,9 @@ var FitnessRPG = FitnessRPG || {};
                     availableQuestView.resetQuest(questId);
                     localStorage.removeItem("activeQuest");
                 } else {
-
                  }
 
             }
-
-
-
             that.activeControllerGetInstances = activeControllerGetInstances;
             that.changeQuestStatus = changeQuestStatus;
             that.removeActiveQuest = removeActiveQuest;
