@@ -4,7 +4,7 @@
       {
         "status": "offen",
         "questid": "0",
-        "name": "Ausdauerübung",
+        "name": "Ausdauerübung Grünschnabel",
         "dauer": "1 Woche ",
         "uebung": [
           "5 KM Lauf",
@@ -42,7 +42,7 @@
       {
           "status": "offen",
         "questid": "1",
-        "name": "Kraftübung",
+        "name": "Krafttraining Grünschnabel",
         "dauer": "1 Wochen ",
         "uebung": [
           "10 KG Bizepcurls",
@@ -50,7 +50,7 @@
           "Liegestütze"
         ],
         "voraussetzung": [
-           "4",
+           "2",
             "0",
             "0",
             "0",
@@ -59,7 +59,7 @@
         "belohnung": [
           {
             "awardid": "Exp",
-            "value": "20"
+            "value": "15"
           },
           {
             "awardid": "End",
@@ -80,16 +80,16 @@
       {
           "status": "offen",
         "questid": "2",
-        "name": "Schnelligkeit",
+        "name": "Schnelligkeit Grünschnabel",
         "dauer": "2 Wochen ",
         "uebung": [
-          "5x 100 M Sprint",
-          "5x 50 M Sprint",
+          "2x 100 M Sprint",
+          "2x 50 M Sprint",
           "1x 200 M Sprint",
           "1x 100 M Sprint"
         ],
         "voraussetzung": [
-           "1",
+           "2",
             "0",
             "0",
             "0",
@@ -98,7 +98,7 @@
         "belohnung": [
           {
             "awardid": "Exp",
-            "value": "20"
+            "value": "15"
           },
           {
             "awardid": "End",
@@ -116,20 +116,20 @@
           }
         ]
       },
+
       {
           "status": "offen",
         "questid": "3",
-        "name": "Ausdauerübung",
+        "name": "Koordinationstraining Grünschnabel",
         "dauer": "1 Woche ",
         "uebung": [
-          "7,5 KM Joggen",
-          "5 KM Joggen",
-          "300M Schwimmen",
-          "10KM Radfahren"
+          "Leiterlauf Vorwärts",
+          "Hütchenlauf Slalom 5 Minuten",
+          "4x 2 Minuten Stangenspringen Beidbeinig"
         ],
         "voraussetzung": [
-           "2",
-            "3",
+           "3",
+            "0",
             "0",
             "0",
             "0"
@@ -158,24 +158,25 @@
       {
           "status": "offen",
         "questid": "4",
-        "name": "Koordinationstraining",
-        "dauer": "2 Wochen ",
+        "name": "Krafttraining Grünschnabel",
+        "dauer": "1,5 Wochen ",
         "uebung": [
-          "Slalom Hütchenlauf",
-          "Stangenspringen",
-          "10x 20M Diverse Übungen"
+          "3x 10 Liegestützen",
+          "3x 15 Situps",
+          "3x Klimmzüge",
+            "3x 7KG Bizepcurls"
         ],
         "voraussetzung": [
-             "2",
+             "3",
             "0",
-            "2",
+            "0",
             "0",
             "0"
         ],
         "belohnung": [
            {
             "awardid": "Exp",
-            "value": "20"
+            "value": "25"
           },
           {
             "awardid": "End",
@@ -196,15 +197,16 @@
       {
           "status": "offen",
         "questid": "5",
-        "name": "Beweglichkeit",
+        "name": "Beweglichkeit/Ausdauer Anfänger",
         "dauer": "2 Wochen ",
         "uebung": [
-          "Squashen",
-          "Tennis",
-          "Squats"
+          "1x Squashmatch",
+          "15x Squats",
+            "10 Min Oberschenkel dehnen",
+            "10 Min Waden Dehnen"
         ],
         "voraussetzung": [
-          "1",
+          "4",
             "0",
             "0",
             "0",
@@ -234,14 +236,15 @@
       {
           "status": "offen",
         "questid": "6",
-        "name": "Ausdauertraining",
-        "dauer": "1 Wochen ",
+        "name": "Ausdauertraining Anfänger",
+        "dauer": "1 Woche ",
         "uebung": [
-          "12KM Joggen",
-          "5KM Schnelles Joggen"
+          "7,5 KM Joggen",
+          "3,5 KM Schnelles Joggen",
+            "300 M schwimmen"
         ],
         "voraussetzung": [
-            "2",
+            "4",
             "0",
             "0",
             "0",
@@ -271,15 +274,15 @@
       {
           "status": "offen",
         "questid": "7",
-        "name": "Crossfit",
+        "name": "Crossfit Anfänger",
         "dauer": "2 Wochen ",
         "uebung": [
           "10 KG Bizepcurls",
           "30 Situps",
-          "Liegestütze"
+          "3x 10 Liegestütze"
         ],
         "voraussetzung": [
-          "3",
+          "4",
             "0",
             "0",
             "0",
@@ -303,6 +306,707 @@
           {
             "awardid": "Agi",
             "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "8",
+        "name": "Freeletics Ausdauer Grünschnabel",
+        "dauer": "1 Wochen ",
+        "uebung": [
+          "30 Minuten Seilspringen",
+          "60 Hampelmänner",
+          "3x 10 Minuten Kniehebelauf",
+            "3x 10 Minuten Anfersen"
+        ],
+        "voraussetzung": [
+          "5",
+            "2",
+            "1",
+            "1",
+            "1"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "30"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "15"
+          }
+        ]
+      },
+         {
+          "status": "offen",
+        "questid": "9",
+        "name": "Brusttraining Anfänger",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "Bankdrücken Langhantel 3x 10 30% Körpergewicht",
+          "Bankdrücken Kurzhantel 3x 10 20% Körpergewicht",
+          "3x 10 Liegestützen",
+            "Butterfly 3x 10-15 30% Körpergewicht"
+        ],
+        "voraussetzung": [
+          "5",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "25"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "10",
+        "name": "Bauchtraining Anfänger",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "3x 25 Situps",
+          "3x 25 seitliche Situps",
+          "3x 1 Minute Planks"
+
+        ],
+        "voraussetzung": [
+          "5",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "20"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "11",
+        "name": "Krafttraining Fortgeschritten",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "4x 20 Liegestützen",
+          "4x 30 Crunches",
+          "3x 40 Kniebeugen",
+             "3x 15 Ausfallschritte"
+        ],
+        "voraussetzung": [
+          "6",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "40"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "50"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "15"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "12",
+        "name": "Koordinationstraining Anfänger",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "Leiterlauf Vorwärts und Rückwärts",
+          "Hütchenlauf Slalom 10 Minuten",
+          "4x 5 Minuten Stangenspringen Beidbeinig"
+        ],
+        "voraussetzung": [
+           "6",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+        {
+            "awardid": "Exp",
+            "value": "30"
+          },
+          {
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "13",
+        "name": "Schnelligkeit Anfänger",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "3x 100 M Sprint",
+          "4x 50 M Sprint",
+          "1x 200 M Sprint",
+          "2x 100 M Sprint"
+        ],
+        "voraussetzung": [
+          "6",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "20"
+          },
+          {
+            "awardid": "End",
+            "value": "50"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "15"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "14",
+        "name": "Bauchtraining Fortgeschritten",
+        "dauer": "1 Woche ",
+        "uebung": [
+         "4x 30 Situps",
+          "4x 25 seitliche Situps",
+          "5x 1 Minute Planks",
+            "3x 1 Minute seitliche Planks"
+        ],
+        "voraussetzung": [
+          "7",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "40"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "50"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "15"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "15",
+        "name": "Beweglichkeit/Ausdauer Fortgeschritten",
+        "dauer": "2 Wochen ",
+        "uebung": [
+          "2x Squashmatch",
+          "2x 15 Squats",
+            "15 Min Oberschenkel dehnen",
+            "15 Min Waden Dehnen"
+        ],
+        "voraussetzung": [
+          "7",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+       {
+            "awardid": "Exp",
+            "value": "25"
+          },
+          {
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "16",
+        "name": "Brusttraining Fortgeschritten",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "Bankdrücken Langhantel 3x 10 50% Körpergewicht",
+          "Bankdrücken Kurzhantel 3x 10 40% Körpergewicht",
+          "3x 15 Liegestützen",
+            "Butterfly 3x 10-15 40% Körpergewicht"
+        ],
+        "voraussetzung": [
+          "7",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "30"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "30"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "17",
+        "name": "Koordinationstraining Fortgeschritten",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "Leiterlauf Vorwärts und Rückwärts und seitlich",
+          "Hütchenlauf Slalom 4x 5 Minuten",
+          "4x 5 Minuten Stangenspringen Beidbeinig vorwärts/rückwärts"
+        ],
+        "voraussetzung": [
+           "7",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+        {
+            "awardid": "Exp",
+            "value": "20"
+          },
+          {
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "18",
+        "name": "Schnelligkeit fortgeschritten",
+        "dauer": "1,5 Wochen ",
+        "uebung": [
+          "4x 100 M Sprint",
+          "4x 50 M Sprint",
+          "2x 200 M Sprint",
+          "4x 100 M Sprint",
+            "Pyramidenlauf"
+        ],
+        "voraussetzung": [
+          "8",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "50"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "30"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "19",
+        "name": "Koordinationstraining Halbprofi",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "Leiterlauf Vorwärts und Rückwärts und seitlich",
+          "Hütchenlauf Slalom 4x 5 Minuten",
+          "4x 5 Minuten Stangenspringen Beidbeinig vorwärts/rückwärts",
+            "4x 5 Minuten Seilspringen"
+        ],
+        "voraussetzung": [
+           "8",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+        {
+            "awardid": "Exp",
+            "value": "30"
+          },
+          {
+            "awardid": "End",
+            "value": "0"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },{
+          "status": "offen",
+        "questid": "20",
+        "name": "Beweglichkeit/Ausdauer Halbprofi",
+        "dauer": "2 Wochen ",
+        "uebung": [
+          "3x Pyramidenlauf",
+          "2x 15 Squats",
+            "15 Min Oberschenkel dehnen",
+            "15 Min Waden Dehnen",
+            "15 Minuten Krabbeln"
+        ],
+        "voraussetzung": [
+          "8",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+       {
+            "awardid": "Exp",
+            "value": "20"
+          },
+          {
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "21",
+        "name": "Brusttraining Halbprofi",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "Bankdrücken Langhantel 3x 10 65%% Körpergewicht",
+          "Bankdrücken Kurzhantel 3x 10 45% Körpergewicht",
+          "3x 20 Liegestützen",
+            "Butterfly 3x 10-15 50% Körpergewicht"
+        ],
+        "voraussetzung": [
+          "8",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "20"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+         {
+          "status": "offen",
+        "questid": "22",
+        "name": "Ausdauerübung Profi",
+        "dauer": "1 Woche ",
+        "uebung": [
+           "10 KM Joggen",
+          "5 KM Joggen",
+          "300M Schwimmen",
+          "10KM Radfahren"
+        ],
+        "voraussetzung": [
+          "9",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "50"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "30"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+         {
+          "status": "offen",
+        "questid": "23",
+        "name": "Brusttraining Profi",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "Bankdrücken Langhantel 3x 10 80% Körpergewicht",
+          "Bankdrücken Kurzhantel 3x 10 60% Körpergewicht",
+          "3x 20 Liegestützen",
+            "Butterfly 3x 10-15 50% Körpergewicht"
+        ],
+        "voraussetzung": [
+          "9",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "35"
+          },
+          {
+            "awardid": "End",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },{
+          "status": "offen",
+        "questid": "24",
+        "name": "Beweglichkeit/Ausdauer Profi",
+        "dauer": "2 Wochen ",
+        "uebung": [
+          "4x Pyramidenlauf",
+          "2x 30 Squats",
+            "15 Min Oberschenkel dehnen",
+            "15 Min Waden Dehnen",
+            "25 Minuten Krabbeln"
+        ],
+        "voraussetzung": [
+          "9",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+       {
+            "awardid": "Exp",
+            "value": "20"
+          },
+          {
+            "awardid": "End",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "10"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "10"
+          }
+        ]
+      },
+        {
+          "status": "offen",
+        "questid": "25",
+        "name": "Schnelligkeit Profi",
+        "dauer": "1 Woche ",
+        "uebung": [
+          "5x 100 M Sprint",
+          "4x 50 M Sprint",
+          "3x 200 M Sprint",
+          "2x 100 M Sprint"
+        ],
+        "voraussetzung": [
+          "9",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "belohnung": [
+           {
+            "awardid": "Exp",
+            "value": "30"
+          },
+          {
+            "awardid": "End",
+            "value": "50"
+          }
+            ,
+          {
+            "awardid": "Strength",
+            "value": "20"
+          }
+            ,
+          {
+            "awardid": "Agi",
+            "value": "15"
           }
         ]
       }
