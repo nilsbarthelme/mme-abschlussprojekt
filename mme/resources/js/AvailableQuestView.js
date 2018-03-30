@@ -63,7 +63,7 @@ var FitnessRPG = FitnessRPG || {};
             var accept = document.createElement("button");
                 accept.className = "button";
                 accept.id = "accept";
-                accept.innerHTML = "Accept";
+                accept.innerHTML = "Annehmen";
                 if(questdata[id].status === "offen" && checkRequirements(id)){
                     quest.appendChild(accept);
                     availableQuestController.listenerQuestAvailable(accept);
@@ -133,10 +133,7 @@ var FitnessRPG = FitnessRPG || {};
             if(lvl>= lvlrequ && exp >= exprequ && str >= strrequ && end >= endrequ && agi >= agirequ){
 
                 return true;
-            } else {
-
-                return false;}
-
+            } else {return false;}
         }
 
         that.getInstances = getInstances;
