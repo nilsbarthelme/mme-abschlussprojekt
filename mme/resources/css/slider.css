@@ -108,7 +108,8 @@ body {
   opacity: 0.4;
 }
 .element.franklin {
-  background: url('http://localhost:63342/mme/resources/img/Char1Level1.png') 45% 0 no-repeat;
+
+
   background-size: cover;
 }
 .element.michael {

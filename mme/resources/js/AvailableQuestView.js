@@ -24,10 +24,17 @@ var FitnessRPG = FitnessRPG || {};
             var rightside = document.getElementsByClassName("right")[0];
             var index = data.length;
             for(var i = 0; i < index;i++){
+                if(data[i].status === "offen"){
                 var questid = data[i].id;
                 if(questid !== activeIndex){
                 createAvailableQuest(rightside,questid);}
-            }
+            }}
+            for(var i = 0; i < index;i++){
+                if(data[i].status === "erledigt"){
+                var questid = data[i].id;
+                if(questid !== activeIndex){
+                createAvailableQuest(rightside,questid);}
+            }}
 
         }
         function createTitle(id) {
@@ -70,11 +77,12 @@ var FitnessRPG = FitnessRPG || {};
                     quest.className = "questDone";
                     var readMore = document.getElementsByClassName("readmore");
                     readMore.innerHTML = "";
-                    readMore.innerHTML = "Erledigt!"
+                    readMore.innerHTML = "Erledigt!";
                     }
                 return accept;
         }
         function createAvailableQuest(parent, id) {
+
                 var quest = document.createElement("LI");
                 quest.appendChild(createTitle(id));
                 createAcceptButton(id,quest);
