@@ -61,6 +61,7 @@ FitnessRPG.PlayerInfoModel = function () {
         var expLeft = (playerLevel * playerLevelOffset) - parseInt(jsonobjPlayer.playerinfo[0].exp);
         jsonobjPlayer.playerinfo[0].exp = String(parseInt(questReward[0].value) - expLeft);
         jsonobjPlayer.playerinfo[0].level =  String(playerLevel + 1);
+        location.reload();
     }
 
     function updateStrLevel(attributeLevel, attributeExp, jsonobjPlayer) {
