@@ -6,9 +6,13 @@
             "email": "testmail@test.de",
             "level" : "1",
             "exp" : "0",
+            "explevel" : "1",
             "str" : "0",
+            "strlevel" : "1",
             "end" : "0",
-            "agi" : "0"
+            "endlevel" : "1",
+            "agi" : "0",
+            "agilevel" : "1"
         }
 
     ]
