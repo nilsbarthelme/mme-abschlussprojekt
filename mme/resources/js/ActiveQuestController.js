@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 /* The ActiveQuestController is used to handle the users Interaction with Buttons and elements. In this Module the Listeners are set
 * and alerts are shown if the user interacts with the elements*/
 
+=======
+/* eslint-env browser*/
+>>>>>>> devNilsEnd
 
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.ActiveQuestController = function () {
