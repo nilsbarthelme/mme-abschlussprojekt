@@ -7,13 +7,9 @@
         "name": "Ausdauerübung Grünschnabel",
         "dauer": "1 Woche ",
         "uebung": [
-          {
-                "uebung":
-          "5 KM Lauf","checkbox": "false"},{
-                "uebung":
-          "Sprints","checkbox": "false"},{
-                "uebung":
-          "10 KM Lauf","checkbox": "false"}
+          "5 KM Lauf",
+          "Sprints",
+          "10 KM Lauf"
         ],
         "voraussetzung": [
             "1",
@@ -49,12 +45,9 @@
         "name": "Krafttraining Grünschnabel",
         "dauer": "1 Wochen ",
         "uebung": [
-         {"uebung":
-          "10 KG Bizepcurls","checkbox": "false"},{
-                "uebung":
-          "30 Situps","checkbox": "false"},{
-            "uebung":
-          "Liegestütze","checkbox": "false"}
+          "10 KG Bizepcurls",
+          "30 Situps",
+          "Liegestütze"
         ],
         "voraussetzung": [
            "2",
@@ -90,12 +83,10 @@
         "name": "Schnelligkeit Grünschnabel",
         "dauer": "2 Wochen ",
         "uebung": [
-          {"uebung":
-          "2x 100 M Sprint","checkbox": "false"},{
-                "uebung":
-          "2x 50 M Sprint","checkbox": "false"},{"uebung":
-          "1x 200 M Sprint","checkbox": "false"},{"uebung":
-          "1x 100 M Sprint","checkbox": "false"}
+          "2x 100 M Sprint",
+          "2x 50 M Sprint",
+          "1x 200 M Sprint",
+          "1x 100 M Sprint"
         ],
         "voraussetzung": [
            "2",
@@ -132,12 +123,9 @@
         "name": "Koordinationstraining Grünschnabel",
         "dauer": "1 Woche ",
         "uebung": [
-             {"uebung":
-          "Leiterlauf Vorwärts","checkbox": "false"},{
-                "uebung":
-          "Hütchenlauf Slalom 5 Minuten","checkbox": "false"},{
-                "uebung":
-          "4x 2 Minuten Stangenspringen Beidbeinig","checkbox": "false"}
+          "Leiterlauf Vorwärts",
+          "Hütchenlauf Slalom 5 Minuten",
+          "4x 2 Minuten Stangenspringen Beidbeinig"
         ],
         "voraussetzung": [
            "3",
@@ -173,15 +161,10 @@
         "name": "Krafttraining Grünschnabel",
         "dauer": "1,5 Wochen ",
         "uebung": [
-           {
-                "uebung":
-          "3x 10 Liegestützen","checkbox": "false"},{
-                "uebung":
-          "3x 15 Situps","checkbox": "false"},{
-                "uebung":
-          "3x Klimmzüge","checkbox": "false"},{
-                "uebung":
-            "3x 7KG Bizepcurls","checkbox": "false"}
+          "3x 10 Liegestützen",
+          "3x 15 Situps",
+          "3x Klimmzüge",
+            "3x 7KG Bizepcurls"
         ],
         "voraussetzung": [
              "3",
@@ -217,15 +200,10 @@
         "name": "Beweglichkeit/Ausdauer Anfänger",
         "dauer": "2 Wochen ",
         "uebung": [
-           {
-                "uebung":
-          "1x Squashmatch","checkbox": "false"},{
-                "uebung":
-          "15x Squats","checkbox": "false"},{
-                "uebung":
-            "10 Min Oberschenkel dehnen","checkbox": "false"},{
-                "uebung":
-            "10 Min Waden Dehnen","checkbox": "false"}
+          "1x Squashmatch",
+          "15x Squats",
+            "10 Min Oberschenkel dehnen",
+            "10 Min Waden Dehnen"
         ],
         "voraussetzung": [
           "4",
@@ -261,13 +239,9 @@
         "name": "Ausdauertraining Anfänger",
         "dauer": "1 Woche ",
         "uebung": [
-         {
-                "uebung":
-          "7,5 KM Joggen","checkbox": "false"},{
-                "uebung":
-          "3,5 KM Schnelles Joggen","checkbox": "false"},{
-                "uebung":
-            "300 M schwimmen","checkbox": "false"}
+          "7,5 KM Joggen",
+          "3,5 KM Schnelles Joggen",
+            "300 M schwimmen"
         ],
         "voraussetzung": [
             "4",
@@ -303,13 +277,9 @@
         "name": "Crossfit Anfänger",
         "dauer": "2 Wochen ",
         "uebung": [
-           {
-                "uebung":
-          "10 KG Bizepcurls","checkbox": "false"},{
-                "uebung":
-          "30 Situps","checkbox": "false"},{
-                "uebung":
-          "3x 10 Liegestütze","checkbox": "false"}
+          "10 KG Bizepcurls",
+          "30 Situps",
+          "3x 10 Liegestütze"
         ],
         "voraussetzung": [
           "4",
@@ -345,15 +315,10 @@
         "name": "Freeletics Ausdauer Grünschnabel",
         "dauer": "1 Wochen ",
         "uebung": [
-           {
-                "uebung":
-          "30 Minuten Seilspringen","checkbox": "false"},{
-                "uebung":
-          "60 Hampelmänner","checkbox": "false"},{
-                "uebung":
-          "3x 10 Minuten Kniehebelauf","checkbox": "false"},{
-                "uebung":
-            "3x 10 Minuten Anfersen","checkbox": "false"}
+          "30 Minuten Seilspringen",
+          "60 Hampelmänner",
+          "3x 10 Minuten Kniehebelauf",
+            "3x 10 Minuten Anfersen"
         ],
         "voraussetzung": [
           "5",
@@ -389,12 +354,10 @@
         "name": "Brusttraining Anfänger",
         "dauer": "1 Woche ",
         "uebung": [
-         {"uebung":
-          "Bankdrücken Langhantel 3x 10 30% Körpergewicht","checkbox": "false"},{
-            "uebung":
-          "Bankdrücken Kurzhantel 3x 10 20% Körpergewicht","checkbox": "false"},{"uebung":
-          "3x 10 Liegestützen"},{"uebung":
-            "Butterfly 3x 10-15 30% Körpergewicht","checkbox": "false"}
+          "Bankdrücken Langhantel 3x 10 30% Körpergewicht",
+          "Bankdrücken Kurzhantel 3x 10 20% Körpergewicht",
+          "3x 10 Liegestützen",
+            "Butterfly 3x 10-15 30% Körpergewicht"
         ],
         "voraussetzung": [
           "5",
@@ -430,11 +393,9 @@
         "name": "Bauchtraining Anfänger",
         "dauer": "1 Woche ",
         "uebung": [
-          {
-                "uebung":
-          "3x 25 Situps","checkbox": "false"},{"uebung":
-          "3x 25 seitliche Situps","checkbox": "false"},{"uebung":
-          "3x 1 Minute Planks","checkbox": "false"}
+          "3x 25 Situps",
+          "3x 25 seitliche Situps",
+          "3x 1 Minute Planks"
 
         ],
         "voraussetzung": [
@@ -471,15 +432,10 @@
         "name": "Krafttraining Fortgeschritten",
         "dauer": "1 Woche ",
         "uebung": [
-          {
-                "uebung":
-          "4x 20 Liegestützen","checkbox": "false"},{
-                "uebung":
-          "4x 30 Crunches","checkbox": "false"},{
-                "uebung":
-          "3x 40 Kniebeugen","checkbox": "false"},{
-                "uebung":
-             "3x 15 Ausfallschritte","checkbox": "false"}
+          "4x 20 Liegestützen",
+          "4x 30 Crunches",
+          "3x 40 Kniebeugen",
+             "3x 15 Ausfallschritte"
         ],
         "voraussetzung": [
           "6",
@@ -515,13 +471,9 @@
         "name": "Koordinationstraining Anfänger",
         "dauer": "1 Woche ",
         "uebung": [
-           {
-                "uebung":
-          "Leiterlauf Vorwärts und Rückwärts","checkbox": "false"},{
-                "uebung":
-          "Hütchenlauf Slalom 10 Minuten","checkbox": "false"},{
-                "uebung":
-          "4x 5 Minuten Stangenspringen Beidbeinig","checkbox": "false"}
+          "Leiterlauf Vorwärts und Rückwärts",
+          "Hütchenlauf Slalom 10 Minuten",
+          "4x 5 Minuten Stangenspringen Beidbeinig"
         ],
         "voraussetzung": [
            "6",
@@ -557,15 +509,10 @@
         "name": "Schnelligkeit Anfänger",
         "dauer": "1 Woche ",
         "uebung": [
-            {
-                "uebung":
-          "3x 100 M Sprint","checkbox": "false"},
-            {"uebung":
-          "4x 50 M Sprint","checkbox": "false"},{
-                "uebung":
-          "1x 200 M Sprint","checkbox": "false"},{
-                "uebung":
-          "2x 100 M Sprint","checkbox": "false"}
+          "3x 100 M Sprint",
+          "4x 50 M Sprint",
+          "1x 200 M Sprint",
+          "2x 100 M Sprint"
         ],
         "voraussetzung": [
           "6",
@@ -601,15 +548,10 @@
         "name": "Bauchtraining Fortgeschritten",
         "dauer": "1 Woche ",
         "uebung": [
-         {
-                "uebung":
-         "4x 30 Situps","checkbox": "false"},{
-                "uebung":
-          "4x 25 seitliche Situps","checkbox": "false"},{
-                "uebung":
-          "5x 1 Minute Planks","checkbox": "false"},{
-                "uebung":
-            "3x 1 Minute seitliche Planks","checkbox": "false"}
+         "4x 30 Situps",
+          "4x 25 seitliche Situps",
+          "5x 1 Minute Planks",
+            "3x 1 Minute seitliche Planks"
         ],
         "voraussetzung": [
           "7",
@@ -645,15 +587,10 @@
         "name": "Beweglichkeit/Ausdauer Fortgeschritten",
         "dauer": "2 Wochen ",
         "uebung": [
-          {
-                "uebung":
-          "2x Squashmatch","checkbox": "false"},{
-                "uebung":
-          "2x 15 Squats","checkbox": "false"},{
-                "uebung":
-            "15 Min Oberschenkel dehnen","checkbox": "false"},{
-                "uebung":
-            "15 Min Waden Dehnen","checkbox": "false"}
+          "2x Squashmatch",
+          "2x 15 Squats",
+            "15 Min Oberschenkel dehnen",
+            "15 Min Waden Dehnen"
         ],
         "voraussetzung": [
           "7",
@@ -689,15 +626,10 @@
         "name": "Brusttraining Fortgeschritten",
         "dauer": "1 Woche ",
         "uebung": [
-          {
-            "uebung":
-          "Bankdrücken Langhantel 3x 10 50% Körpergewicht","checkbox": "false"},{
-            "uebung":
-          "Bankdrücken Kurzhantel 3x 10 40% Körpergewicht","checkbox": "false"},{
-            "uebung":
-          "3x 15 Liegestützen","checkbox": "false"},{
-            "uebung":
-            "Butterfly 3x 10-15 40% Körpergewicht","checkbox": "false"}
+          "Bankdrücken Langhantel 3x 10 50% Körpergewicht",
+          "Bankdrücken Kurzhantel 3x 10 40% Körpergewicht",
+          "3x 15 Liegestützen",
+            "Butterfly 3x 10-15 40% Körpergewicht"
         ],
         "voraussetzung": [
           "7",
@@ -733,12 +665,9 @@
         "name": "Koordinationstraining Fortgeschritten",
         "dauer": "1 Woche ",
         "uebung": [
-         {"uebung":
-          "Leiterlauf Vorwärts und Rückwärts und seitlich","checkbox": "false"},{"uebung":
-          "Hütchenlauf Slalom 4x 5 Minuten","checkbox": "false"},{
-                "uebung":
-          "4x 5 Minuten Stangenspringen Beidbeinig vorwärts/rückwärts","checkbox": "false"}
-
+          "Leiterlauf Vorwärts und Rückwärts und seitlich",
+          "Hütchenlauf Slalom 4x 5 Minuten",
+          "4x 5 Minuten Stangenspringen Beidbeinig vorwärts/rückwärts"
         ],
         "voraussetzung": [
            "7",
@@ -774,19 +703,11 @@
         "name": "Schnelligkeit fortgeschritten",
         "dauer": "1,5 Wochen ",
         "uebung": [
-          {"uebung":
           "4x 100 M Sprint",
-            "checkbox": "false"},{
-                "uebung":
           "4x 50 M Sprint",
-            "checkbox": "false"},{
-                "uebung":
-          "2x 200 M Sprint","checkbox": "false"},{
-                "uebung":
-          "4x 100 M Sprint","checkbox": "false"},{
-                "uebung":
-            "Pyramidenlauf",
-            "checkbox": "false"}
+          "2x 200 M Sprint",
+          "4x 100 M Sprint",
+            "Pyramidenlauf"
         ],
         "voraussetzung": [
           "8",
@@ -822,14 +743,10 @@
         "name": "Koordinationstraining Halbprofi",
         "dauer": "1 Woche ",
         "uebung": [
-          {"uebung":     "Leiterlauf Vorwärts und Rückwärts und seitlich",
-            "checkbox": "false"},{
-                "uebung":"Hütchenlauf Slalom 4x 5 Minuten",
-            "checkbox": "false"},{
-                "uebung": "4x 5 Minuten Stangenspringen Beidbeinig vorwärts/rückwärts", "checkbox": "false"},{
-                "uebung":
-            "4x 5 Minuten Seilspringen",
-            "checkbox": "false"}
+          "Leiterlauf Vorwärts und Rückwärts und seitlich",
+          "Hütchenlauf Slalom 4x 5 Minuten",
+          "4x 5 Minuten Stangenspringen Beidbeinig vorwärts/rückwärts",
+            "4x 5 Minuten Seilspringen"
         ],
         "voraussetzung": [
            "8",
@@ -864,21 +781,11 @@
         "name": "Beweglichkeit/Ausdauer Halbprofi",
         "dauer": "2 Wochen ",
         "uebung": [
-          {
-                "uebung":
           "3x Pyramidenlauf",
-            "checkbox": "false"},{
-                "uebung":
           "2x 15 Squats",
-            "checkbox": "false"},{
-                "uebung":
             "15 Min Oberschenkel dehnen",
-            "checkbox": "false"},{
-                "uebung":
-            "15 Min Waden Dehnen","checkbox": "false"},{
-                "uebung":
-            "15 Minuten Krabbeln",
-            "checkbox": "false"}
+            "15 Min Waden Dehnen",
+            "15 Minuten Krabbeln"
         ],
         "voraussetzung": [
           "8",
@@ -914,16 +821,10 @@
         "name": "Brusttraining Halbprofi",
         "dauer": "1 Woche ",
         "uebung": [
-           {"uebung":
-          "Bankdrücken Langhantel 3x 10 65%% Körpergewicht","checkbox": "false"},{
-            "uebung":
+          "Bankdrücken Langhantel 3x 10 65% Körpergewicht",
           "Bankdrücken Kurzhantel 3x 10 45% Körpergewicht",
-            "checkbox": "false"},{
-            "uebung":
-          "3x 20 Liegestützen","checkbox": "false"},{
-            "uebung":
-            "Butterfly 3x 10-15 50% Körpergewicht",
-            "checkbox": "false"}
+          "3x 20 Liegestützen",
+            "Butterfly 3x 10-15 50% Körpergewicht"
         ],
         "voraussetzung": [
           "8",
@@ -959,16 +860,10 @@
         "name": "Ausdauerübung Profi",
         "dauer": "1 Woche ",
         "uebung": [
-           {
-            "uebung":
            "10 KM Joggen",
-        "checkbox": "false"},{
-            "uebung":
-          "5 KM Joggen", "checkbox": "false"},{
-            "uebung":
-          "300M Schwimmen","checkbox": "false"},{
-            "uebung":
-          "10KM Radfahren","checkbox": "false"}
+          "5 KM Joggen",
+          "300M Schwimmen",
+          "10KM Radfahren"
         ],
         "voraussetzung": [
           "9",
@@ -1004,20 +899,10 @@
         "name": "Brusttraining Profi",
         "dauer": "1 Woche ",
         "uebung": [
-           {
-                "uebung":"Bankdrücken Langhantel 3x 10 80% Körpergewicht",
-                "checkbox": "false"
-            },
-                {
-                "uebung": "Bankdrücken Kurzhantel 3x 10 60% Körpergewicht",
-                    "checkbox": "false"
-                },{
-                "uebung":
-                "3x 20 Liegestützen",
-            "checkbox": "false"},{
-                "uebung":
-                "Butterfly 3x 10-15 50% Körpergewicht","checkbox": "false"}
-
+          "Bankdrücken Langhantel 3x 10 80% Körpergewicht",
+          "Bankdrücken Kurzhantel 3x 10 60% Körpergewicht",
+          "3x 20 Liegestützen",
+            "Butterfly 3x 10-15 50% Körpergewicht"
         ],
         "voraussetzung": [
           "9",
@@ -1052,20 +937,11 @@
         "name": "Beweglichkeit/Ausdauer Profi",
         "dauer": "2 Wochen ",
         "uebung": [
-          {
-            "uebung":
           "4x Pyramidenlauf",
-        "checkbox": "false"},{
-            "uebung":
           "2x 30 Squats",
-        "checkbox": "false"},{
-            "uebung":
             "15 Min Oberschenkel dehnen",
-        "checkbox": "false"},{
-            "uebung":    "15 Min Waden Dehnen", "checkbox": "false"},{
-            "uebung":
-            "25 Minuten Krabbeln",
-        "checkbox": "false"}
+            "15 Min Waden Dehnen",
+            "25 Minuten Krabbeln"
         ],
         "voraussetzung": [
           "9",
@@ -1101,18 +977,10 @@
         "name": "Schnelligkeit Profi",
         "dauer": "1 Woche ",
         "uebung": [
-          {
-                "uebung":
           "5x 100 M Sprint",
-            "checkbox": "false"},{
-                "uebung":
           "4x 50 M Sprint",
-            "checkbox": "false"},{
-                "uebung":
-          "3x 200 M Sprint","checkbox": "false"},{
-                "uebung":
-          "2x 100 M Sprint",
-            "checkbox": "false"}
+          "3x 200 M Sprint",
+          "2x 100 M Sprint"
         ],
         "voraussetzung": [
           "9",
