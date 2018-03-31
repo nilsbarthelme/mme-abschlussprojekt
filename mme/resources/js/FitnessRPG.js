@@ -22,11 +22,11 @@ var FitnessRPG = (function() {
     }
 
     function setInstances() {
-        activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
-        availablequestview.getInstances(availableQuestModel,availableQuestController,readMoreView,activeQuestView);
-        availableQuestController.availQuestsGetInstances(activeQuestView,availableQuestModel);
-        activeQuestView.activeViewGetInstances(activeQuestController,availableQuestModel);
-        activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview, playerInfoModel);
+        activeQuestController.setInstances(availableQuestModel,availablequestview);
+        availablequestview.setInstances(availableQuestModel,availableQuestController,readMoreView,activeQuestView);
+        availableQuestController.setInstances(activeQuestView,availableQuestModel);
+        activeQuestView.setInstances(activeQuestController,availableQuestModel);
+        activeQuestController.setInstances(availableQuestModel,availablequestview, playerInfoModel);
         availablequestview.buildQuestElements(availableQuestModel.parseQuests());
         playerInfoModel.setInstances(playerinfoview,availablequestview,availableQuestModel);
         playerInfoController.setInstances(activeQuestView, playerinfoview);

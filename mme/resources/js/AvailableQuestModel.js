@@ -8,10 +8,10 @@ var FitnessRPG = FitnessRPG || {};
 
 
         function addElementsToQuestList() {
-            var questStorage,questStorageLength;
+            var questStorage,questStorageLength,i;
             questStorage = JSON.parse(localStorage.getItem("quests"));
             questStorageLength = questStorage.questlist.quest.length;
-             for(var i = 0; i < questStorageLength;i++){
+             for( i = 0; i < questStorageLength;i++){
                 createQuestObjects(i,questStorage);}
         }
         function parseQuests() {
@@ -20,7 +20,7 @@ var FitnessRPG = FitnessRPG || {};
         }
 
         function createQuestObjects(index,questlist) {
-                var questObj = new Object();
+            var questObj = new Object();
             questObj.name = questlist.questlist.quest[index].name;
             questObj.id = questlist.questlist.quest[index].questid;
             questObj.status = questlist.questlist.quest[index].status;
