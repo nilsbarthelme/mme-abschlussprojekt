@@ -92,8 +92,20 @@ FitnessRPG.PlayerInfoModel = function () {
         playerInfoView.updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent);
     }
 
+    function updateUserViewBoot() {
+        var expInPercent, strInPercent, endInPercent, agiInPercent, obj;
+        obj = JSON.parse(localStorage.getItem("playerinfo"));
+        expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * 100;
+        strInPercent = (parseFloat(obj.playerinfo[0].str) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].strlevel))) * 100 ;
+        endInPercent = (parseFloat(obj.playerinfo[0].end) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].endlevel))) * 100 ;
+        agiInPercent = (parseFloat(obj.playerinfo[0].agi) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].agilevel))) * 100 ;
+
+        playerInfoView.updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent);
+    }
+
     that.updatePlayerStats = updatePlayerStats;
     that.setInstances = setInstances;
+    that.updateUserViewBoot = updateUserViewBoot;
 
     return that;
 };

@@ -6,6 +6,8 @@ FitnessRPG.MessageBoxAlertView = function () {
     var that = {};
 
     function showMessage(messageText) {
+        document.querySelector(".messageboxAlert").style.opacity = "1";
+        document.querySelector(".messageboxAlert").style.display = "block";
         document.querySelector(".messageboxAlertText").textContent = messageText;
         document.querySelector(".messageboxAlert").style.opacity = "1";
         document.querySelector(".buttonOK").addEventListener("click",hideMessage);
@@ -14,6 +16,7 @@ FitnessRPG.MessageBoxAlertView = function () {
     function hideMessage() {
         document.querySelector(".messageboxAlert").style.opacity = "0";
         document.querySelector(".messageboxAlertText").textContent = "";
+        document.querySelector(".messageboxAlert").style.display = "none";
     }
 
     that.showMessage = showMessage;

@@ -54,7 +54,7 @@ var FitnessRPG = (function() {
         playerinfoview.updateCharacterImage();
         playerinfoview.updateCharacterLevel();
         playerinfoview.updateCharacterName();
-        playerinfoview.updateUserView();
+        playerInfoModel.updateUserViewBoot();
     }
 
     that.init = init;

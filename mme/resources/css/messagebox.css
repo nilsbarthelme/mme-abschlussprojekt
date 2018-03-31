@@ -24,6 +24,7 @@
 
 .messageboxAlert {
     opacity: 0;
+    display: none;
     transition: opacity .2s linear;
     overflow-y: scroll;
     font-family: 'Roboto', sans-serif;
