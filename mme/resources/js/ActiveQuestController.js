@@ -8,24 +8,25 @@ var FitnessRPG = FitnessRPG || {};
         var availableQuestModel;
         var availableQuestView;
         var playerInfoModel;
-        var quests;
+        var quests,
+        messageBoxAlert;
 
-        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance) {
+        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance, messageBoxAlertInstace) {
             availableQuestModel = availableQuestModelInstance;
             availableQuestView = availableQuestViewInstance;
             playerInfoModel = playerInfoModelInstance;
             quests = availableQuestModel.availableQuests;
-
-
+            messageBoxAlert = messageBoxAlertInstace;
         }
+
         function changeQuestStatus(button) {
             button.addEventListener("click",changeStatus);
-
         }
+
         function removeActiveQuest(button) {
             button.addEventListener("click",removeButtonActive);
-
         }
+
         function changeStatus() {
                 var elm = event.target;
                 var questelement = elm.parentNode;
@@ -38,10 +39,10 @@ var FitnessRPG = FitnessRPG || {};
                         jsonobj.questlist.quest[i].status = "erledigt";
                         playerInfoModel.updatePlayerStats(i);
                         localStorage.setItem("quests",JSON.stringify(jsonobj));
-                        alert("Quest erfolgreich abgeschlossen!");
+                        messageBoxAlert.showMessage("Quest erfolgreich abgeschlossen!");
                         removeActiveFinished();
                     }
-                }} else { alert("Sie Müssen erst alle Aufgaben der Quest erledigen um die Quest abzuschließen!");}
+                }} else {messageBoxAlert.showMessage("Sie Müssen erst alle Aufgaben der Quest erledigen um die Quest abzuschließen!");}
             }
 
              function checkQuestProgress(questelement) {
@@ -72,12 +73,11 @@ var FitnessRPG = FitnessRPG || {};
              function removeButtonActive() {
                 var elm = event.target;
                 var parent = document.getElementsByClassName("questelement")[0];
-                if (confirm('Bist du dir sicher, dass du diese Quest abbrechen willst?')) {
                      parent.parentNode.removeChild(parent);
                     var questId = JSON.parse(localStorage.getItem("activeQuest"));
                     availableQuestView.resetQuestCancelled(questId);
                     localStorage.removeItem("activeQuest");
-                }
+
 
             }
             function setChecked() {

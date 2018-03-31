@@ -6,12 +6,14 @@ var FitnessRPG = FitnessRPG || {};
 
         var that = {};
         var activeQuestView,availableQuestModel;
-        var availableQuests;
+        var availableQuests,
+        messageBoxAlert;
 
 
-        function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance) {
+        function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance, messageBoxAlertInstance) {
             activeQuestView = activeQuestviewInstance;
             availableQuestModel = availableQuestModelInstance;
+            messageBoxAlert = messageBoxAlertInstance;
         }
         function setClickListenerEnabled(button) {
              button.addEventListener("click",acceptbutton);
@@ -29,14 +31,14 @@ var FitnessRPG = FitnessRPG || {};
               elm.parentNode.parentNode.removeChild(elm.parentNode);
               activeQuestView.createActiveQuest(getQuestData(elm));
             } else {
-              alert("Sie können nur eine Quest gleichzeitig annehmen!");
+                messageBoxAlert.showMessage("Sie können nur eine Quest gleichzeitig annehmen!");
           }
 
 
         }
 
         function requirementsNotFulfilled() {
-            alert("Sie erfüllen die Anforderungen für diese Quest nicht!");
+            messageBoxAlert.showMessage("Sie erfüllen die Anforderungen für diese Quest nicht!");
         }
         function getQuestData(target) {
                 availableQuests = availableQuestModel.availableQuests;
