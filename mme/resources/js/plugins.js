@@ -1,8 +1,10 @@
-// Avoid `console` errors in browsers that lack a console.
+/* eslint-env browser*/
+
 (function() {
-    var method;
-    var noop = function () {};
-    var methods = [
+    "use strict";
+    var method,
+     noop = function () {},
+     methods = [
         'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
         'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
         'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
@@ -22,3 +24,4 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+

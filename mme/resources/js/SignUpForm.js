@@ -1,3 +1,5 @@
+/* eslint-env browser*/
+
 var SignUpForm = (function() {
     "use strict";
       var that = {}, messageBoxAlertView;
@@ -15,17 +17,18 @@ var SignUpForm = (function() {
 
       }
       function getData() {
-          var name = document.getElementsByName("user_name");
-          var email = document.getElementsByName("user_email");
+          var name, email, playerInfo;
+          name = document.getElementsByName("user_name");
+          email = document.getElementsByName("user_email");
           if (name[0].value === "") {messageBoxAlertView.showMessage("Bitte einen Namen eingeben!");}
           else if (name[0].value.length > 8) {messageBoxAlertView.showMessage("Bitte kürzeren Namen eingeben!")}
           else if (!validateEmail(email[0].value)) {messageBoxAlertView.showMessage("Bitte eine korrekte Email eingeben!")}
           else {
-              var playerInfo = JSON.parse(localStorage.getItem("playerinfo"));
+              playerInfo = JSON.parse(localStorage.getItem("playerinfo"));
               playerInfo.playerinfo[0].name = name[0].value;
               playerInfo.playerinfo[0].email = email[0].value;
               localStorage.setItem("playerinfo",JSON.stringify(playerInfo));
-              window.open('slider.html',"_self");
+              window.open("slider.html","_self");
           }
       }
 
@@ -34,9 +37,9 @@ var SignUpForm = (function() {
         return re.test(String(email).toLowerCase());
     }
       function setPlayerInfo() {
-           var jsonString = "";
-        var client = new XMLHttpRequest();
-        client.open('GET', 'resources/xml/playerinfo.json');
+           var jsonString = "", client;
+       client = new XMLHttpRequest();
+        client.open("GET", "resources/xml/playerinfo.json");
         client.onloadend = function () {
             jsonString = client.responseText;
             localStorage.setItem("playerinfo", jsonString);
@@ -47,9 +50,9 @@ var SignUpForm = (function() {
 
       }
       function setQuestList() {
-         var jsonString = "";
-        var client = new XMLHttpRequest();
-        client.open('GET', 'resources/xml/quests.json');
+         var jsonString = "", client;
+        client = new XMLHttpRequest();
+        client.open("GET", "resources/xml/quests.json");
         client.onloadend = function () {
             jsonString = client.responseText;
             localStorage.setItem("quests", jsonString);

@@ -1,3 +1,5 @@
+/* eslint-env browser*/
+
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.MessageBoxAlertView = function () {
 

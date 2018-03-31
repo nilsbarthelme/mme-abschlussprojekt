@@ -1,3 +1,5 @@
+/* eslint-env browser*/
+
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.PlayerInfoController = function () {
 
@@ -6,7 +8,9 @@ FitnessRPG.PlayerInfoController = function () {
 
     var that = {},
     activeQuestView,
-    playerInfoView;
+    playerInfoView,
+    middleWidthShort = 38.9,
+    middleWidthLong = 48.9;
 
     function setInstances(activeQuestViewInstance, playerInfoViewInstance) {
         activeQuestView = activeQuestViewInstance;
@@ -17,11 +21,11 @@ FitnessRPG.PlayerInfoController = function () {
         var infoElement;
         infoElement  = playerInfoView.getInfoElement();
         infoElement.addEventListener("mouseover", function() {
-            activeQuestView.setMiddleWidth(38.9);
+            activeQuestView.setMiddleWidth(middleWidthShort);
         });
         infoElement.addEventListener("mouseout", function () {
-            activeQuestView.setMiddleWidth(48.9);
-        })
+            activeQuestView.setMiddleWidth(middleWidthLong);
+        });
     }
 
     that.init = init;

@@ -1,3 +1,5 @@
+/* eslint-env browser*/
+
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.AvailableQuestModel = function () {
 
@@ -19,7 +21,7 @@ var FitnessRPG = FitnessRPG || {};
                 return availableQuests;
         }
         function createQuestObjects(index,questlist) {
-                var questObj = new Object();
+            var questObj = new Object();
             questObj.name = questlist.questlist.quest[index].name;
             questObj.id = questlist.questlist.quest[index].questid;
             questObj.status = questlist.questlist.quest[index].status;

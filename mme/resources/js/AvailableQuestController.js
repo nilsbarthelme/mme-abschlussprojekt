@@ -1,3 +1,5 @@
+/* eslint-env browser*/
+
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.AvailableQuestController = function () {
 

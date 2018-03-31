@@ -1,4 +1,4 @@
-
+/* eslint-env browser*/
 
 $('.element').each(function() {
         $(this).mouseover(function() {

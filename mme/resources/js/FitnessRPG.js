@@ -1,8 +1,7 @@
+/* eslint-env browser*/
+
 var FitnessRPG = (function() {
     "use strict";
-   if(localStorage.length === 0){
-        window.open('signup.html',"_self");
-    }
 
     var that = {},
         availablequestview,
@@ -17,6 +16,10 @@ var FitnessRPG = (function() {
         messageBoxAlert;
 
     function init() {
+        if(localStorage.length === 0){
+            window.open("signup.html","_self");
+        }
+
         initObjects();
         setInstances();
         playerInfoController.init();
@@ -30,7 +33,6 @@ var FitnessRPG = (function() {
         availablequestview.buildQuestElements(availableQuestModel.parseQuests());
         playerInfoModel.setInstances(playerinfoview);
         playerInfoController.setInstances(activeQuestView, playerinfoview);
-        playerinfoview.setInstances(playerInfoController);
         activeQuestController.setInstances(availableQuestModel,availablequestview,playerInfoModel,messageBoxAlert);
     }
 
