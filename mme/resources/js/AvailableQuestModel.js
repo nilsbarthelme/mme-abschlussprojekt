@@ -20,6 +20,7 @@ var FitnessRPG = FitnessRPG || {};
         }
 
         function createQuestObjects(index,questlist) {
+            
             var questObj = new Object();
             questObj.name = questlist.questlist.quest[index].name;
             questObj.id = questlist.questlist.quest[index].questid;

@@ -9,30 +9,33 @@ var FitnessRPG = FitnessRPG || {};
         var availableQuestModel;
         var availableQuestView;
         var playerInfoModel;
-        var quests,
-        messageBoxAlert;
+        var quests;
 
+<<<<<<< HEAD
         function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance, messageBoxAlertInstace) {
 =======
         var that = {},availableQuestModel,availableQuestView,playerInfoModel,quests;
 
         function setInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance) {
 >>>>>>> 1d7e892f9debbf13125b5ae5bfdc13d231eac545
+=======
+        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance) {
+>>>>>>> parent of c423d61... Added Alert Box
             availableQuestModel = availableQuestModelInstance;
             availableQuestView = availableQuestViewInstance;
             playerInfoModel = playerInfoModelInstance;
             quests = availableQuestModel.availableQuests;
-            messageBoxAlert = messageBoxAlertInstace;
-        }
 
+
+        }
         function changeQuestStatus(button) {
             button.addEventListener("click",changeStatus);
-        }
 
+        }
         function removeActiveQuest(button) {
             button.addEventListener("click",removeButtonActive);
-        }
 
+        }
         function changeStatus() {
                 var targetElement,questElement,questId,jsonObj,i;
                 targetElement = event.target;
@@ -47,14 +50,18 @@ var FitnessRPG = FitnessRPG || {};
                         playerInfoModel.updatePlayerStats(i);
 <<<<<<< HEAD
                         localStorage.setItem("quests",JSON.stringify(jsonobj));
+<<<<<<< HEAD
                         messageBoxAlert.showMessage("Quest erfolgreich abgeschlossen!");
 =======
                         localStorage.setItem("quests",JSON.stringify(jsonObj));
                         alert("Quest erfolgreich abgeschlossen!");
 >>>>>>> 1d7e892f9debbf13125b5ae5bfdc13d231eac545
+=======
+                        alert("Quest erfolgreich abgeschlossen!");
+>>>>>>> parent of c423d61... Added Alert Box
                         removeActiveFinished();
                     }
-                }} else {messageBoxAlert.showMessage("Sie Müssen erst alle Aufgaben der Quest erledigen um die Quest abzuschließen!");}
+                }} else { alert("Sie Müssen erst alle Aufgaben der Quest erledigen um die Quest abzuschließen!");}
             }
 
              function checkQuestProgress(questelement) {
@@ -88,6 +95,7 @@ var FitnessRPG = FitnessRPG || {};
 <<<<<<< HEAD
                 var elm = event.target;
                 var parent = document.getElementsByClassName("questelement")[0];
+                if (confirm('Bist du dir sicher, dass du diese Quest abbrechen willst?')) {
                      parent.parentNode.removeChild(parent);
                     var questId = JSON.parse(localStorage.getItem("activeQuest"));
 =======
@@ -99,7 +107,7 @@ var FitnessRPG = FitnessRPG || {};
 >>>>>>> 1d7e892f9debbf13125b5ae5bfdc13d231eac545
                     availableQuestView.resetQuestCancelled(questId);
                     localStorage.removeItem("activeQuest");
-
+                }
 
             }
             function setChecked() {

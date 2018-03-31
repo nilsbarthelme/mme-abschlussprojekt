@@ -7,10 +7,10 @@ var FitnessRPG = FitnessRPG || {};
 <<<<<<< HEAD
         var that = {};
         var activeQuestView,availableQuestModel;
-        var availableQuests,
-        messageBoxAlert;
+        var availableQuests;
 
 
+<<<<<<< HEAD
         function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance, messageBoxAlertInstance) {
 =======
         var that = {},activeQuestView,availableQuestModel,availableQuests;
@@ -18,9 +18,11 @@ var FitnessRPG = FitnessRPG || {};
 
         function setInstances(activeQuestviewInstance, availableQuestModelInstance) {
 >>>>>>> 1d7e892f9debbf13125b5ae5bfdc13d231eac545
+=======
+        function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance) {
+>>>>>>> parent of c423d61... Added Alert Box
             activeQuestView = activeQuestviewInstance;
             availableQuestModel = availableQuestModelInstance;
-            messageBoxAlert = messageBoxAlertInstance;
         }
         function setClickListenerEnabled(button) {
              button.addEventListener("click",acceptbutton);
@@ -36,14 +38,14 @@ var FitnessRPG = FitnessRPG || {};
               targetElement.parentNode.parentNode.removeChild(targetElement.parentNode);
               activeQuestView.createActiveQuest(getQuestData(targetElement));
             } else {
-                messageBoxAlert.showMessage("Sie können nur eine Quest gleichzeitig annehmen!");
+              alert("Sie können nur eine Quest gleichzeitig annehmen!");
           }
 
 
         }
 
         function requirementsNotFulfilled() {
-            messageBoxAlert.showMessage("Sie erfüllen die Anforderungen für diese Quest nicht!");
+            alert("Sie erfüllen die Anforderungen für diese Quest nicht!");
         }
         function getQuestData(target) {
                 var clickedId, quests,i;

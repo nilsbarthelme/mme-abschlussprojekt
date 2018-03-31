@@ -5,8 +5,7 @@ var FitnessRPG = (function() {
         window.open('signup.html',"_self");
     }
 
-    var that = {},
-        availablequestview,
+    var that = {}, availablequestview,
         playerinfoview,
         availableQuestModel,
         availableQuestController,
@@ -14,22 +13,24 @@ var FitnessRPG = (function() {
         activeQuestView,
         activeQuestController,
         playerInfoModel,
-        playerInfoController,
-        messageBoxAlert;
+        playerInfoController;
 
     function init() {
         initObjects();
         setInstances();
         playerInfoController.init();
         updateUserInfo();
-        messageBoxAlert.showMessage("Welcome to the jungel, my friend!!!");
     }
 
     function setInstances() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview, activeQuestController, messageBoxAlert);
+=======
+        activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
+>>>>>>> parent of c423d61... Added Alert Box
         availablequestview.getInstances(availableQuestModel,availableQuestController,readMoreView,activeQuestView);
-        availableQuestController.availQuestsGetInstances(activeQuestView,availableQuestModel, messageBoxAlert);
+        availableQuestController.availQuestsGetInstances(activeQuestView,availableQuestModel);
         activeQuestView.activeViewGetInstances(activeQuestController,availableQuestModel);
         activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview, playerInfoModel);
 =======
@@ -43,7 +44,6 @@ var FitnessRPG = (function() {
         playerInfoModel.setInstances(playerinfoview,availablequestview,availableQuestModel);
         playerInfoController.setInstances(activeQuestView, playerinfoview);
         playerinfoview.setInstances(playerInfoController);
-        activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
     }
 
     function initObjects() {
@@ -51,16 +51,19 @@ var FitnessRPG = (function() {
         availableQuestModel = new FitnessRPG.AvailableQuestModel();
         activeQuestController = new FitnessRPG.ActiveQuestController();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         activeQuestController.setInstances(availableQuestModel,availablequestview);
 >>>>>>> 1d7e892f9debbf13125b5ae5bfdc13d231eac545
+=======
+        activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
+>>>>>>> parent of c423d61... Added Alert Box
         playerinfoview = new FitnessRPG.PlayerInfoView();
         readMoreView = new FitnessRPG.ReadMoreView();
         activeQuestView = new FitnessRPG.ActiveQuestView();
         playerInfoModel = new FitnessRPG.PlayerInfoModel();
         playerInfoController = new FitnessRPG.PlayerInfoController();
         availableQuestController = new FitnessRPG.AvailableQuestController();
-        messageBoxAlert = new FitnessRPG.MessageBoxAlertView();
     }
 
     function updateUserInfo() {
