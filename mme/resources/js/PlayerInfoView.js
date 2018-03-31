@@ -25,10 +25,10 @@ FitnessRPG.PlayerInfoView = function () {
     }
 
     function updateAttributeBarText() {
-        document.querySelector(".expinfo").textContent = obj.playerinfo[0].exp + " / " + (obj.playerinfo[0].level * playerLevelOffset);
-        document.querySelector(".strinfo").textContent = obj.playerinfo[0].str + " / " + (obj.playerinfo[0].strlevel * playerAttributeOffset);
-        document.querySelector(".endinfo").textContent = obj.playerinfo[0].end + " / " + (obj.playerinfo[0].endlevel * playerAttributeOffset);
-        document.querySelector(".agiinfo").textContent = obj.playerinfo[0].agi + " / " + (obj.playerinfo[0].agilevel * playerAttributeOffset);
+        document.querySelector(".expinfo").textContent = "Erfahrung: " + obj.playerinfo[0].exp + " / " + (obj.playerinfo[0].level * playerLevelOffset);
+        document.querySelector(".strinfo").textContent = "Stärke: " + obj.playerinfo[0].str + " / " + (obj.playerinfo[0].strlevel * playerAttributeOffset);
+        document.querySelector(".endinfo").textContent = "Ausdauer: " + obj.playerinfo[0].end + " / " + (obj.playerinfo[0].endlevel * playerAttributeOffset);
+        document.querySelector(".agiinfo").textContent = "Beweglichkeit: " + obj.playerinfo[0].agi + " / " + (obj.playerinfo[0].agilevel * playerAttributeOffset);
     }
 
     function updateCharacterImage() {
