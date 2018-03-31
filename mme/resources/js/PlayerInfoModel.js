@@ -1,3 +1,6 @@
+/*This Module is used to store and manipulate the data of the player. this means his progress is being processed in this file
+* */
+
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.PlayerInfoModel = function () {
 

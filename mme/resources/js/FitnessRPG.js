@@ -1,8 +1,8 @@
+/*Main JS To init all modules and create instances and update userinfo. At First the user opens the site the first time (No Cache), he is redirected
+* to the signup form*/
+
 var FitnessRPG = (function() {
     "use strict";
-   if(localStorage.length === 0){
-        window.open('signup.html',"_self");
-    }
 
     var that = {},
         availablequestview,
@@ -15,7 +15,9 @@ var FitnessRPG = (function() {
         playerInfoModel,
         playerInfoController,
         messageBoxAlert;
-
+    if(localStorage.length === 0){
+        window.open("signup.html","_self");
+    }
     function init() {
         initObjects();
         setInstances();

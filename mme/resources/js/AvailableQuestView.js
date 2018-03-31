@@ -1,3 +1,8 @@
+/* This Module is responsible for manipulating the interface of the available quests. The Quest list is generated/Build out of different
+* HTML Elements and resetted quests (Finishing or cancelling a quest) are rebuild in the list. This Module is important to separate dom
+* accesses.*/
+
+
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.AvailableQuestView = function () {
 
@@ -8,6 +13,7 @@ var FitnessRPG = FitnessRPG || {};
         const removeButtonLength= 4;
         playerinfo = JSON.parse(localStorage.getItem("playerinfo"));
 
+        /*  gets the in "FitnessRPG.js" created instances and set them*/
         function setInstances (availableQuestModelInstance, availableQuestControllerInstance, readMoreViewInstance, activeQuestViewInstance){
             availableQuestModel = availableQuestModelInstance;
             availableQuestController = availableQuestControllerInstance;
@@ -15,6 +21,9 @@ var FitnessRPG = FitnessRPG || {};
             activeQuestView = activeQuestViewInstance;
             availableQuests = availableQuestModel.availableQuests;
         }
+
+        /* Is called everytime the Page is loaded. So the last active quest is reloaded to save the users progress. Further the quest list
+        * on the right hand on the interface is built.*/
        function buildQuestElements(data) {
             var activeQuestIndex,dataLength,questid,i;
             if(localStorage.getItem("activeQuest") !== null || undefined){
@@ -37,12 +46,15 @@ var FitnessRPG = FitnessRPG || {};
             }}
 
         }
+        // Creates the Title Html element
         function createTitle(id) {
            var titleElement = document.createElement("div");
                titleElement.className = "questtitle";
                titleElement.innerHTML = availableQuests[id].name;
             return titleElement;
         }
+
+        //Creates the + Button on each quest and adds an eventlistener
         function createReadMoreIcon() {
             var readMoreIcon = document.createElement("img");
                 readMoreIcon.src = "resources/img/add-button-inside-black-circle.png";
@@ -52,6 +64,8 @@ var FitnessRPG = FitnessRPG || {};
                 readMoreIcon.addEventListener("click",readMoreButtonClick);
                 return readMoreIcon;
         }
+
+        //Creates the Text next to the read more icon
         function createReadMoreText(id) {
 
                var readMoreText = document.createElement("div");
@@ -64,6 +78,9 @@ var FitnessRPG = FitnessRPG || {};
                 }
                 return readMoreText;
         }
+
+        /* Creates the acceptbutton and adds the css class to the quest depending on the quest status and requirements
+        * /Users progress*/
         function createAcceptButton(id,quest) {
             var acceptButton = document.createElement("button");
                 acceptButton.className = "button";
@@ -82,6 +99,8 @@ var FitnessRPG = FitnessRPG || {};
                 } else {quest.className = "questDone"; }
                 return acceptButton;
         }
+
+        // This function in particular uses all the other functions to append the different html elements to a finished Questelement
         function createAvailableQuest(parent, id) {
 
                 var quest = document.createElement("LI");
@@ -92,6 +111,7 @@ var FitnessRPG = FitnessRPG || {};
                 quest.id = id;
                 parent.appendChild(quest);
             }
+            //rebuilds the cancelled quest in the questlist so the user is able to start it again
         function resetQuestCancelled(id) {
                 var firstQuest,resettedQuest;
                     firstQuest = parentObj.getElementsByClassName("questAvailable");
@@ -104,10 +124,15 @@ var FitnessRPG = FitnessRPG || {};
                     parentObj.insertBefore(resettedQuest,firstQuest[0]);
 
             }
+            //appends/recreates the finished and disabled quest to the end of the questlist
             function resetQuestFinished(id) {
                createAvailableQuest(parentObj,id);
 
             }
+
+            /*This function is needed to use one messagebox item (ReadMoreWindow)for every quest and removing the current children
+             * of the messagebox (Text of the last quest) After that new text elements can be added */
+
             function deleteChilds(parent) {
                 var removeButton, removeButtonInner,messageboxText,i;
                 while (parent.firstChild) {
@@ -128,6 +153,7 @@ var FitnessRPG = FitnessRPG || {};
                 parent.appendChild(removeButton);
                 parent.appendChild(messageboxText);
                }
+               /* Deletes old text elements of the messagebox and adds the new ones*/
         function readMoreButtonClick(){
                 var parent,target;
                     parent = document.getElementsByClassName("messagebox")[0];
@@ -141,6 +167,8 @@ var FitnessRPG = FitnessRPG || {};
                     readMoreView.createAwards(getQuestData(target),parent);
                     readMoreView.removeButton();
             }
+
+        //Compares Id from the html doc element and the elements in the array to find out the element in the array for flexible editing
             function getQuestData(target) {
                 var clickedId,currentQuest,i;
                     clickedId = target.parentNode.getAttribute("id");
@@ -150,7 +178,8 @@ var FitnessRPG = FitnessRPG || {};
               }}
                 return currentQuest;
             }
-
+            /*Compares the requirements of the questelement to the player stats in local storage, returns true if user
+            * meets the requirements, returns false if the user does not meet the requirements*/
             function checkRequirements(id) {
             var lvl,exp,str,end,agi,lvlRequirement,expRequirement,strRequirement,endRequirement,agiRequirement;
                      lvl = parseInt(playerinfo.playerinfo[0].level);
