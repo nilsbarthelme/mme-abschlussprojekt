@@ -43,7 +43,7 @@ var FitnessRPG = FitnessRPG || {};
 
                     exercise.className = "exercise";
                     exercise.innerHTML = "Übung: ";
-                    exercise.innerHTML += questData.exercises[i];
+                    exercise.innerHTML += questData.exercises[i].uebung;
 
                     parent.appendChild(exercise);
                 }

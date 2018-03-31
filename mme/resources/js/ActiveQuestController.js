@@ -54,8 +54,8 @@ var FitnessRPG = FitnessRPG || {};
                 }
                 if(proofNumber === exercises.length){
                     return true;
-                } else {
-                    return false;}
+                }
+                    return false;
 
             }
             function removeActiveFinished() {
@@ -78,9 +78,33 @@ var FitnessRPG = FitnessRPG || {};
                     var questId = questelement.getAttribute("id");
                     availableQuestView.resetQuestCancelled(questId);
                     localStorage.removeItem("activeQuest");
-                } 
+                }
 
             }
+            function setChecked() {
+                var elm = event.target;
+                var quest = elm.parentNode.parentNode;
+                var exercises = quest.getElementsByClassName("checkbox");
+                var index;
+
+                for(var i = 0; i < exercises.length; i++){
+
+                    if(exercises[i] === elm){
+                        index=i;
+                    }
+
+                }
+                var questId = quest.getAttribute("id");
+                var quests = JSON.parse(localStorage.getItem("quests"));
+                if(elm.checked){
+                quests.questlist.quest[questId].uebung[index].checkbox = true;}else{
+                    quests.questlist.quest[questId].uebung[index].checkbox = false;
+                }
+
+                localStorage.setItem("quests",JSON.stringify(quests));
+
+            }
+            that.setChecked = setChecked;
             that.activeControllerGetInstances = activeControllerGetInstances;
             that.changeQuestStatus = changeQuestStatus;
             that.removeActiveQuest = removeActiveQuest;

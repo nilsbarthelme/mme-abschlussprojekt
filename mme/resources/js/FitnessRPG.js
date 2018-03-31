@@ -63,10 +63,7 @@ var FitnessRPG = (function() {
             // json string
             questsobj = JSON.parse(quests);
             obj = JSON.parse(playerinfo);
-            console.log(questsobj.questlist);
-            console.log(JSON.parse(localStorage.getItem("quests")).questlist.quest[0]);
-            console.log(obj); // java objekt
-            console.log(obj.playerinfo[0].level); //level des users
+       //level des users
            // PlayerInfoView.updateUserView(obj);
         }
 
