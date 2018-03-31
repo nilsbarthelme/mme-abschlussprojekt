@@ -4,9 +4,10 @@
 *   the currently active Quest is stored in the local Storage.
 * */
 
+/* eslint-env browser*/
+
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.AvailableQuestModel = function () {
-
 
         "use strict";
 

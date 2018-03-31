@@ -1,15 +1,17 @@
 /*This Module is used to handle the users interaction with the playerinfo side (Leftside)*/
 
+/* eslint-env browser*/
 
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.PlayerInfoController = function () {
-
 
     "use strict";
 
     var that = {},
     activeQuestView,
-    playerInfoView;
+    playerInfoView,
+    middleWidthSmall = 38.9,
+    middleWidthLong = 48.9;
 
     function setInstances(activeQuestViewInstance, playerInfoViewInstance) {
         activeQuestView = activeQuestViewInstance;
@@ -20,10 +22,10 @@ FitnessRPG.PlayerInfoController = function () {
         var infoElement;
         infoElement = playerInfoView.getInfoElement();
         infoElement.addEventListener("mouseover", function() {
-            activeQuestView.setMiddleWidth(38.9);
+            activeQuestView.setMiddleWidth(middleWidthSmall);
         });
         infoElement.addEventListener("mouseout", function () {
-            activeQuestView.setMiddleWidth(48.9);
+            activeQuestView.setMiddleWidth(middleWidthLong);
         });
     }
 

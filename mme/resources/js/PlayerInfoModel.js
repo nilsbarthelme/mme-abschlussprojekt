@@ -1,6 +1,8 @@
 /*This Module is used to store and manipulate the data of the player. this means his progress is being processed in this file
 * */
 
+/* eslint-env browser*/
+
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.PlayerInfoModel = function () {
 
@@ -13,7 +15,8 @@ FitnessRPG.PlayerInfoModel = function () {
     playerLevel,
     expAward,
     questReward,
-    jsonobjPlayer;
+    jsonobjPlayer,
+    percentMultiplikator = 100;
 
     function setInstances(playerInfoViewInstance) {
         playerInfoView = playerInfoViewInstance;
@@ -54,6 +57,7 @@ FitnessRPG.PlayerInfoModel = function () {
                         updateAgiLevel(parseInt(jsonobjPlayer.playerinfo[0].agilevel),expAward, jsonobjPlayer);
                     } else {jsonobjPlayer.playerinfo[0].agi = String(parseInt(jsonobjPlayer.playerinfo[0].agi) + parseInt(questReward[index].value));}
                     break;
+                default:
             }
         }
         localStorage.setItem("playerinfo",JSON.stringify(jsonobjPlayer));
@@ -61,37 +65,38 @@ FitnessRPG.PlayerInfoModel = function () {
     }
 
     function updatePlayerLevel(playerLevel, jsonobjPlayer) {
-        var expLeft = (playerLevel * playerLevelOffset) - parseInt(jsonobjPlayer.playerinfo[0].exp);
+        var expLeft, playerLevelSet;
+        expLeft = (playerLevel * playerLevelOffset) - parseInt(jsonobjPlayer.playerinfo[0].exp);
         jsonobjPlayer.playerinfo[0].exp = String(parseInt(questReward[0].value) - expLeft);
-        playerLevel= playerLevel + 1;
-        jsonobjPlayer.playerinfo[0].level =  String(playerLevel);
+        playerLevelSet = playerLevel + 1;
+        jsonobjPlayer.playerinfo[0].level = String(playerLevelSet);
         location.reload();
-
     }
+
     function updateStrLevel(attributeLevel, attributeExp, jsonobjPlayer) {
         var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].str);
         jsonobjPlayer.playerinfo[0].str = String(attributeExp - expLeft);
-        jsonobjPlayer.playerinfo[0].strlevel =  String(attributeLevel + 1);
+        jsonobjPlayer.playerinfo[0].strlevel = String(attributeLevel + 1);
     }
 
     function updateEndLevel(attributeLevel, attributeExp, jsonobjPlayer) {
         var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].end);
         jsonobjPlayer.playerinfo[0].end = String(attributeExp - expLeft);
-        jsonobjPlayer.playerinfo[0].endlevel =  String(attributeLevel + 1);
+        jsonobjPlayer.playerinfo[0].endlevel = String(attributeLevel + 1);
     }
 
     function updateAgiLevel(attributeLevel, attributeExp, jsonobjPlayer) {
         var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].agi);
         jsonobjPlayer.playerinfo[0].agi = String(attributeExp - expLeft);
-        jsonobjPlayer.playerinfo[0].agilevel =  String(attributeLevel + 1);
+        jsonobjPlayer.playerinfo[0].agilevel = String(attributeLevel + 1);
     }
 
     function updateUserView(obj) {
         var expInPercent, strInPercent, endInPercent, agiInPercent;
-        expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * 100;
-        strInPercent = (parseFloat(obj.playerinfo[0].str) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].strlevel))) * 100 ;
-        endInPercent = (parseFloat(obj.playerinfo[0].end) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].endlevel))) * 100 ;
-        agiInPercent = (parseFloat(obj.playerinfo[0].agi) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].agilevel))) * 100 ;
+        expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * percentMultiplikator;
+        strInPercent = (parseFloat(obj.playerinfo[0].str) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].strlevel))) * percentMultiplikator ;
+        endInPercent = (parseFloat(obj.playerinfo[0].end) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].endlevel))) * percentMultiplikator ;
+        agiInPercent = (parseFloat(obj.playerinfo[0].agi) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].agilevel))) * percentMultiplikator ;
 
         playerInfoView.updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent);
     }
@@ -99,10 +104,10 @@ FitnessRPG.PlayerInfoModel = function () {
     function updateUserViewBoot() {
         var expInPercent, strInPercent, endInPercent, agiInPercent, obj;
         obj = JSON.parse(localStorage.getItem("playerinfo"));
-        expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * 100;
-        strInPercent = (parseFloat(obj.playerinfo[0].str) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].strlevel))) * 100 ;
-        endInPercent = (parseFloat(obj.playerinfo[0].end) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].endlevel))) * 100 ;
-        agiInPercent = (parseFloat(obj.playerinfo[0].agi) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].agilevel))) * 100 ;
+        expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * percentMultiplikator;
+        strInPercent = (parseFloat(obj.playerinfo[0].str) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].strlevel))) * percentMultiplikator ;
+        endInPercent = (parseFloat(obj.playerinfo[0].end) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].endlevel))) * percentMultiplikator ;
+        agiInPercent = (parseFloat(obj.playerinfo[0].agi) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].agilevel))) * percentMultiplikator;
 
         playerInfoView.updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent);
     }

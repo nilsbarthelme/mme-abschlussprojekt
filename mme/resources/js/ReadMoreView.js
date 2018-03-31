@@ -1,9 +1,9 @@
 /*This Module is used to create and manipulate the message box when clicking on the read more button. */
 
+/* eslint-env browser*/
 
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.ReadMoreView = function () {
-
 
         "use strict";
 
@@ -12,7 +12,7 @@ var FitnessRPG = FitnessRPG || {};
         function removeButton() {
             document.querySelector("#messagebox").addEventListener("click", hideMessageButton);
             function hideMessageButton() {
-                document.getElementsByClassName("messagebox")[0].style.display="none";
+              document.getElementsByClassName("messagebox")[0].style.display="none";
 }
         }
         // creates the duration text of the quest
@@ -22,7 +22,6 @@ var FitnessRPG = FitnessRPG || {};
                 duration.innerHTML ="Questdauer: ";
                 duration.innerHTML += questData.duration;
                 parent.appendChild(duration);
-
             }
 
             //creates the quest name
@@ -46,7 +45,9 @@ var FitnessRPG = FitnessRPG || {};
                         case 3: property = "Ausdauerlevel: ";
                         break;
                         case 4: property = "Beweglichkeitslevel: ";
-                        break;}
+                        break;
+                        default:
+                    }
 
                     requirement = document.createElement("div");
                     requirement.className = "requirement";
@@ -82,14 +83,12 @@ var FitnessRPG = FitnessRPG || {};
 
             }
 
-
             that.removeButton = removeButton;
             that.createDuration = createDuration;
             that.createAwards = createAwards;
             that.createExercises = createExercises;
            that.createName = createName;
            that.createRequirements = createRequirements;
-
 
         return that;
     };

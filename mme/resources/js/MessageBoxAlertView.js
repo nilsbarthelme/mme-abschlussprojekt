@@ -1,6 +1,7 @@
 /*This Module is used to manipulate the interface and create a messagebox alert for different supposes. This is used because
 * the integrated alert function is mostly used for debugging and not editable through css. */
 
+/* eslint-env browser*/
 
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.MessageBoxAlertView = function () {

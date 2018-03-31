@@ -1,9 +1,10 @@
 /* This Module is responsible for manipulating the interface of the active quests. The currently active Quest generated/Build out of different
 * HTML Elements. This Module is important to separate dom accesses.*/
 
+/* eslint-env browser*/
+
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.ActiveQuestView = function () {
-
 
         "use strict";
 
@@ -81,7 +82,6 @@ var FitnessRPG = FitnessRPG || {};
                 parent = document.getElementsByClassName("middle")[0];
                 parent.appendChild(questbox);
                 availableQuestModel.storageActiveQuest(quest.id);
-
 
             }
         /*Creates the different exercises with their checkboxes*/

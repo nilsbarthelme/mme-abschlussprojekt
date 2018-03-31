@@ -1,5 +1,6 @@
 /*This Module is used to manipulate the user interface of the playerinfo (Left side ) and represent/visualise the progress of the player */
 
+/* eslint-env browser*/
 
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.PlayerInfoView = function () {
@@ -7,15 +8,16 @@ FitnessRPG.PlayerInfoView = function () {
     "use strict";
 
     var that = {},
-    playerInfoController,
     playerLevelOffset = 15,
     playerAttributeOffset = 15,
-    obj;
+    obj,
+    imageLevel1 = 2,
+    imageLevel2 = 4,
+    imageLevel3 = 6,
+    imageLevel4 = 8,
+    imageLevel5 = 9;
     /*  gets the in "FitnessRPG.js" created instances and set them*/
 
-    function setinstances(playerInfoControllerView) {
-        playerInfoController = playerInfoControllerView;
-    }
     // Updates the different progress bars
     function updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent) {
         obj = JSON.parse(localStorage.getItem("playerinfo"));
@@ -54,15 +56,17 @@ FitnessRPG.PlayerInfoView = function () {
             case "char_3":
                 char.setAttribute("src","resources/img/Char3Level" + imgLevel + ".png");
                 break;
+            default:
         }
     }
     //Defines which image number to choose depending on the players level
     function definePlayerImageLevel(level) {
-        if (level <= 2) {return "1";}
-        else if (level <= 4) {return "2";}
-        else if (level <= 6) {return "3";}
-        else if (level <= 8) {return "4";}
-        else if (level >= 9 ) {return "5";}
+        if (level <= imageLevel1) {return "1";}
+        else if (level <= imageLevel2) {return "2";}
+        else if (level <= imageLevel3) {return "3";}
+        else if (level <= imageLevel4) {return "4";}
+        else if (level >= imageLevel5 ) {return "5";}
+        return null;
     }
     // Updates the level in the left sidebar of the interfaces
     function updateCharacterLevel() {
@@ -78,14 +82,12 @@ FitnessRPG.PlayerInfoView = function () {
         charName = document.getElementsByClassName("username")[0];
         playerinfoObj = JSON.parse(localStorage.getItem("playerinfo"));
         name = playerinfoObj.playerinfo[0].name;
-        charName.innerHTML =  name;
+        charName.innerHTML = name;
     }
-
 
     function getInfoElement() {return document.querySelector(".left");}
 
     that.getInfoElement = getInfoElement;
-    that.setInstances = setinstances;
     that.updateUserView = updateUserView;
     that.updateCharacterImage = updateCharacterImage;
     that.updateCharacterLevel = updateCharacterLevel;

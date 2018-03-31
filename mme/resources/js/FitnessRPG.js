@@ -1,6 +1,8 @@
 /*Main JS To init all modules and create instances and update userinfo. At First the user opens the site the first time (No Cache), he is redirected
 * to the signup form*/
 
+/* eslint-env browser*/
+
 var FitnessRPG = (function() {
     "use strict";
 
@@ -32,7 +34,6 @@ var FitnessRPG = (function() {
         availablequestview.buildQuestElements(availableQuestModel.parseQuests());
         playerInfoModel.setInstances(playerinfoview);
         playerInfoController.setInstances(activeQuestView, playerinfoview);
-        playerinfoview.setInstances(playerInfoController);
         activeQuestController.setInstances(availableQuestModel,availablequestview,playerInfoModel,messageBoxAlert);
     }
 

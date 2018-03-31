@@ -1,5 +1,6 @@
 /*This Module is used to save the selected character in the local storage so it is displayed correctly in the user info*/
 
+/* eslint-env browser*/
 
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.Selection = function () {
@@ -24,10 +25,7 @@ var FitnessRPG = FitnessRPG || {};
 
         }
         //Opens index.html to start the game
-        function openNewPage() {
-            window.open("index.html");
-
-        }
+        function openNewPage() {window.open("index.html");}
 
         /*These functions save the different chosen characters to the local storage*/
         function saveFirstCharacter() {

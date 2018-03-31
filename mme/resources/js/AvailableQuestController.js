@@ -1,9 +1,10 @@
 /* The AvailableQuestController is used to handle the users Interaction with Buttons. In this Module the Listeners are set
 * and functions of the view module are called.*/
 
+/* eslint-env browser*/
+
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.AvailableQuestController = function () {
-
 
         "use strict";
 

@@ -2,10 +2,10 @@
 * HTML Elements and resetted quests (Finishing or cancelling a quest) are rebuild in the list. This Module is important to separate dom
 * accesses.*/
 
+/* eslint-env browser*/
 
 var FitnessRPG = FitnessRPG || {};
     FitnessRPG.AvailableQuestView = function () {
-
 
         "use strict";
 
@@ -187,7 +187,6 @@ var FitnessRPG = FitnessRPG || {};
                      str = parseInt(playerinfo.playerinfo[0].strlevel);
                      end = parseInt(playerinfo.playerinfo[0].endlevel);
                      agi = parseInt(playerinfo.playerinfo[0].agilevel);
-
 
                      lvlRequirement = parseInt(availableQuests[id].requirements[0]);
                      expRequirement = parseInt(availableQuests[id].requirements[1]);
