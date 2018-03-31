@@ -16,20 +16,15 @@ FitnessRPG.PlayerInfoModel = function () {
     expAward,
     questReward,
     jsonobjPlayer,
-    percentMultiplikator = 100;
+    percentMultiplikator = 100,
+    jsonobjQuests,
+    index;
 
-    function setInstances(playerInfoViewInstance) {
-        playerInfoView = playerInfoViewInstance;
+    function setInstances(playerInfoViewInstance) {playerInfoView = playerInfoViewInstance;}
 
-    }
-
+    //updates local storage with quest attributes when a quest is finished
     function updatePlayerStats(questId) {
-        var jsonobjQuests, index;
-        jsonobjQuests = JSON.parse(localStorage.getItem("quests"));
-        jsonobjPlayer = JSON.parse(localStorage.getItem("playerinfo"));
-        questReward = jsonobjQuests.questlist.quest[questId].belohnung;
-        playerLevel= parseInt(jsonobjPlayer.playerinfo[0].level);
-
+        setAttributes(questId);
         for (index = 0; index < questReward.length; index++) {
             switch (questReward[index].awardid) {
                 case "Exp":
@@ -64,6 +59,15 @@ FitnessRPG.PlayerInfoModel = function () {
         updateUserView(jsonobjPlayer);
     }
 
+    //writes new player stats in local storage
+    function setAttributes(questId) {
+        jsonobjQuests = JSON.parse(localStorage.getItem("quests"));
+        jsonobjPlayer = JSON.parse(localStorage.getItem("playerinfo"));
+        questReward = jsonobjQuests.questlist.quest[questId].belohnung;
+        playerLevel= parseInt(jsonobjPlayer.playerinfo[0].level);
+    }
+
+    //updates userview to set new level when user leveld up
     function updatePlayerLevel(playerLevel, jsonobjPlayer) {
         var expLeft, playerLevelSet;
         expLeft = (playerLevel * playerLevelOffset) - parseInt(jsonobjPlayer.playerinfo[0].exp);
@@ -73,6 +77,7 @@ FitnessRPG.PlayerInfoModel = function () {
         location.reload();
     }
 
+    //following functions update jsonobj with new player attributes 
     function updateStrLevel(attributeLevel, attributeExp, jsonobjPlayer) {
         var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].str);
         jsonobjPlayer.playerinfo[0].str = String(attributeExp - expLeft);
@@ -91,6 +96,7 @@ FitnessRPG.PlayerInfoModel = function () {
         jsonobjPlayer.playerinfo[0].agilevel = String(attributeLevel + 1);
     }
 
+    //updates the percentage of the player attribute bars when a quest is finished
     function updateUserView(obj) {
         var expInPercent, strInPercent, endInPercent, agiInPercent;
         expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * percentMultiplikator;
@@ -101,6 +107,7 @@ FitnessRPG.PlayerInfoModel = function () {
         playerInfoView.updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent);
     }
 
+    ////updates the percentage of the player attribute bars on initial start
     function updateUserViewBoot() {
         var expInPercent, strInPercent, endInPercent, agiInPercent, obj;
         obj = JSON.parse(localStorage.getItem("playerinfo"));
