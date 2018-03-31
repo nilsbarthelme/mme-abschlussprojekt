@@ -65,7 +65,7 @@ var FitnessRPG = FitnessRPG || {};
                 parent.parentNode.removeChild(parent);
                 var questelement = elm.parentNode;
                 var questId = questelement.getAttribute("id");
-                availableQuestView.resetQuest(questId);
+                availableQuestView.resetQuestFinished(questId);
 
                 localStorage.removeItem("activeQuest");
             }
@@ -78,7 +78,7 @@ var FitnessRPG = FitnessRPG || {};
                      parent.parentNode.removeChild(parent);
                         var questelement = elm.parentNode.parentNode.parentNode;
                     var questId = questelement.getAttribute("id");
-                    availableQuestView.resetQuest(questId);
+                    availableQuestView.resetQuestCancelled(questId);
                     localStorage.removeItem("activeQuest");
                 } else {
                  }

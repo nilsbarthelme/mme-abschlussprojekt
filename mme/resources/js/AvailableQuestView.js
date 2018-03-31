@@ -92,7 +92,7 @@ var FitnessRPG = FitnessRPG || {};
                 quest.id = id;
                 parent.appendChild(quest);
             }
-        function resetQuest(id) {
+        function resetQuestCancelled(id) {
                 var rightside = document.getElementsByClassName("right")[0];
                 var firstQuest = rightside.getElementsByClassName("questAvailable");
                 var quest = document.createElement("LI");
@@ -102,6 +102,11 @@ var FitnessRPG = FitnessRPG || {};
                 quest.appendChild(createReadMoreText());
                 quest.id = id;
                 rightside.insertBefore(quest,firstQuest[0]);
+
+            }
+            function resetQuestFinished(id) {
+                var rightside = document.getElementsByClassName("right")[0];
+               createAvailableQuest(rightside,id);
 
             }
         function readMoreButtonClick(){
@@ -145,7 +150,8 @@ var FitnessRPG = FitnessRPG || {};
         }
 
         that.getInstances = getInstances;
-        that.resetQuest = resetQuest;
+        that.resetQuestCancelled = resetQuestCancelled;
+        that.resetQuestFinished = resetQuestFinished;
         that.buildQuestElements = buildQuestElements;
         return that;
     };
