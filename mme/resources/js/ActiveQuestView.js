@@ -77,9 +77,11 @@ var FitnessRPG = FitnessRPG || {};
                     var checkbox = document.createElement("input");
                     checkbox.setAttribute("type","checkbox");
                     checkbox.className = "checkbox";
-                    if(questData.exercises[i].checkbox === "false" || false){
+                    console.log(questData.exercises[i].checkbox);
+                    if(questData.exercises[i].checkbox === "false" || questData.exercises[i].checkbox ===false){
                         checkbox.checked = false;
                     } else {checkbox.checked = true; }
+                    console.log(checkbox.checked);
                     checkbox.addEventListener("change",activeQuestController.setChecked);
                     var exercise = document.createElement("div");
                     exercise.className = "exercise";
