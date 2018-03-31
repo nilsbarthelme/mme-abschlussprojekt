@@ -1,4 +1,5 @@
 var FitnessRPG = (function() {
+
     "use strict";
    if(localStorage.length === 0){
         window.open('signup.html',"_self");
@@ -37,7 +38,7 @@ var FitnessRPG = (function() {
         availablequestview = new FitnessRPG.AvailableQuestView();
         availableQuestModel = new FitnessRPG.AvailableQuestModel();
         activeQuestController = new FitnessRPG.ActiveQuestController();
-        activeQuestController.activeControllerGetInstances(availableQuestModel,availablequestview);
+        activeQuestController.setInstances(availableQuestModel,availablequestview);
         playerinfoview = new FitnessRPG.PlayerInfoView();
         readMoreView = new FitnessRPG.ReadMoreView();
         activeQuestView = new FitnessRPG.ActiveQuestView();
