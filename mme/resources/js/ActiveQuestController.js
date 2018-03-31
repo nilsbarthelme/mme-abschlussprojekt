@@ -11,12 +11,12 @@ var FitnessRPG = FitnessRPG || {};
         var quests,
         messageBoxAlert;
 
-        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance, messageBoxAlertInstace) {
+        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance, messageBoxAlertInstance) {
             availableQuestModel = availableQuestModelInstance;
             availableQuestView = availableQuestViewInstance;
             playerInfoModel = playerInfoModelInstance;
             quests = availableQuestModel.availableQuests;
-            messageBoxAlert = messageBoxAlertInstace;
+            messageBoxAlert = messageBoxAlertInstance;
         }
 
         function changeQuestStatus(button) {
