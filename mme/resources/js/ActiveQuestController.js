@@ -11,7 +11,7 @@ var FitnessRPG = FitnessRPG || {};
         var quests,
         messageBoxAlert;
 
-        function activeControllerGetInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance, messageBoxAlertInstance) {
+        function setInstances(availableQuestModelInstance,availableQuestViewInstance, playerInfoModelInstance, messageBoxAlertInstance) {
             availableQuestModel = availableQuestModelInstance;
             availableQuestView = availableQuestViewInstance;
             playerInfoModel = playerInfoModelInstance;
@@ -107,7 +107,7 @@ var FitnessRPG = FitnessRPG || {};
 
             }
             that.setChecked = setChecked;
-            that.activeControllerGetInstances = activeControllerGetInstances;
+            that.setInstances = setInstances;
             that.changeQuestStatus = changeQuestStatus;
             that.removeActiveQuest = removeActiveQuest;
 

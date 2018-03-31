@@ -6,7 +6,7 @@ var FitnessRPG = FitnessRPG || {};
 
         var that = {},availableQuestModel,activeQuestController;
         const removeButtonLength = 4;
-        function activeViewGetInstances(activeQuestControllerInstance,availableQuestModelInstance) {
+        function setInstances(activeQuestControllerInstance,availableQuestModelInstance) {
             activeQuestController = activeQuestControllerInstance;
             availableQuestModel = availableQuestModelInstance;
 
@@ -114,7 +114,7 @@ var FitnessRPG = FitnessRPG || {};
 
             that.setMiddleWidth = setMiddleWidth;
             that.getMiddleElement = getMiddleElement;
-            that.activeViewGetInstances = activeViewGetInstances;
+            that.setInstances = setInstances;
             that.createActiveQuest = createActiveQuest;
 
         return that;
