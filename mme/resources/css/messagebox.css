@@ -3,7 +3,7 @@
     overflow-y: scroll;
     font-family: 'Roboto', sans-serif;
     width: 35%;
-    height: 50%;
+    height: 60%;
     background: orange;
     position: absolute;
     top:0;
@@ -11,6 +11,9 @@
     left: 0;
     right: 0;
     margin: auto;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -26,11 +29,15 @@
     color:#FFFFFF;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:28px;
+    font-size:25px;
     text-align:center;
-    font-family:helvetica, sans-serif;
+    font-family: 'Press Start 2P', cursive;
     line-height:3;
     padding:0px;
+}
+
+.messagebox.name {
+    font-size: 10px;
 }
 
 .messagebox::-webkit-scrollbar {

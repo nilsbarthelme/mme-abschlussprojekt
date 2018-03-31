@@ -60,21 +60,6 @@
     width: 50%;
     background-color: dodgerblue; */
 }
-.expbar {
-    display: none;
-    content: "Experience";
-    color: black;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    width: 0%;
-    height: 50px;
-    margin: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #FFFAD5;
-    text-decoration: none;
-    list-style-type: none;
-}
 
 .expinfo{
     float: right;
@@ -86,6 +71,7 @@
     position: relative;
     top: 30%;
     left: -5%;
+    transition: opacity .5s linear;
 }
 
 .strinfo{
@@ -124,9 +110,24 @@
     left: -5%;
 }
 
+.expbar {
+    opacity: 0;
+    color: black;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FFFAD5;
+    text-decoration: none;
+    list-style-type: none;
+    transition: opacity .5s linear;
+}
 
 .strbar{
-    display: none;
+    opacity: 0;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
     width: 90%;
@@ -135,11 +136,12 @@
     background-color: #FFE34E;
     text-decoration: none;
     list-style-type: none;
+    transition: opacity .5s linear;
 
 }
 
 .endbar{
-    display: none;
+    opacity: 0;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
     width: 90%;
@@ -148,10 +150,11 @@
     background-color: #DB9E36;
     text-decoration: none;
     list-style-type: none;
+    transition: opacity .5s linear;
 }
 
 .agibar{
-    display: none;
+    opacity: 0;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
     width: 90%;
@@ -160,6 +163,7 @@
     background-color: #BD4932;
     text-decoration: none;
     list-style-type: none;
+    transition: opacity .5s linear;
 }
 
 
@@ -187,7 +191,7 @@
 }
 
 .left {
-    font-family:helvetica, sans-serif;
+    font-family: 'Press Start 2P', cursive;
     color: white;
     vertical-align: top;
     position: relative;
@@ -204,8 +208,6 @@
 
 
 .left:hover .expbar {
-    display: list-item;
-     content: "Experience";
     color: black;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
@@ -217,11 +219,11 @@
     background-color: #C0BDAA;
     text-decoration: none;
     list-style-type: none;
+    opacity:1;
+    transition: opacity .5s linear;
 }
 
 .left:hover .strbar {
-    display: list-item;
-     content: "Experience";
     color: black;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
@@ -233,11 +235,11 @@
     background-color: #C6B664;
     text-decoration: none;
     list-style-type: none;
+    opacity:1;
+    transition: opacity .5s linear;
 }
 
 .left:hover .agibar {
-    display: list-item;
-     content: "Experience";
     color: black;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
@@ -249,11 +251,11 @@
     background-color: #A26255;
     text-decoration: none;
     list-style-type: none;
+    opacity:1;
+    transition: opacity .5s linear;
 }
 
 .left:hover .endbar {
-    display: list-item;
-     content: "Experience";
     color: black;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
@@ -265,6 +267,8 @@
     background-color: #B29057;
     text-decoration: none;
     list-style-type: none;
+    opacity:1;
+    transition: opacity .5s linear;
 }
 
 .level{
@@ -276,7 +280,6 @@
     word-spacing:7pt;
     font-size:28px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
     padding:0px;
 }
@@ -291,12 +294,13 @@
     word-spacing:7pt;
     font-size:28px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
     padding:0px;
 }
 
 
-.left:hover{ width: 30%;}
+.left:hover{
+    width: 30%;
+}
 
 
