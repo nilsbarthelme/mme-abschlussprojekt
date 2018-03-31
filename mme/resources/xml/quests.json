@@ -29,7 +29,7 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
@@ -39,7 +39,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "15"
           }
         ]
       },
@@ -58,10 +58,10 @@
         ],
         "voraussetzung": [
            "2",
-            "0",
-            "0",
-            "0",
-            "0"
+            "1",
+            "1",
+            "1",
+            "1"
         ],
         "belohnung": [
           {
@@ -80,7 +80,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "15"
           }
         ]
       },
@@ -99,10 +99,10 @@
         ],
         "voraussetzung": [
            "2",
-            "0",
-            "0",
-            "0",
-            "0"
+            "1",
+            "1",
+            "1",
+            "1"
         ],
         "belohnung": [
           {
@@ -111,7 +111,7 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
@@ -121,7 +121,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "15"
           }
         ]
       },
@@ -141,10 +141,10 @@
         ],
         "voraussetzung": [
            "3",
-            "0",
-            "0",
-            "0",
-            "0"
+            "1",
+            "1",
+            "1",
+            "1"
         ],
         "belohnung": [
         {
@@ -153,7 +153,7 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
@@ -163,7 +163,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "25"
           }
         ]
       },
@@ -185,10 +185,10 @@
         ],
         "voraussetzung": [
              "3",
-            "0",
-            "0",
-            "0",
-            "0"
+            "1",
+            "1",
+            "1",
+            "1"
         ],
         "belohnung": [
            {
@@ -202,12 +202,12 @@
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "25"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "15"
           }
         ]
       },
@@ -229,10 +229,10 @@
         ],
         "voraussetzung": [
           "4",
-            "0",
-            "0",
-            "0",
-            "0"
+            "2",
+            "2",
+            "2",
+            "2"
         ],
         "belohnung": [
        {
@@ -241,7 +241,7 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
@@ -251,7 +251,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "20"
           }
         ]
       },
@@ -271,10 +271,10 @@
         ],
         "voraussetzung": [
             "4",
-            "0",
-            "0",
-            "0",
-            "0"
+            "2",
+            "2",
+            "2",
+            "2"
         ],
         "belohnung": [
          {
@@ -283,17 +283,17 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "20"
           }
         ]
       },
@@ -313,10 +313,10 @@
         ],
         "voraussetzung": [
           "4",
-            "0",
-            "0",
-            "0",
-            "0"
+            "2",
+            "2",
+            "2",
+            "2"
         ],
         "belohnung": [
            {
@@ -325,17 +325,17 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "15"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "25"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "20"
           }
         ]
       },
@@ -357,10 +357,10 @@
         ],
         "voraussetzung": [
           "5",
-            "2",
-            "1",
-            "1",
-            "1"
+            "3",
+            "3",
+            "3",
+            "3"
         ],
         "belohnung": [
            {
@@ -369,17 +369,17 @@
           },
           {
             "awardid": "End",
-            "value": "20"
+            "value": "25"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "20"
+            "value": "25"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "15"
+            "value": "25"
           }
         ]
       },
@@ -398,10 +398,10 @@
         ],
         "voraussetzung": [
           "5",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "3",
+            "3",
+            "3"
         ],
         "belohnung": [
            {
@@ -439,10 +439,10 @@
         ],
         "voraussetzung": [
           "5",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "3",
+            "3",
+            "3"
         ],
         "belohnung": [
            {
@@ -483,10 +483,10 @@
         ],
         "voraussetzung": [
           "6",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "3",
+            "3",
+            "3"
         ],
         "belohnung": [
            {
@@ -525,10 +525,10 @@
         ],
         "voraussetzung": [
            "6",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "3",
+            "3",
+            "3"
         ],
         "belohnung": [
         {
@@ -537,17 +537,17 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "25"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "30"
           }
         ]
       },
@@ -569,10 +569,10 @@
         ],
         "voraussetzung": [
           "6",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "3",
+            "3",
+            "3"
         ],
         "belohnung": [
            {
@@ -581,7 +581,7 @@
           },
           {
             "awardid": "End",
-            "value": "50"
+            "value": "30"
           }
             ,
           {
@@ -591,7 +591,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "15"
+            "value": "25"
           }
         ]
       },
@@ -613,10 +613,10 @@
         ],
         "voraussetzung": [
           "7",
-            "0",
-            "0",
-            "0",
-            "0"
+            "4",
+            "4",
+            "4",
+            "4"
         ],
         "belohnung": [
            {
@@ -635,7 +635,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "15"
+            "value": "20"
           }
         ]
       },
@@ -657,10 +657,10 @@
         ],
         "voraussetzung": [
           "7",
-            "0",
-            "0",
-            "0",
-            "0"
+            "4",
+            "4",
+            "4",
+            "4"
         ],
         "belohnung": [
        {
@@ -669,17 +669,17 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "25"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "25"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "40"
           }
         ]
       },
@@ -701,10 +701,10 @@
         ],
         "voraussetzung": [
           "7",
-            "0",
-            "0",
-            "0",
-            "0"
+            "4",
+            "4",
+            "4",
+            "4"
         ],
         "belohnung": [
            {
@@ -713,7 +713,7 @@
           },
           {
             "awardid": "End",
-            "value": "20"
+            "value": "25"
           }
             ,
           {
@@ -723,7 +723,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "25"
           }
         ]
       },
@@ -742,10 +742,10 @@
         ],
         "voraussetzung": [
            "7",
-            "0",
-            "0",
-            "0",
-            "0"
+            "4",
+            "4",
+            "4",
+            "4"
         ],
         "belohnung": [
         {
@@ -754,17 +754,17 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "35"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "25"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "30"
           }
         ]
       },
@@ -790,10 +790,10 @@
         ],
         "voraussetzung": [
           "8",
-            "0",
-            "0",
-            "0",
-            "0"
+            "5",
+            "5",
+            "5",
+            "5"
         ],
         "belohnung": [
            {
@@ -802,12 +802,12 @@
           },
           {
             "awardid": "End",
-            "value": "20"
+            "value": "50"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "25"
           }
             ,
           {
@@ -833,10 +833,10 @@
         ],
         "voraussetzung": [
            "8",
-            "0",
-            "0",
-            "0",
-            "0"
+            "5",
+            "5",
+            "5",
+            "5"
         ],
         "belohnung": [
         {
@@ -845,17 +845,17 @@
           },
           {
             "awardid": "End",
-            "value": "0"
+            "value": "35"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "45"
           }
         ]
       },{
@@ -882,10 +882,10 @@
         ],
         "voraussetzung": [
           "8",
-            "0",
-            "0",
-            "0",
-            "0"
+            "5",
+            "5",
+            "5",
+            "5"
         ],
         "belohnung": [
        {
@@ -894,17 +894,17 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "30"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "35"
           }
         ]
       },
@@ -927,10 +927,10 @@
         ],
         "voraussetzung": [
           "8",
-            "0",
-            "0",
-            "0",
-            "0"
+            "5",
+            "5",
+            "5",
+            "5"
         ],
         "belohnung": [
            {
@@ -944,12 +944,12 @@
             ,
           {
             "awardid": "Strength",
-            "value": "20"
+            "value": "35"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "20"
           }
         ]
       },
@@ -972,10 +972,10 @@
         ],
         "voraussetzung": [
           "9",
-            "0",
-            "0",
-            "0",
-            "0"
+            "6",
+            "6",
+            "6",
+            "6"
         ],
         "belohnung": [
            {
@@ -984,7 +984,7 @@
           },
           {
             "awardid": "End",
-            "value": "20"
+            "value": "50"
           }
             ,
           {
@@ -994,7 +994,7 @@
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "35"
           }
         ]
       },
@@ -1021,10 +1021,10 @@
         ],
         "voraussetzung": [
           "9",
-            "0",
-            "0",
-            "0",
-            "0"
+            "6",
+            "6",
+            "6",
+            "6"
         ],
         "belohnung": [
            {
@@ -1033,17 +1033,17 @@
           },
           {
             "awardid": "End",
-            "value": "20"
+            "value": "25"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "20"
+            "value": "40"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "30"
           }
         ]
       },{
@@ -1069,10 +1069,10 @@
         ],
         "voraussetzung": [
           "9",
-            "0",
-            "0",
-            "0",
-            "0"
+            "6",
+            "6",
+            "6",
+            "6"
         ],
         "belohnung": [
        {
@@ -1081,17 +1081,17 @@
           },
           {
             "awardid": "End",
-            "value": "10"
+            "value": "20"
           }
             ,
           {
             "awardid": "Strength",
-            "value": "10"
+            "value": "30"
           }
             ,
           {
             "awardid": "Agi",
-            "value": "10"
+            "value": "20"
           }
         ]
       },
@@ -1116,10 +1116,10 @@
         ],
         "voraussetzung": [
           "9",
-            "0",
-            "0",
-            "0",
-            "0"
+            "6",
+            "6",
+            "6",
+            "6"
         ],
         "belohnung": [
            {
