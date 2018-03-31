@@ -21,7 +21,6 @@ var FitnessRPG = (function() {
         setInstances();
         playerInfoController.init();
         updateUserInfo();
-        messageBoxAlert.showMessage("Welcome to the jungel, my friend!!!");
     }
 
     function setInstances() {
