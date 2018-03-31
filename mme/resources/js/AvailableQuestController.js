@@ -4,7 +4,6 @@ var FitnessRPG = FitnessRPG || {};
 
         "use strict";
 
-<<<<<<< HEAD
         var that = {};
         var activeQuestView,availableQuestModel;
         var availableQuests;
@@ -12,6 +11,7 @@ var FitnessRPG = FitnessRPG || {};
 
 <<<<<<< HEAD
         function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance, messageBoxAlertInstance) {
+<<<<<<< HEAD
 =======
         var that = {},activeQuestView,availableQuestModel,availableQuests;
 
@@ -21,6 +21,8 @@ var FitnessRPG = FitnessRPG || {};
 =======
         function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance) {
 >>>>>>> parent of c423d61... Added Alert Box
+=======
+>>>>>>> parent of f3ab6fd... Merge branch 'master' of https://github.com/UniRegensburg/mme-abschlussprojekte-ws-201718-fitnessrpg
             activeQuestView = activeQuestviewInstance;
             availableQuestModel = availableQuestModelInstance;
         }
@@ -33,10 +35,12 @@ var FitnessRPG = FitnessRPG || {};
         }
 
         function acceptbutton(){
-           var targetElement = event.target;
+           var elm = event.target;
             if(localStorage.getItem("activeQuest") === null){
-              targetElement.parentNode.parentNode.removeChild(targetElement.parentNode);
-              activeQuestView.createActiveQuest(getQuestData(targetElement));
+                console.log(localStorage);
+                console.log(localStorage.getItem("activeQuest"));
+              elm.parentNode.parentNode.removeChild(elm.parentNode);
+              activeQuestView.createActiveQuest(getQuestData(elm));
             } else {
               alert("Sie können nur eine Quest gleichzeitig annehmen!");
           }
@@ -48,16 +52,17 @@ var FitnessRPG = FitnessRPG || {};
             alert("Sie erfüllen die Anforderungen für diese Quest nicht!");
         }
         function getQuestData(target) {
-                var clickedId, quests,i;
                 availableQuests = availableQuestModel.availableQuests;
-                clickedId = target.parentNode.getAttribute("id");
-                for( i = 0; i < availableQuests.length; i++){
+                console.log(availableQuests);
+                var clickedId = target.parentNode.getAttribute("id");
+                var questData;
+                for(var i = 0; i < availableQuests.length; i++){
                     if(availableQuests[i].id === clickedId){
-                  quests = availableQuests[i];
+                  questData = availableQuests[i];
               }}
-                return quests;
+                return questData;
             }
-            that.setInstances = setInstances;
+            that.availQuestsGetInstances = availQuestsGetInstances;
             that.setClickListenerDisabled = setClickListenerDisabled;
             that.setClickListenerEnabled = setClickListenerEnabled;
 
