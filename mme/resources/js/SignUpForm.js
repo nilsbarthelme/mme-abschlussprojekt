@@ -13,13 +13,14 @@ var SignUpForm = (function() {
 
       }
       function getData() {
-          var name = document.getElementsByName("user_name");
-          var email = document.getElementsByName("user_email");
+          var name,email,playerInfo;
+          name = document.getElementsByName("user_name");
+          email = document.getElementsByName("user_email");
           if (name[0].value === "") {alert("Bitte einen Namen eingeben!")}
           else if (name[0].value.length > 9) {alert("Name ist zu lang!")}
           else if (!validateEmail(email[0].value)) {alert("Bitte eine korrekte Email angeben!")}
           else {
-              var playerInfo = JSON.parse(localStorage.getItem("playerinfo"));
+              playerInfo = JSON.parse(localStorage.getItem("playerinfo"));
               playerInfo.playerinfo[0].name = name[0].value;
               playerInfo.playerinfo[0].email = email[0].value;
               localStorage.setItem("playerinfo",JSON.stringify(playerInfo));
@@ -34,8 +35,9 @@ var SignUpForm = (function() {
         return re.test(String(email).toLowerCase());
     }
       function setPlayerInfo() {
-           var jsonString = "";
-        var client = new XMLHttpRequest();
+           var jsonString,client;
+           jsonString = "";
+           client = new XMLHttpRequest();
         client.open('GET', 'resources/xml/playerinfo.json');
         client.onloadend = function () {
             jsonString = client.responseText;
@@ -47,10 +49,11 @@ var SignUpForm = (function() {
 
       }
       function setQuestList() {
-         var jsonString = "";
-        var client = new XMLHttpRequest();
-        client.open('GET', 'resources/xml/quests.json');
-        client.onloadend = function () {
+         var jsonString,client
+             jsonString = "";
+             client = new XMLHttpRequest();
+            client.open('GET', 'resources/xml/quests.json');
+            client.onloadend = function () {
             jsonString = client.responseText;
             localStorage.setItem("quests", jsonString);
             return jsonString;

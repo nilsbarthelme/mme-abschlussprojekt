@@ -4,6 +4,7 @@ var FitnessRPG = FitnessRPG || {};
 
         "use strict";
 
+<<<<<<< HEAD
         var that = {};
         var activeQuestView,availableQuestModel;
         var availableQuests,
@@ -11,6 +12,12 @@ var FitnessRPG = FitnessRPG || {};
 
 
         function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance, messageBoxAlertInstance) {
+=======
+        var that = {},activeQuestView,availableQuestModel,availableQuests;
+
+
+        function setInstances(activeQuestviewInstance, availableQuestModelInstance) {
+>>>>>>> 1d7e892f9debbf13125b5ae5bfdc13d231eac545
             activeQuestView = activeQuestviewInstance;
             availableQuestModel = availableQuestModelInstance;
             messageBoxAlert = messageBoxAlertInstance;
@@ -24,12 +31,10 @@ var FitnessRPG = FitnessRPG || {};
         }
 
         function acceptbutton(){
-           var elm = event.target;
+           var targetElement = event.target;
             if(localStorage.getItem("activeQuest") === null){
-                console.log(localStorage);
-                console.log(localStorage.getItem("activeQuest"));
-              elm.parentNode.parentNode.removeChild(elm.parentNode);
-              activeQuestView.createActiveQuest(getQuestData(elm));
+              targetElement.parentNode.parentNode.removeChild(targetElement.parentNode);
+              activeQuestView.createActiveQuest(getQuestData(targetElement));
             } else {
                 messageBoxAlert.showMessage("Sie können nur eine Quest gleichzeitig annehmen!");
           }
@@ -41,17 +46,16 @@ var FitnessRPG = FitnessRPG || {};
             messageBoxAlert.showMessage("Sie erfüllen die Anforderungen für diese Quest nicht!");
         }
         function getQuestData(target) {
+                var clickedId, quests,i;
                 availableQuests = availableQuestModel.availableQuests;
-                console.log(availableQuests);
-                var clickedId = target.parentNode.getAttribute("id");
-                var questData;
-                for(var i = 0; i < availableQuests.length; i++){
+                clickedId = target.parentNode.getAttribute("id");
+                for( i = 0; i < availableQuests.length; i++){
                     if(availableQuests[i].id === clickedId){
-                  questData = availableQuests[i];
+                  quests = availableQuests[i];
               }}
-                return questData;
+                return quests;
             }
-            that.availQuestsGetInstances = availQuestsGetInstances;
+            that.setInstances = setInstances;
             that.setClickListenerDisabled = setClickListenerDisabled;
             that.setClickListenerEnabled = setClickListenerEnabled;
 
