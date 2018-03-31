@@ -74,8 +74,7 @@ var FitnessRPG = FitnessRPG || {};
                 var parent = document.getElementsByClassName("questelement")[0];
                 if (confirm('Bist du dir sicher, dass du diese Quest abbrechen willst?')) {
                      parent.parentNode.removeChild(parent);
-                        var questelement = elm.parentNode.parentNode.parentNode;
-                    var questId = questelement.getAttribute("id");
+                    var questId = JSON.parse(localStorage.getItem("activeQuest"));
                     availableQuestView.resetQuestCancelled(questId);
                     localStorage.removeItem("activeQuest");
                 }

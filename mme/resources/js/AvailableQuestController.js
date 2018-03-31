@@ -13,10 +13,10 @@ var FitnessRPG = FitnessRPG || {};
             activeQuestView = activeQuestviewInstance;
             availableQuestModel = availableQuestModelInstance;
         }
-        function listenerQuestAvailable(button) {
+        function setClickListenerEnabled(button) {
              button.addEventListener("click",acceptbutton);
         }
-        function listenerQuestNotAvailable(button) {
+        function setClickListenerDisabled(button) {
             button.addEventListener("click",requirementsNotFulfilled);
 
         }
@@ -50,8 +50,8 @@ var FitnessRPG = FitnessRPG || {};
                 return questData;
             }
             that.availQuestsGetInstances = availQuestsGetInstances;
-            that.listenerQuestNotAvailable = listenerQuestNotAvailable;
-            that.listenerQuestAvailable = listenerQuestAvailable;
+            that.setClickListenerDisabled = setClickListenerDisabled;
+            that.setClickListenerEnabled = setClickListenerEnabled;
 
         return that;
     };

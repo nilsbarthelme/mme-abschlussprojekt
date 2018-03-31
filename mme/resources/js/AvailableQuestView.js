@@ -4,7 +4,7 @@ var FitnessRPG = FitnessRPG || {};
 
         "use strict";
 
-        var that = {},availableQuests, availableQuestModel, availableQuestController,activeQuestView,readMoreView,playerinfo;
+        var that = {},availableQuests, availableQuestModel, availableQuestController,activeQuestView,readMoreView,playerinfo,parentObj;
         playerinfo = JSON.parse(localStorage.getItem("playerinfo"));
 
         function getInstances (availableQuestModelInstance, availableQuestControllerInstance, readMoreViewInstance, activeQuestViewInstance){
@@ -15,7 +15,7 @@ var FitnessRPG = FitnessRPG || {};
             availableQuests = availableQuestModel.availableQuests;
         }
        function buildQuestElements(data) {
-            var activeQuestIndex,parentObj,dataLength,questid;
+            var activeQuestIndex,dataLength,questid;
             if(localStorage.getItem("activeQuest") !== null || undefined){
                activeQuestIndex = localStorage.getItem("activeQuest");
                activeQuestView.createActiveQuest(data[activeQuestIndex]);
@@ -37,10 +37,10 @@ var FitnessRPG = FitnessRPG || {};
 
         }
         function createTitle(id) {
-           var title = document.createElement("div");
-               title.className = "questtitle";
-               title.innerHTML = availableQuests[id].name;
-            return title;
+           var titleElement = document.createElement("div");
+               titleElement.className = "questtitle";
+               titleElement.innerHTML = availableQuests[id].name;
+            return titleElement;
         }
         function createReadMoreIcon() {
             var readMoreIcon = document.createElement("img");
@@ -52,38 +52,34 @@ var FitnessRPG = FitnessRPG || {};
                 return readMoreIcon;
         }
         function createReadMoreText(id) {
-               var readMore = document.createElement("div");
-                    readMore.className = "readmore";
+            console.log(id);
+               var readMoreText = document.createElement("div");
+                    readMoreText.className = "readmore";
                 if(availableQuests[id].status === "offen"){
-                    readMore.innerHTML = "Mehr Informationen";
+                    readMoreText.innerHTML = "Mehr Informationen";
                 }
                 else {
-                        readMore.innerHTML = "Erfolgreich abgeschlossen!";
+                        readMoreText.innerHTML = "Erfolgreich abgeschlossen!";
                 }
-                return readMore;
+                return readMoreText;
         }
         function createAcceptButton(id,quest) {
-            var accept = document.createElement("button");
-                accept.className = "button";
-                accept.id = "accept";
-                accept.innerHTML = "Annehmen";
+            var acceptButton = document.createElement("button");
+                acceptButton.className = "button";
+                acceptButton.id = "acceptButton";
+                acceptButton.innerHTML = "Annehmen";
                 if(availableQuests[id].status === "offen" && checkRequirements(id)){
-                    quest.appendChild(accept);
-                    availableQuestController.listenerQuestAvailable(accept);
+                    quest.appendChild(acceptButton);
+                    availableQuestController.setClickListenerEnabled(acceptButton);
                     quest.className = "questAvailable";
                 } else if (availableQuests[id].status === "offen" && !checkRequirements(id)){
-                    quest.appendChild(accept);
-                    accept.className = "buttonRequirements";
-                    accept.innerHTML = "Nicht erfüllt!";
-                    availableQuestController.listenerQuestNotAvailable(accept);
+                    quest.appendChild(acceptButton);
+                    acceptButton.className = "buttonRequirements";
+                    acceptButton.innerHTML = "Nicht erfüllt!";
+                    availableQuestController.setClickListenerDisabled(acceptButton);
                     quest.className = "questAvailable";
-                }else{
-                    quest.className = "questDone";
-                    var readMore = document.getElementsByClassName("readmore");
-                    readMore.innerHTML = "";
-                    readMore.innerHTML = "Erledigt!";
-                    }
-                return accept;
+                }
+                return acceptButton;
         }
         function createAvailableQuest(parent, id) {
 
@@ -96,32 +92,55 @@ var FitnessRPG = FitnessRPG || {};
                 parent.appendChild(quest);
             }
         function resetQuestCancelled(id) {
-                var rightside = document.getElementsByClassName("right")[0];
-                var firstQuest = rightside.getElementsByClassName("questAvailable");
-                var quest = document.createElement("LI");
-                quest.appendChild(createTitle(id));
-                createAcceptButton(id,quest);
-                quest.appendChild(createReadMoreIcon());
-                quest.appendChild(createReadMoreText());
-                quest.id = id;
-                rightside.insertBefore(quest,firstQuest[0]);
+                console.log(id);
+                var firstQuest,resettedQuest;
+                    firstQuest = parentObj.getElementsByClassName("questAvailable");
+                    resettedQuest = document.createElement("LI");
+                    resettedQuest.appendChild(createTitle(id));
+                    createAcceptButton(id,resettedQuest);
+                    resettedQuest.appendChild(createReadMoreIcon());
+                    resettedQuest.appendChild(createReadMoreText(id));
+                    resettedQuest.id = id;
+                    parentObj.insertBefore(resettedQuest,firstQuest[0]);
 
             }
             function resetQuestFinished(id) {
-                var rightside = document.getElementsByClassName("right")[0];
-               createAvailableQuest(rightside,id);
+               createAvailableQuest(parentObj,id);
 
             }
+            function deleteChilds(parent) {
+                var removeButton, removeButtonInner,messageboxText;
+                while (parent.firstChild) {
+                        parent.removeChild(parent.firstChild);
+                }
+                messageboxText = document.createElement("div");
+                messageboxText.innerHTML = "Questbeschreibung";
+                messageboxText.className = "messagetext";
+                removeButton = document.createElement("div");
+                removeButton.className = "removebuttonactive";
+                removeButton.id = "messagebox";
+                removeButtonInner = document.createElement("div");
+                removeButtonInner.className = "x flop large";
+                    for (var i = 0; i < 4; i++) {
+                    removeButtonInner.appendChild(document.createElement("b"));
+                }
+
+                removeButton.appendChild(removeButtonInner);
+                parent.appendChild(removeButton);
+                parent.appendChild(messageboxText);
+               }
         function readMoreButtonClick(){
-                var parent =  document.getElementsByClassName("messagebox")[0];
-                parent.style.display="block";
-                var target = event.target;
-                readMoreView.createName(getQuestData(target),parent);
-                readMoreView.createDuration(getQuestData(target),parent);
-                readMoreView.createExercises(getQuestData(target),parent);
-                readMoreView.createRequirements(getQuestData(target),parent);
-                readMoreView.createAwards(getQuestData(target),parent);
-                readMoreView.removeButton();
+                var parent,target;
+                    parent = document.getElementsByClassName("messagebox")[0];
+                    deleteChilds(parent);
+                    parent.style.display="block";
+                    target = event.target;
+                    readMoreView.createName(getQuestData(target),parent);
+                    readMoreView.createDuration(getQuestData(target),parent);
+                    readMoreView.createExercises(getQuestData(target),parent);
+                    readMoreView.createRequirements(getQuestData(target),parent);
+                    readMoreView.createAwards(getQuestData(target),parent);
+                    readMoreView.removeButton();
             }
             function getQuestData(target) {
                 var clickedId = target.parentNode.getAttribute("id");
