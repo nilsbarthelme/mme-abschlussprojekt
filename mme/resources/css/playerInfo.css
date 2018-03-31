@@ -178,10 +178,10 @@
     position: relative;
     height: 200px;
     width: 200px;
-    margin-left: 20%;
-    margin-top: 60px;
+    margin: auto;
+    margin-top: 50px;
     background-color: #91AA9D;
-    -webkit-transition: margin-left 0.5s;
+    -webkit-transition: margin 0.5s;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -268,7 +268,7 @@
 }
 
 .level{
-    margin-left: 10px;
+    margin: auto;
     list-style-type: none ;
     font-weight:normal;
     color:#FFFFFF;
@@ -283,7 +283,7 @@
 
 
 .username{
-    margin-left: 10px;
+    margin: auto;
     list-style-type: none ;
     font-weight:normal;
     color:#FFFFFF;
@@ -299,7 +299,4 @@
 
 .left:hover{ width: 30%;}
 
-.left:hover .avatarpicture{
-    margin-left: 30%;
 
-}
