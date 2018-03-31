@@ -77,7 +77,7 @@ FitnessRPG.PlayerInfoModel = function () {
         location.reload();
     }
 
-    //following functions update jsonobj with new player attributes 
+    //following functions update jsonobj with new player attributes
     function updateStrLevel(attributeLevel, attributeExp, jsonobjPlayer) {
         var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].str);
         jsonobjPlayer.playerinfo[0].str = String(attributeExp - expLeft);
