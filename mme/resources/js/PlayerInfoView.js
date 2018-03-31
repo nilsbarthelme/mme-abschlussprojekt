@@ -1,3 +1,6 @@
+/*This Module is used to manipulate the user interface of the playerinfo (Left side ) and represent/visualise the progress of the player */
+
+
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.PlayerInfoView = function () {
 
@@ -8,11 +11,12 @@ FitnessRPG.PlayerInfoView = function () {
     playerLevelOffset = 15,
     playerAttributeOffset = 15,
     obj;
+    /*  gets the in "FitnessRPG.js" created instances and set them*/
 
     function setinstances(playerInfoControllerView) {
         playerInfoController = playerInfoControllerView;
     }
-
+    // Updates the different progress bars
     function updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent) {
         obj = JSON.parse(localStorage.getItem("playerinfo"));
         document.querySelector(".username").textContent = obj.playerinfo[0].name;
@@ -23,13 +27,15 @@ FitnessRPG.PlayerInfoView = function () {
         document.querySelector(".agiprogressback").style.width = agiInPercent + "%";
         updateAttributeBarText();
     }
-
+        // adds the text to the different progress bars
     function updateAttributeBarText() {
         document.querySelector(".expinfo").textContent = obj.playerinfo[0].exp + " / " + (obj.playerinfo[0].level * playerLevelOffset);
         document.querySelector(".strinfo").textContent = obj.playerinfo[0].str + " / " + (obj.playerinfo[0].strlevel * playerAttributeOffset);
         document.querySelector(".endinfo").textContent = obj.playerinfo[0].end + " / " + (obj.playerinfo[0].endlevel * playerAttributeOffset);
         document.querySelector(".agiinfo").textContent = obj.playerinfo[0].agi + " / " + (obj.playerinfo[0].agilevel * playerAttributeOffset);
     }
+
+    /* Visualises the progress of the player in different characterimages, the image is changed if the player reaches different levels */
 
     function updateCharacterImage() {
         var char, character, jsonObj, level, imgLevel;
@@ -47,11 +53,10 @@ FitnessRPG.PlayerInfoView = function () {
                 break;
             case "char_3":
                 char.setAttribute("src","resources/img/Char3Level" + imgLevel + ".png");
-                console.log(imgLevel);
                 break;
         }
     }
-
+    //Defines which image number to choose depending on the players level
     function definePlayerImageLevel(level) {
         if (level <= 2) {return "1";}
         else if (level <= 4) {return "2";}
@@ -59,7 +64,7 @@ FitnessRPG.PlayerInfoView = function () {
         else if (level <= 8) {return "4";}
         else if (level >= 9 ) {return "5";}
     }
-
+    // Updates the level in the left sidebar of the interfaces
     function updateCharacterLevel() {
         var charLevel, playerinfoObj, currentLevel;
         charLevel = document.getElementsByClassName("level")[0];
@@ -67,7 +72,7 @@ FitnessRPG.PlayerInfoView = function () {
         currentLevel = playerinfoObj.playerinfo[0].level;
         charLevel.innerHTML = "Level: " + currentLevel;
     }
-
+    //Updates the charactername depending on the name in the localstorage
     function updateCharacterName() {
         var charName, playerinfoObj, name;
         charName = document.getElementsByClassName("username")[0];

@@ -1,3 +1,6 @@
+/*This Module is used to handle the users interaction with the playerinfo side (Leftside)*/
+
+
 var FitnessRPG = FitnessRPG || {};
 FitnessRPG.PlayerInfoController = function () {
 
@@ -15,13 +18,13 @@ FitnessRPG.PlayerInfoController = function () {
 
     function init() {
         var infoElement;
-        infoElement  = playerInfoView.getInfoElement();
+        infoElement = playerInfoView.getInfoElement();
         infoElement.addEventListener("mouseover", function() {
             activeQuestView.setMiddleWidth(38.9);
         });
         infoElement.addEventListener("mouseout", function () {
             activeQuestView.setMiddleWidth(48.9);
-        })
+        });
     }
 
     that.init = init;
