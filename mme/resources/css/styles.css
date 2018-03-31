@@ -80,9 +80,7 @@ body{
 }
 
 
-.quest:hover{
-     background-color: #C0BDAA;
-}
+
 
 
 
@@ -223,26 +221,26 @@ body{
 /*
 design of abgeben button*/
 .sendbutton {
-    width: 200px;
-    height: 50px;
+  width: 200px;
+  height: 40px;
   float: right;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  margin-right: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+    margin-right: 30%;
   padding: 15px 25px;
   font-size: 24px;
   text-align: center;
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #af0700;
+  background-color: #da1a00;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 .buttonRequirements {
   float: right;
-    margin-top: -5px;
+  margin-top: -5px;
   margin-right: 35px;
   padding: 15px 25px;
   font-size: 24px;
@@ -283,7 +281,7 @@ design of abgeben button*/
 
 .button:hover {background-color: #3e8e41}
 
-.sendbutton:hover {background-color: #8e8280
+.sendbutton:hover {background-color: #AE1500
 }
 .sendbutton:active {
   background-color: #af0700;
