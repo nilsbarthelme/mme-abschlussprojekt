@@ -97,9 +97,12 @@ var FitnessRPG = FitnessRPG || {};
                 var questId = quest.getAttribute("id");
                 var quests = JSON.parse(localStorage.getItem("quests"));
                 if(elm.checked){
-                quests.questlist.quest[questId].uebung[index].checkbox = true;}else{
+                quests.questlist.quest[questId].uebung[index].checkbox = true;}
+                else{
+
                     quests.questlist.quest[questId].uebung[index].checkbox = false;
                 }
+                console.log(quests.questlist.quest[questId].uebung[index].checkbox);
 
                 localStorage.setItem("quests",JSON.stringify(quests));
 
