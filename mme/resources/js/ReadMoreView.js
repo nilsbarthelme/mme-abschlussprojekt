@@ -13,11 +13,11 @@ var FitnessRPG = FitnessRPG || {};
         }
 
         function createDuration(questData,parent){
-                var duration  = document.createElement("div");
+                var duration = document.createElement("div");
                 duration.className = "duration";
                 duration.innerHTML ="Questdauer: ";
                 duration.innerHTML += questData.duration;
-                parent.appendChild(duration)
+                parent.appendChild(duration);
 
             }
             function createName(questData,parent) {
@@ -27,8 +27,9 @@ var FitnessRPG = FitnessRPG || {};
                 parent.appendChild(title);
             }
             function createRequirements(questData,parent) {
-            for(var i = 0; i < questData.requirements.length;i++){
-                    var requirement = document.createElement("div");
+            var requirement,i;
+            for( i = 0; i < questData.requirements.length;i++){
+                    requirement = document.createElement("div");
                     requirement.className = "requirement";
                     requirement.innerHTML = "Anforderungen: ";
                     requirement.innerHTML += questData.requirements[i];
@@ -37,10 +38,9 @@ var FitnessRPG = FitnessRPG || {};
 
             }
             function createExercises(questData,parent) {
-                for(var i = 0; i < questData.exercises.length; i++){
-
-                    var exercise = document.createElement("div");
-
+            var exercise,i;
+                for( i = 0; i < questData.exercises.length; i++){
+                    exercise = document.createElement("div");
                     exercise.className = "exercise";
                     exercise.innerHTML = "Übung: ";
                     exercise.innerHTML += questData.exercises[i].uebung;
@@ -50,8 +50,9 @@ var FitnessRPG = FitnessRPG || {};
 
             }
             function createAwards(questData,parent) {
-                for(var i = 0; i < questData.award.length;i++){
-                    var award = document.createElement("div");
+            var award,i;
+                for(i = 0; i < questData.award.length;i++){
+                    award = document.createElement("div");
                     award.className = "award";
                     award.innerHTML = "Belohnungen: ";
                     award.innerHTML += questData.award[i].awardid;

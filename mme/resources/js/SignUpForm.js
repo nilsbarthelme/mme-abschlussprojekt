@@ -16,7 +16,6 @@ var SignUpForm = (function() {
           var name = document.getElementsByName("user_name");
           var email = document.getElementsByName("user_email");
           if (name[0].value === "") {alert("Bitte einen Namen eingeben!")}
-          else if (name[0].value.length > 9) {alert("Name ist zu lang!")}
           else if (!validateEmail(email[0].value)) {alert("Bitte eine korrekte Email angeben!")}
           else {
               var playerInfo = JSON.parse(localStorage.getItem("playerinfo"));
