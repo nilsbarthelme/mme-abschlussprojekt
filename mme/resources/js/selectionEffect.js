@@ -1,5 +1,4 @@
-
-
+//This is for the sliding selection effect (Template used)
 $('.element').each(function() {
         $(this).mouseover(function() {
             $(this).addClass('active');

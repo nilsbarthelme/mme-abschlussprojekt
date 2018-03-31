@@ -1,3 +1,5 @@
+/*This Module is used for the signup process of the user. The User is able to signup with his name and email.*/
+
 var SignUpForm = (function() {
     "use strict";
       var that = {};
@@ -7,11 +9,13 @@ var SignUpForm = (function() {
           setQuestList();
 
       }
+      //Adds eventListener to the signup button
       function setSignUpButton() {
           var signUpButton = document.getElementsByClassName("signup-button");
           signUpButton[0].addEventListener("click",getData);
 
       }
+      //Saves the user entered data and opens the next page if the user signed up
       function getData() {
           var name = document.getElementsByName("user_name");
           var email = document.getElementsByName("user_email");
@@ -27,11 +31,13 @@ var SignUpForm = (function() {
 
 
       }
-
+    // Validates mail so it's in a correct form (******@***.de/com/etc)
     function validateEmail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
+
+    //Once the signup page is loaded the local storage is set for the first time with all available quest and a placeholder player data
       function setPlayerInfo() {
            var jsonString = "";
         var client = new XMLHttpRequest();
