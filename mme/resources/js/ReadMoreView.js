@@ -27,16 +27,28 @@ var FitnessRPG = FitnessRPG || {};
                 parent.appendChild(title);
             }
             function createRequirements(questData,parent) {
-            var requirement,i;
+            var requirement,i,property;
             for( i = 0; i < questData.requirements.length;i++){
+                    switch (i){
+                        case 0: property = "Spielerlevel: ";
+                        break;
+                        case 1: property = "Erfahrungslevel: ";
+                        break;
+                        case 2: property = "Stärkelevel: ";
+                        break;
+                        case 3: property = "Ausdauerlevel: ";
+                        break;
+                        case 4: property = "Beweglichkeitslevel: ";
+                        break;}
+
                     requirement = document.createElement("div");
                     requirement.className = "requirement";
-                    requirement.innerHTML = "Anforderungen: ";
+                    requirement.innerHTML = property;
                     requirement.innerHTML += questData.requirements[i];
-                    parent.appendChild(requirement);
+                    parent.appendChild(requirement);}
                 }
 
-            }
+
             function createExercises(questData,parent) {
             var exercise,i;
                 for( i = 0; i < questData.exercises.length; i++){
