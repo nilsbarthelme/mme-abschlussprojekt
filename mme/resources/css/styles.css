@@ -102,6 +102,7 @@ body{
      height: 500px;
     overflow-y: scroll;
     font-size: 11px;
+
 }
 
 .quest::-webkit-scrollbar {
@@ -257,7 +258,7 @@ design of abgeben button*/
   background-color: #da1a00;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 6px #999;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -282,7 +283,7 @@ design of abgeben button*/
   background-color: #449E48;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 6px #999;
   font-family: 'Press Start 2P', cursive;
 }
 
