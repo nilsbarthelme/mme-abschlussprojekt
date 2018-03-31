@@ -54,12 +54,11 @@ var FitnessRPG = FitnessRPG || {};
                 }
                 if(proofNumber === exercises.length){
                     return true;
-                } else {
-                    return false;}
+                }
+                    return false;
 
             }
             function removeActiveFinished() {
-                console.log(availableQuestView);
                 var elm = event.target;
                 var parent = document.getElementsByClassName("questelement")[0];
                 parent.parentNode.removeChild(parent);
@@ -71,7 +70,6 @@ var FitnessRPG = FitnessRPG || {};
             }
 
              function removeButtonActive() {
-                 console.log(availableQuestView);
                 var elm = event.target;
                 var parent = document.getElementsByClassName("questelement")[0];
                 if (confirm('Bist du dir sicher, dass du diese Quest abbrechen willst?')) {
@@ -80,10 +78,36 @@ var FitnessRPG = FitnessRPG || {};
                     var questId = questelement.getAttribute("id");
                     availableQuestView.resetQuestCancelled(questId);
                     localStorage.removeItem("activeQuest");
-                } else {
-                 }
+                }
 
             }
+            function setChecked() {
+                var elm = event.target;
+                var quest = elm.parentNode.parentNode;
+                var exercises = quest.getElementsByClassName("checkbox");
+                var index;
+
+                for(var i = 0; i < exercises.length; i++){
+
+                    if(exercises[i] === elm){
+                        index=i;
+                    }
+
+                }
+                var questId = quest.getAttribute("id");
+                var quests = JSON.parse(localStorage.getItem("quests"));
+                if(elm.checked){
+                quests.questlist.quest[questId].uebung[index].checkbox = true;}
+                else{
+
+                    quests.questlist.quest[questId].uebung[index].checkbox = false;
+                }
+                console.log(quests.questlist.quest[questId].uebung[index].checkbox);
+
+                localStorage.setItem("quests",JSON.stringify(quests));
+
+            }
+            that.setChecked = setChecked;
             that.activeControllerGetInstances = activeControllerGetInstances;
             that.changeQuestStatus = changeQuestStatus;
             that.removeActiveQuest = removeActiveQuest;
