@@ -47,7 +47,6 @@ var FitnessRPG = FitnessRPG || {};
 
             function storageActiveQuest(id){
              localStorage.setItem("activeQuest",id);
-             console.log("Available quests" + availableQuests);
             }
 
             that.storageActiveQuest = storageActiveQuest;

@@ -23,7 +23,9 @@ var FitnessRPG = FitnessRPG || {};
 
         function acceptbutton(){
            var elm = event.target;
-            if(localStorage.getItem("questActive") === null){
+            if(localStorage.getItem("activeQuest") === null){
+                console.log(localStorage);
+                console.log(localStorage.getItem("activeQuest"));
               elm.parentNode.parentNode.removeChild(elm.parentNode);
               activeQuestView.createActiveQuest(getQuestData(elm));
             } else {
