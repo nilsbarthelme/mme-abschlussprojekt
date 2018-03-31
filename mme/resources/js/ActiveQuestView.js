@@ -4,9 +4,8 @@ var FitnessRPG = FitnessRPG || {};
 
         "use strict";
 
-        var that = {};
-        var availableQuestModel;
-          var activeQuestController;
+        var that = {},availableQuestModel,activeQuestController;
+        const removeButtonLength = 4;
         function activeViewGetInstances(activeQuestControllerInstance,availableQuestModelInstance) {
             activeQuestController = activeQuestControllerInstance;
             availableQuestModel = availableQuestModelInstance;
@@ -26,18 +25,19 @@ var FitnessRPG = FitnessRPG || {};
                 return titlequest;
         }
         function createDuration(clickedQuest) {
-                var duration  = document.createElement("div");
+                var duration = document.createElement("div");
                 duration.className = "duration";
                 duration.innerHTML ="Questdauer: ";
                 duration.innerHTML += clickedQuest.duration;
                 return duration;
         }
         function createRemoveButton() {
-            var removeButton = document.createElement("div");
+            var removeButton,removeButtonInner,i;
+            removeButton = document.createElement("div");
                 removeButton.className = "removebuttonactive";
-                var removeButtonInner = document.createElement("div");
+                 removeButtonInner = document.createElement("div");
                 removeButtonInner.className = "x flop large";
-                    for (var i = 0; i < 4; i++) {
+                    for ( i = 0; i < removeButtonLength; i++) {
                     removeButtonInner.appendChild(document.createElement("b"));
                 }
                   removeButton.appendChild(removeButtonInner);
@@ -53,12 +53,13 @@ var FitnessRPG = FitnessRPG || {};
                 return sendButton;
         }
         function createActiveQuest(clickedQuest) {
-                var questbox = document.createElement("div");
+                var questbox,questActive,quest,parent;
+                questbox = document.createElement("div");
                 questbox.className ="questelement";
-                var questActive = document.createElement("ul");
+                questActive = document.createElement("ul");
                 questActive.className = "questsactive";
                 questbox.appendChild(questActive);
-                var quest = createQuest(clickedQuest);
+                quest = createQuest(clickedQuest);
                 quest.appendChild(createRemoveButton());
                 quest.appendChild(createQuestTitle(clickedQuest));
                 quest.appendChild(createDuration(clickedQuest));
@@ -66,24 +67,23 @@ var FitnessRPG = FitnessRPG || {};
                 createAwards(clickedQuest,quest);
                 quest.appendChild(createFinishButton());
                 questActive.appendChild(quest);
-                var parent = document.getElementsByClassName("middle")[0];
+                parent = document.getElementsByClassName("middle")[0];
                 parent.appendChild(questbox);
                 availableQuestModel.storageActiveQuest(quest.id);
 
 
             }
             function createExercises(questData,parent) {
-                for(var i = 0; i < questData.exercises.length; i++){
-                    var checkbox = document.createElement("input");
+            var i, checkbox,exercise;
+                for( i = 0; i < questData.exercises.length; i++){
+                    checkbox = document.createElement("input");
                     checkbox.setAttribute("type","checkbox");
                     checkbox.className = "checkbox";
-                    console.log(questData.exercises[i].checkbox);
                     if(questData.exercises[i].checkbox === "false" || questData.exercises[i].checkbox ===false){
                         checkbox.checked = false;
                     } else {checkbox.checked = true; }
-                    console.log(checkbox.checked);
                     checkbox.addEventListener("change",activeQuestController.setChecked);
-                    var exercise = document.createElement("div");
+                    exercise = document.createElement("div");
                     exercise.className = "exercise";
                     exercise.innerHTML = "Übung: ";
                     exercise.innerHTML += questData.exercises[i].uebung;
@@ -94,8 +94,9 @@ var FitnessRPG = FitnessRPG || {};
 
             }
             function createAwards(questData,parent) {
-                for(var i = 0; i < questData.award.length;i++){
-                    var award = document.createElement("div");
+            var i, award;
+                for( i = 0; i < questData.award.length;i++){
+                    award = document.createElement("div");
                     award.className = "award";
                     award.innerHTML = "Belohnungen: ";
                     award.innerHTML += questData.award[i].awardid;
