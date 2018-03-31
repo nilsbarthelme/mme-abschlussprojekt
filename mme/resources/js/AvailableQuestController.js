@@ -7,7 +7,7 @@ var FitnessRPG = FitnessRPG || {};
         var that = {},activeQuestView,availableQuestModel,availableQuests, messageBoxAlert;
 
 
-        function availQuestsGetInstances(activeQuestviewInstance, availableQuestModelInstance, messageBoxAlertInstance) {
+        function setInstances(activeQuestviewInstance, availableQuestModelInstance, messageBoxAlertInstance) {
             activeQuestView = activeQuestviewInstance;
             availableQuestModel = availableQuestModelInstance;
             messageBoxAlert = messageBoxAlertInstance;
@@ -44,7 +44,7 @@ var FitnessRPG = FitnessRPG || {};
               }}
                 return questData;
             }
-            that.availQuestsGetInstances = availQuestsGetInstances;
+            that.setInstances = setInstances;
             that.setClickListenerDisabled = setClickListenerDisabled;
             that.setClickListenerEnabled = setClickListenerEnabled;
 
