@@ -33,10 +33,10 @@ var FitnessRPG = FitnessRPG || {};
                     if (quests[i].id === questId){
                         quests[i].status = "erledigt";
                         jsonObj.questlist.quest[i].status = "erledigt";
+                        removeActiveFinished();
                         playerInfoModel.updatePlayerStats(i);
                         localStorage.setItem("quests",JSON.stringify(jsonObj));
                         messageBoxAlert.showMessage("Quest erfolgreich abgeschlossen!");
-                        removeActiveFinished();
                     }
                 }} else {messageBoxAlert.showMessage("Sie Müssen erst alle Aufgaben der Quest erledigen um die Quest abzuschließen!");}
             }

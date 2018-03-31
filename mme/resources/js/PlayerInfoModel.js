@@ -14,6 +14,7 @@ FitnessRPG.PlayerInfoModel = function () {
 
     function setInstances(playerInfoViewInstance) {
         playerInfoView = playerInfoViewInstance;
+
     }
 
     function updatePlayerStats(questId) {
@@ -62,8 +63,8 @@ FitnessRPG.PlayerInfoModel = function () {
         playerLevel= playerLevel + 1;
         jsonobjPlayer.playerinfo[0].level =  String(playerLevel);
         location.reload();
-    }
 
+    }
     function updateStrLevel(attributeLevel, attributeExp, jsonobjPlayer) {
         var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].str);
         jsonobjPlayer.playerinfo[0].str = String(attributeExp - expLeft);
