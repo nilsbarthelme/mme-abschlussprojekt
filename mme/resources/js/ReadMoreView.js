@@ -13,11 +13,11 @@ var FitnessRPG = FitnessRPG || {};
         }
 
         function createDuration(questData,parent){
-                var duration  = document.createElement("div");
+                var duration = document.createElement("div");
                 duration.className = "duration";
                 duration.innerHTML ="Questdauer: ";
                 duration.innerHTML += questData.duration;
-                parent.appendChild(duration)
+                parent.appendChild(duration);
 
             }
             function createName(questData,parent) {
