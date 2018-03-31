@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
-
 .menu {
     list-style-type: none;
     margin: 0;
@@ -265,6 +264,7 @@ design of abgeben button*/
   border-radius: 15px;
   box-shadow: 0 6px #999;
   font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
 }
 
 .buttonRequirements:hover {background-color: #AE1500}

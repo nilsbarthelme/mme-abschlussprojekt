@@ -3,18 +3,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up Form</title>
-        <link rel="stylesheet" href="resources/css/main.css">
-        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="resources/css/main.css">
+        <link rel="stylesheet" href="resources/css/signUp.css">
     </head>
     <body>
 
+    <div class="messageboxAlert">
+        <label class="messageboxAlertText"></label>
+        <button class="buttonOK">OK</button>
+    </div>
 
-
-        <h1>Sign Up</h1>
+        <h1>Anmeldung</h1>
 
         <fieldset>
-          <legend><span class="number">1</span>Your basic info</legend>
+          <legend>Deine Nutzerdaten</legend>
           <label for="name">Name:</label>
           <input type="text" id="name" name="user_name">
 
@@ -23,9 +24,10 @@
 
         </fieldset>
 
-        <button type="submit" class="signup-button">Sign Up</button>
+        <button type="submit" class="signup-button">Anmelden</button>
 
     <script src="resources/js/SignUpForm.js"></script>
+    <script src="resources/js/MessageBoxAlertView.js"></script>
     <script>SignUpForm.init()</script>
 
     </body>

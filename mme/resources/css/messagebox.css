@@ -1,7 +1,6 @@
 .messagebox {
     display: none;
     overflow-y: scroll;
-    font-family: 'Roboto', sans-serif;
     width: 35%;
     height: 60%;
     background: orange;
