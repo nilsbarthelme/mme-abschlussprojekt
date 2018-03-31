@@ -76,6 +76,7 @@ FitnessRPG.PlayerInfoView = function () {
         charName.innerHTML =  name;
     }
 
+
     function getInfoElement() {return document.querySelector(".left");}
 
     that.getInfoElement = getInfoElement;
