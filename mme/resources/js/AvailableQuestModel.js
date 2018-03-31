@@ -8,10 +8,10 @@ var FitnessRPG = FitnessRPG || {};
 
 
         function addElementsToQuestList() {
-            var questStorage,questStorageLength;
+            var questStorage,questStorageLength,i;
             questStorage = JSON.parse(localStorage.getItem("quests"));
             questStorageLength = questStorage.questlist.quest.length;
-             for(var i = 0; i < questStorageLength;i++){
+             for(i = 0; i < questStorageLength;i++){
                 createQuestObjects(i,questStorage);}
         }
         function parseQuests() {
