@@ -11,6 +11,8 @@
     margin-top: 5px;
     float: right;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Press Start 2P', cursive;
+
 }
 
 .right::-webkit-scrollbar {
@@ -18,13 +20,13 @@
 }
 
 .right #accept {
-    font-size: 15px;
+    font-size: 10px;
     padding: 10px 17px;
+    font-family: 'Press Start 2P', cursive;
 }
 
 
 .availableTitle{
-    margin-left: 10px;
     list-style-type: none ;
     font-weight:normal;
     color:#FFFFFF;
@@ -32,14 +34,13 @@
     word-spacing:7pt;
     font-size:20px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
     padding:0px;
 }
 .readmore{
-    font-family:helvetica, sans-serif;
+    font-size: 10px;
     margin-left: 85px;
-    margin-top: -32px;
+    margin-top: -24px;
 }
 
 .questtitleactive {
@@ -50,11 +51,11 @@
     color: black;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:20px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
     padding:0px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .questDone::-webkit-scrollbar {
@@ -70,10 +71,10 @@
     color: black;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:20px;
+    font-size:10px;
     text-align:center;
-    font-family:helvetica, sans-serif;
-    line-height:3;
+    margin-left: 5px;
+    line-height:6;
     padding:0px;
 }
 .duration {
@@ -83,11 +84,11 @@
     color: black;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:20px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
     padding:0px;
+    font-size: 10px;
+    font-weight: bold;
 }
 .exercise {
     list-style-type: none ;
@@ -95,10 +96,9 @@
     color: black;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:20px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
+    font-size: 10px;
 
 }
 .name {
@@ -107,10 +107,10 @@
     color: black;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:20px;
+    font-size:18px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
+    padding-top: 15px;
 
 }
 .duration {
@@ -119,10 +119,9 @@
     color: black;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:20px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
+    font-size: 15px;
 
 }
 .requirement {
@@ -131,9 +130,8 @@
     color: black;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:20px;
+    font-size:10px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
 
 }
@@ -143,10 +141,9 @@
     color: black;
     letter-spacing:1pt;
     word-spacing:7pt;
-    font-size:20px;
     text-align:center;
-    font-family:helvetica, sans-serif;
     line-height:3;
+    font-size: 10px;
 
 }
 .more{
