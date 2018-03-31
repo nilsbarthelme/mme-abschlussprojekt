@@ -4,44 +4,42 @@ var FitnessRPG = FitnessRPG || {};
 
         "use strict";
 
-        var that = {};
-        var questdata, availableQuestModel, availableQuestController,activeQuestView,readMoreView,playerinfo;
-        playerinfo = JSON.parse(localStorage.getItem("playerinfo"))
+        var that = {},availableQuests, availableQuestModel, availableQuestController,activeQuestView,readMoreView,playerinfo;
+        playerinfo = JSON.parse(localStorage.getItem("playerinfo"));
 
         function getInstances (availableQuestModelInstance, availableQuestControllerInstance, readMoreViewInstance, activeQuestViewInstance){
             availableQuestModel = availableQuestModelInstance;
             availableQuestController = availableQuestControllerInstance;
             readMoreView = readMoreViewInstance;
             activeQuestView = activeQuestViewInstance;
-            questdata = availableQuestModel.availableQuests;
+            availableQuests = availableQuestModel.availableQuests;
         }
-
        function buildQuestElements(data) {
-
-            if(localStorage.getItem("activeQuest")!== null || undefined){
-               var activeIndex = localStorage.getItem("activeQuest");
-               activeQuestView.createActiveQuest(data[activeIndex]);
+            var activeQuestIndex,parentObj,dataLength,questid;
+            if(localStorage.getItem("activeQuest") !== null || undefined){
+               activeQuestIndex = localStorage.getItem("activeQuest");
+               activeQuestView.createActiveQuest(data[activeQuestIndex]);
             }
-            var rightside = document.getElementsByClassName("right")[0];
-            var index = data.length;
-            for(var i = 0; i < index;i++){
+            parentObj = document.getElementsByClassName("right")[0];
+            dataLength = data.length;
+            for(var i = 0; i < dataLength;i++){
                 if(data[i].status === "offen"){
-                var questid = data[i].id;
-                if(questid !== activeIndex){
-                createAvailableQuest(rightside,questid);}
+                    questid = data[i].id;
+                if(questid !== activeQuestIndex){
+                createAvailableQuest(parentObj,questid);}
             }}
-            for(var i = 0; i < index;i++){
+            for(var i = 0; i < dataLength;i++){
                 if(data[i].status === "erledigt"){
-                var questid = data[i].id;
-                if(questid !== activeIndex){
-                createAvailableQuest(rightside,questid);}
+                    questid = data[i].id;
+                if(questid !== activeQuestIndex){
+                createAvailableQuest(parentObj,questid);}
             }}
 
         }
         function createTitle(id) {
            var title = document.createElement("div");
-                title.className = "questtitle";
-                title.innerHTML = questdata[id].name;
+               title.className = "questtitle";
+               title.innerHTML = availableQuests[id].name;
             return title;
         }
         function createReadMoreIcon() {
@@ -53,10 +51,15 @@ var FitnessRPG = FitnessRPG || {};
                 readMoreIcon.addEventListener("click",readMoreButtonClick);
                 return readMoreIcon;
         }
-        function createReadMoreText() {
+        function createReadMoreText(id) {
                var readMore = document.createElement("div");
-                readMore.className = "readmore";
-                readMore.innerHTML = "Mehr Informationen";
+                    readMore.className = "readmore";
+                if(availableQuests[id].status === "offen"){
+                    readMore.innerHTML = "Mehr Informationen";
+                }
+                else {
+                        readMore.innerHTML = "Erfolgreich abgeschlossen!";
+                }
                 return readMore;
         }
         function createAcceptButton(id,quest) {
@@ -64,11 +67,11 @@ var FitnessRPG = FitnessRPG || {};
                 accept.className = "button";
                 accept.id = "accept";
                 accept.innerHTML = "Annehmen";
-                if(questdata[id].status === "offen" && checkRequirements(id)){
+                if(availableQuests[id].status === "offen" && checkRequirements(id)){
                     quest.appendChild(accept);
                     availableQuestController.listenerQuestAvailable(accept);
                     quest.className = "questAvailable";
-                } else if (questdata[id].status === "offen" && !checkRequirements(id)){
+                } else if (availableQuests[id].status === "offen" && !checkRequirements(id)){
                     quest.appendChild(accept);
                     accept.className = "buttonRequirements";
                     accept.innerHTML = "Nicht erfüllt!";
@@ -88,7 +91,7 @@ var FitnessRPG = FitnessRPG || {};
                 quest.appendChild(createTitle(id));
                 createAcceptButton(id,quest);
                 quest.appendChild(createReadMoreIcon());
-                quest.appendChild(createReadMoreText());
+                quest.appendChild(createReadMoreText(id));
                 quest.id = id;
                 parent.appendChild(quest);
             }
@@ -123,9 +126,9 @@ var FitnessRPG = FitnessRPG || {};
             function getQuestData(target) {
                 var clickedId = target.parentNode.getAttribute("id");
                 var currentQuest;
-                for(var i = 0; i < questdata.length; i++){
-                    if(questdata[i].id === clickedId){
-                  currentQuest = questdata[i];
+                for(var i = 0; i < availableQuests.length; i++){
+                    if(availableQuests[i].id === clickedId){
+                  currentQuest = availableQuests[i];
               }}
                 return currentQuest;
             }
@@ -138,11 +141,11 @@ var FitnessRPG = FitnessRPG || {};
                     var agi = parseInt(playerinfo.playerinfo[0].agilevel);
 
 
-                    var lvlrequ = parseInt(questdata[id].requirements[0]);
-                    var exprequ = parseInt(questdata[id].requirements[1]);
-                    var strrequ = parseInt(questdata[id].requirements[2]);
-                    var endrequ = parseInt(questdata[id].requirements[3]);
-                    var agirequ = parseInt(questdata[id].requirements[4]);
+                    var lvlrequ = parseInt(availableQuests[id].requirements[0]);
+                    var exprequ = parseInt(availableQuests[id].requirements[1]);
+                    var strrequ = parseInt(availableQuests[id].requirements[2]);
+                    var endrequ = parseInt(availableQuests[id].requirements[3]);
+                    var agirequ = parseInt(availableQuests[id].requirements[4]);
             if(lvl>= lvlrequ && exp >= exprequ && str >= strrequ && end >= endrequ && agi >= agirequ){
 
                 return true;
