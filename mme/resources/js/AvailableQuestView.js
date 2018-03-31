@@ -94,7 +94,15 @@ var FitnessRPG = FitnessRPG || {};
             }
         function resetQuest(id) {
                 var rightside = document.getElementsByClassName("right")[0];
-                createAvailableQuest(rightside,id);
+                var firstQuest = rightside.getElementsByClassName("questAvailable");
+                var quest = document.createElement("LI");
+                quest.appendChild(createTitle(id));
+                createAcceptButton(id,quest);
+                quest.appendChild(createReadMoreIcon());
+                quest.appendChild(createReadMoreText());
+                quest.id = id;
+                rightside.insertBefore(quest,firstQuest[0]);
+
             }
         function readMoreButtonClick(){
                 var parent =  document.getElementsByClassName("messagebox")[0];

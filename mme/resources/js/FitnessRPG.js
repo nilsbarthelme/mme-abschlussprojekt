@@ -1,6 +1,5 @@
 var FitnessRPG = (function() {
     "use strict";
-
    if(localStorage.length === 0){
         window.open('signup.html',"_self");
 
