@@ -9,15 +9,15 @@ FitnessRPG.PlayerInfoModel = function () {
     playerAttributeOffset= 15,
     playerLevel,
     expAward,
-    questReward;
+    questReward,
+    jsonobjPlayer;
 
     function setInstances(playerInfoViewInstance) {
         playerInfoView = playerInfoViewInstance;
-
     }
 
     function updatePlayerStats(questId) {
-        var jsonobjQuests, jsonobjPlayer, index;
+        var jsonobjQuests, index;
         jsonobjQuests = JSON.parse(localStorage.getItem("quests"));
         jsonobjPlayer = JSON.parse(localStorage.getItem("playerinfo"));
         questReward = jsonobjQuests.questlist.quest[questId].belohnung;
@@ -53,14 +53,14 @@ FitnessRPG.PlayerInfoModel = function () {
             }
         }
         localStorage.setItem("playerinfo",JSON.stringify(jsonobjPlayer));
-        playerInfoView.updateUserView();
-        playerInfoView.updateCharacterImage();
+        updateUserView(jsonobjPlayer);
     }
 
     function updatePlayerLevel(playerLevel, jsonobjPlayer) {
         var expLeft = (playerLevel * playerLevelOffset) - parseInt(jsonobjPlayer.playerinfo[0].exp);
         jsonobjPlayer.playerinfo[0].exp = String(parseInt(questReward[0].value) - expLeft);
-        jsonobjPlayer.playerinfo[0].level =  String(playerLevel + 1);
+        playerLevel= playerLevel + 1;
+        jsonobjPlayer.playerinfo[0].level =  String(playerLevel);
         location.reload();
     }
 
@@ -80,6 +80,16 @@ FitnessRPG.PlayerInfoModel = function () {
         var expLeft = (attributeLevel * playerAttributeOffset) - parseInt(jsonobjPlayer.playerinfo[0].agi);
         jsonobjPlayer.playerinfo[0].agi = String(attributeExp - expLeft);
         jsonobjPlayer.playerinfo[0].agilevel =  String(attributeLevel + 1);
+    }
+
+    function updateUserView(obj) {
+        var expInPercent, strInPercent, endInPercent, agiInPercent;
+        expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * 100;
+        strInPercent = (parseFloat(obj.playerinfo[0].str) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].strlevel))) * 100 ;
+        endInPercent = (parseFloat(obj.playerinfo[0].end) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].endlevel))) * 100 ;
+        agiInPercent = (parseFloat(obj.playerinfo[0].agi) / (playerAttributeOffset * parseFloat(obj.playerinfo[0].agilevel))) * 100 ;
+
+        playerInfoView.updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent);
     }
 
     that.updatePlayerStats = updatePlayerStats;

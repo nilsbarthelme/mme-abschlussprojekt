@@ -14,12 +14,11 @@ FitnessRPG.PlayerInfoController = function () {
     }
 
     function init() {
-        var infoElement  = playerInfoView.getInfoElement();
+        var infoElement;
+        infoElement  = playerInfoView.getInfoElement();
         infoElement.addEventListener("mouseover", function() {
             activeQuestView.setMiddleWidth(38.9);
-            console.log("in: mouseover");
         });
-
         infoElement.addEventListener("mouseout", function () {
             activeQuestView.setMiddleWidth(48.9);
         })

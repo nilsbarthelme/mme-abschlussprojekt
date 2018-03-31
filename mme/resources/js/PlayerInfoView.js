@@ -6,39 +6,38 @@ FitnessRPG.PlayerInfoView = function () {
     var that = {},
     playerInfoController,
     playerLevelOffset = 15,
-    playerAttributeOffeset = 15;
+    playerAttributeOffset = 15,
+    obj;
 
     function setinstances(playerInfoControllerView) {
         playerInfoController = playerInfoControllerView;
     }
 
-    function updateUserView() {
-        var obj = JSON.parse(localStorage.getItem("playerinfo"));
-        var expInPercent = (parseFloat(obj.playerinfo[0].exp) / (parseFloat(obj.playerinfo[0].level) * playerLevelOffset) ) * 100;
-        var strInPercent =  (parseFloat(obj.playerinfo[0].str) / (playerAttributeOffeset * parseFloat(obj.playerinfo[0].strlevel))) * 100 ;
-        var endInPercent =  (parseFloat(obj.playerinfo[0].end) / (playerAttributeOffeset * parseFloat(obj.playerinfo[0].endlevel))) * 100 ;
-        var agiInPercent =  (parseFloat(obj.playerinfo[0].agi) / (playerAttributeOffeset * parseFloat(obj.playerinfo[0].agilevel))) * 100 ;
-        console.log("agi: " +  parseFloat(obj.playerinfo[0].endlevel));
-        console.log("end: " + endInPercent);
+    function updateUserView(expInPercent, strInPercent, endInPercent, agiInPercent) {
+        obj = JSON.parse(localStorage.getItem("playerinfo"));
         document.querySelector(".username").textContent = obj.playerinfo[0].name;
         document.querySelector(".level").textContent = "Level: " + obj.playerinfo[0].level;
         document.querySelector(".expprogressback").style.width = expInPercent + "%";
         document.querySelector(".strprogressback").style.width = strInPercent + "%";
         document.querySelector(".endprogressback").style.width = endInPercent + "%";
         document.querySelector(".agiprogressback").style.width = agiInPercent + "%";
+        updateAttributeBarText();
+    }
+
+    function updateAttributeBarText() {
         document.querySelector(".expinfo").textContent = obj.playerinfo[0].exp + " / " + (obj.playerinfo[0].level * playerLevelOffset);
-        document.querySelector(".strinfo").textContent = obj.playerinfo[0].str + " / " + (obj.playerinfo[0].strlevel * playerAttributeOffeset);
-        document.querySelector(".endinfo").textContent = obj.playerinfo[0].end + " / " + (obj.playerinfo[0].endlevel * playerAttributeOffeset);
-        document.querySelector(".agiinfo").textContent = obj.playerinfo[0].agi + " / " + (obj.playerinfo[0].agilevel * playerAttributeOffeset);
+        document.querySelector(".strinfo").textContent = obj.playerinfo[0].str + " / " + (obj.playerinfo[0].strlevel * playerAttributeOffset);
+        document.querySelector(".endinfo").textContent = obj.playerinfo[0].end + " / " + (obj.playerinfo[0].endlevel * playerAttributeOffset);
+        document.querySelector(".agiinfo").textContent = obj.playerinfo[0].agi + " / " + (obj.playerinfo[0].agilevel * playerAttributeOffset);
     }
 
     function updateCharacterImage() {
-        var char = document.getElementById("character");
-        var character = localStorage.getItem("character");
-        var jsonObj = JSON.parse(localStorage.getItem("playerinfo"));
-        var level = parseInt( jsonObj.playerinfo[0].level);
-        var imgLevel = definePlayerImageLevel(level);
-        console.log(level);
+        var char, character, jsonObj, level, imgLevel;
+        char = document.getElementById("character");
+        character = localStorage.getItem("character");
+        jsonObj = JSON.parse(localStorage.getItem("playerinfo"));
+        level = parseInt( jsonObj.playerinfo[0].level);
+        imgLevel = definePlayerImageLevel(level);
         switch (character){
             case "char_1":
                 char.setAttribute("src","resources/img/Char1Level" + imgLevel + ".png");
@@ -51,7 +50,6 @@ FitnessRPG.PlayerInfoView = function () {
                 console.log(imgLevel);
                 break;
         }
-        console.log(character);
     }
 
     function definePlayerImageLevel(level) {
@@ -63,22 +61,22 @@ FitnessRPG.PlayerInfoView = function () {
     }
 
     function updateCharacterLevel() {
-        var charLevel = document.getElementsByClassName("level")[0];
-        var playerinfoObj = JSON.parse(localStorage.getItem("playerinfo"));
-        var currentLevel = playerinfoObj.playerinfo[0].level;
+        var charLevel, playerinfoObj, currentLevel;
+        charLevel = document.getElementsByClassName("level")[0];
+        playerinfoObj = JSON.parse(localStorage.getItem("playerinfo"));
+        currentLevel = playerinfoObj.playerinfo[0].level;
         charLevel.innerHTML = "Level: " + currentLevel;
     }
 
     function updateCharacterName() {
-        var charName = document.getElementsByClassName("username")[0];
-        var playerinfoObj = JSON.parse(localStorage.getItem("playerinfo"));
-        var name = playerinfoObj.playerinfo[0].name;
+        var charName, playerinfoObj, name;
+        charName = document.getElementsByClassName("username")[0];
+        playerinfoObj = JSON.parse(localStorage.getItem("playerinfo"));
+        name = playerinfoObj.playerinfo[0].name;
         charName.innerHTML =  name;
     }
 
-    function getInfoElement() {
-        return document.querySelector(".left");
-    }
+    function getInfoElement() {return document.querySelector(".left");}
 
     that.getInfoElement = getInfoElement;
     that.setInstances = setinstances;
