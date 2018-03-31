@@ -13,7 +13,9 @@ var FitnessRPG = FitnessRPG || {};
             questStorageLength = questStorage.questlist.quest.length;
              for( i = 0; i < questStorageLength;i++){
                 createQuestObjects(i,questStorage);}
+                console.log(availableQuests);
         }
+
         function parseQuests() {
                 addElementsToQuestList();
                 return availableQuests;
