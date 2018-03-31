@@ -34,7 +34,7 @@ li a:hover {
 }
 body{
     background-color: #193441;
-    overflow: hidden
+    overflow-x: hidden
 }
 
 .titel {
