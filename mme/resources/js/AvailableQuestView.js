@@ -5,9 +5,10 @@ var FitnessRPG = FitnessRPG || {};
         "use strict";
 
         var that = {},availableQuests, availableQuestModel, availableQuestController,activeQuestView,readMoreView,playerinfo,parentObj;
+        const removeButtonLength= 4;
         playerinfo = JSON.parse(localStorage.getItem("playerinfo"));
 
-        function getInstances (availableQuestModelInstance, availableQuestControllerInstance, readMoreViewInstance, activeQuestViewInstance){
+        function setInstances (availableQuestModelInstance, availableQuestControllerInstance, readMoreViewInstance, activeQuestViewInstance){
             availableQuestModel = availableQuestModelInstance;
             availableQuestController = availableQuestControllerInstance;
             readMoreView = readMoreViewInstance;
@@ -15,20 +16,20 @@ var FitnessRPG = FitnessRPG || {};
             availableQuests = availableQuestModel.availableQuests;
         }
        function buildQuestElements(data) {
-            var activeQuestIndex,dataLength,questid;
+            var activeQuestIndex,dataLength,questid,i;
             if(localStorage.getItem("activeQuest") !== null || undefined){
                activeQuestIndex = localStorage.getItem("activeQuest");
                activeQuestView.createActiveQuest(data[activeQuestIndex]);
             }
             parentObj = document.getElementsByClassName("right")[0];
             dataLength = data.length;
-            for(var i = 0; i < dataLength;i++){
+            for( i = 0; i < dataLength;i++){
                 if(data[i].status === "offen"){
                     questid = data[i].id;
                 if(questid !== activeQuestIndex){
                 createAvailableQuest(parentObj,questid);}
             }}
-            for(var i = 0; i < dataLength;i++){
+            for( i = 0; i < dataLength;i++){
                 if(data[i].status === "erledigt"){
                     questid = data[i].id;
                 if(questid !== activeQuestIndex){
@@ -52,7 +53,7 @@ var FitnessRPG = FitnessRPG || {};
                 return readMoreIcon;
         }
         function createReadMoreText(id) {
-            console.log(id);
+
                var readMoreText = document.createElement("div");
                     readMoreText.className = "readmore";
                 if(availableQuests[id].status === "offen"){
@@ -78,7 +79,7 @@ var FitnessRPG = FitnessRPG || {};
                     acceptButton.innerHTML = "Nicht erfüllt!";
                     availableQuestController.setClickListenerDisabled(acceptButton);
                     quest.className = "questAvailable";
-                }
+                } else {quest.className = "questDone"; }
                 return acceptButton;
         }
         function createAvailableQuest(parent, id) {
@@ -92,7 +93,6 @@ var FitnessRPG = FitnessRPG || {};
                 parent.appendChild(quest);
             }
         function resetQuestCancelled(id) {
-                console.log(id);
                 var firstQuest,resettedQuest;
                     firstQuest = parentObj.getElementsByClassName("questAvailable");
                     resettedQuest = document.createElement("LI");
@@ -109,7 +109,7 @@ var FitnessRPG = FitnessRPG || {};
 
             }
             function deleteChilds(parent) {
-                var removeButton, removeButtonInner,messageboxText;
+                var removeButton, removeButtonInner,messageboxText,i;
                 while (parent.firstChild) {
                         parent.removeChild(parent.firstChild);
                 }
@@ -121,10 +121,9 @@ var FitnessRPG = FitnessRPG || {};
                 removeButton.id = "messagebox";
                 removeButtonInner = document.createElement("div");
                 removeButtonInner.className = "x flop large";
-                    for (var i = 0; i < 4; i++) {
+                    for (i = 0; i < removeButtonLength; i++) {
                     removeButtonInner.appendChild(document.createElement("b"));
                 }
-
                 removeButton.appendChild(removeButtonInner);
                 parent.appendChild(removeButton);
                 parent.appendChild(messageboxText);
@@ -143,9 +142,9 @@ var FitnessRPG = FitnessRPG || {};
                     readMoreView.removeButton();
             }
             function getQuestData(target) {
-                var clickedId = target.parentNode.getAttribute("id");
-                var currentQuest;
-                for(var i = 0; i < availableQuests.length; i++){
+                var clickedId,currentQuest,i;
+                    clickedId = target.parentNode.getAttribute("id");
+                for( i = 0; i < availableQuests.length; i++){
                     if(availableQuests[i].id === clickedId){
                   currentQuest = availableQuests[i];
               }}
@@ -153,25 +152,26 @@ var FitnessRPG = FitnessRPG || {};
             }
 
             function checkRequirements(id) {
-                    var lvl = parseInt(playerinfo.playerinfo[0].level);
-                    var exp = parseInt(playerinfo.playerinfo[0].exp);
-                    var str = parseInt(playerinfo.playerinfo[0].strlevel);
-                    var end = parseInt(playerinfo.playerinfo[0].endlevel);
-                    var agi = parseInt(playerinfo.playerinfo[0].agilevel);
+            var lvl,exp,str,end,agi,lvlRequirement,expRequirement,strRequirement,endRequirement,agiRequirement;
+                     lvl = parseInt(playerinfo.playerinfo[0].level);
+                     exp = parseInt(playerinfo.playerinfo[0].exp);
+                     str = parseInt(playerinfo.playerinfo[0].strlevel);
+                     end = parseInt(playerinfo.playerinfo[0].endlevel);
+                     agi = parseInt(playerinfo.playerinfo[0].agilevel);
 
 
-                    var lvlrequ = parseInt(availableQuests[id].requirements[0]);
-                    var exprequ = parseInt(availableQuests[id].requirements[1]);
-                    var strrequ = parseInt(availableQuests[id].requirements[2]);
-                    var endrequ = parseInt(availableQuests[id].requirements[3]);
-                    var agirequ = parseInt(availableQuests[id].requirements[4]);
-            if(lvl>= lvlrequ && exp >= exprequ && str >= strrequ && end >= endrequ && agi >= agirequ){
+                     lvlRequirement = parseInt(availableQuests[id].requirements[0]);
+                     expRequirement = parseInt(availableQuests[id].requirements[1]);
+                     strRequirement = parseInt(availableQuests[id].requirements[2]);
+                     endRequirement = parseInt(availableQuests[id].requirements[3]);
+                     agiRequirement = parseInt(availableQuests[id].requirements[4]);
+            if(lvl>= lvlRequirement && exp >= expRequirement && str >= strRequirement && end >= endRequirement && agi >= agiRequirement){
 
                 return true;
-            } else {return false;}
+            } return false;
         }
 
-        that.getInstances = getInstances;
+        that.setInstances = setInstances;
         that.resetQuestCancelled = resetQuestCancelled;
         that.resetQuestFinished = resetQuestFinished;
         that.buildQuestElements = buildQuestElements;
