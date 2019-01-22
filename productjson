@@ -1,0 +1,37 @@
+{
+  "kollektion": "Bernina",
+  "productNumber": "2392RT1M",
+  "colorName": "beige",
+  "preisEmpfehlung": 37.21,
+  "verlegeArt": 3,
+  "fliesenFormat": 0,
+  "oberfläche": 0,
+  "productUrl": null,
+  "imageUrl": "https://storagewhk.blob.core.windows.net/images/products/bodenbelag/fliese/00f9abe0-fef4-4c65-85c1-8ec14bb8d0cf/ImageUrl-201901062048136547.jpg",
+  "materialData": {
+    "textureName": "Misc/Fliesen-s.jpg",
+    "colorTint": "#08ff4d",
+    "textureScale": 2.49,
+    "smoothness": 0.5,
+    "metallic": 0.6,
+    "hue": 0.5,
+    "saturation": 0.5,
+    "contrast": 0.55,
+    "brightness": 0.48,
+    "colorFX": 1.08
+  },
+  "imageUrls": [
+    "https://storagewhk.blob.core.windows.net/images/products/bodenbelag/fliese/00f9abe0-fef4-4c65-85c1-8ec14bb8d0cf/ImageUrl-201901062048136547.jpg"
+  ],
+  "id": "00f9abe0-fef4-4c65-85c1-8ec14bb8d0cf",
+  "enabled": true,
+  "productId": "01.04.0001",
+  "name": "Fliese B",
+  "description": "Die an Quarzit erinnernden, dezent schimmernden und matt strukturierten Fliesen durchziehen feine unregelmäßige Äderungen, die ihr das charakteristische Aussehen verleihen: Ein Natursteincharakter mit einer authentischen Ausstrahlung und Anwendungsvorteilen, die nur vilbostone-Feinsteinzeug Fliesen bieten. BERNINA ist mit vilbostone plus ausgestattet, wodurch die Fliesenoberfläche schon im Herstellungsprozess gegen Schmutz und Flecken versiegelt wird.",
+  "techSpecs": null,
+  "styleTags": 3,
+  "budgetTags": 2,
+  "manufacturerId": null,
+  "tags": null,
+  "manufacturer": null
+}
